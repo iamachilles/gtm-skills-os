@@ -136,8 +136,7 @@ Found a bug? Want to add a skill? PRs welcome.
 
 I build outbound systems for B2B growth teams: ICP, signals, infrastructure, sequences, CRM ops, and automation. Everything a GTM Engineer would own, without the full-time hire.
 
-- [LinkedIn](https://linkedin.com/in/achille-morin-lemoine/)
-- [Website](https://blog.achilles.ml)
+[LinkedIn](https://linkedin.com/in/achille-morin-lemoine/)
 
 ## License
 
