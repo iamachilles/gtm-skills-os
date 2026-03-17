@@ -29,7 +29,9 @@ Built from 15 months running GTM for 10+ B2B clients. Every skill encodes a repe
 
 Explore all 151 skills with filters, search, and detailed metadata:
 
-**[Open the GTM Skills OS on Notion](https://www.notion.so/1234480458f14f1daa854480e22c6e29)**
+**[Open the GTM Skills OS on Notion](https://www.notion.so/3264221fbab181c8bdcfeeb2c93db34b)**
+
+The Notion hub includes the full skill directory, install instructions, and skill chain examples.
 
 Every skill includes: one-liner, who it's for, required inputs, expected output, which skills it chains with, and difficulty level.
 
