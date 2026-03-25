@@ -1,27 +1,24 @@
 # GTM Skills OS
 
-**151 Claude Code skills for B2B Go-To-Market teams.** 14 phases, from research to revenue.
+**151 Claude Code skills for B2B Go-To-Market teams.** 11 packs, organized by role.
 
 Built from 18 months running GTM for 10+ B2B clients. Every skill encodes a repeatable framework, not a prompt hack.
 
 ## What's Inside
 
-| Phase | Skills | What it covers |
-|-------|--------|---------------|
-| 1. Research & Diagnostics | 15 | Market sizing, competitive intel, intent signals, win/loss analysis |
-| 2. Strategy & Positioning | 14 | ICP, personas, messaging matrix, pricing, launch planning |
-| 3. Infrastructure & Data | 12 | Email infra, CRM design, enrichment waterfalls, Clay tables, n8n workflows |
-| 4. Prospecting & List Building | 11 | TAM building, signal-based lists, contact finding, micro-campaigns |
-| 5. Outreach & Sequences | 15 | Cold email, LinkedIn, calls, multi-threading, A/B testing |
-| 6. Content & Demand Gen | 16 | LinkedIn posts, lead magnets, SEO, newsletters, ad copy |
-| 7. Sales Enablement | 13 | Battlecards, proposals, discovery frameworks, deal coaching |
-| 8. ABM & Account Plays | 8 | Account-level campaigns, executive briefings, expansion plays |
-| 9. RevOps & Operations | 10 | Sales process, territories, forecasting, handoffs, deal desk |
-| 10. Customer Success | 8 | Health scoring, churn prevention, upsell triggers, advocacy |
-| 11. Partnerships | 6 | Partner programs, co-marketing, channel enablement |
-| 12. Event Marketing | 6 | Event GTM, conference talks, booth strategy, ROI tracking |
-| 13. Analytics & Optimization | 10 | Campaign analysis, pipeline audits, attribution, experiments |
-| 14. Freelancer & Agency | 7 | Scoping, SOWs, client reports, positioning, productizing |
+| Pack | Skills | What it covers |
+|------|--------|---------------|
+| GTM Foundations | 16 | ICP, positioning, personas, messaging, pricing, competitive intel |
+| Outbound Engine | 15 | Cold email, LinkedIn, calls, sequences, nurture, list building |
+| Content Machine | 15 | LinkedIn, blogs, SEO, ads, video, lead magnets, newsletters |
+| Signal Campaigns | 12 | Signal-based lists, trigger campaigns, prospecting tools |
+| ABM Playbook | 12 | Account mapping, executive outreach, multi-threading, LinkedIn ads |
+| Sales Enablement | 16 | Battlecards, proposals, discovery, QBRs, coaching, demos |
+| RevOps & Infra | 16 | Email infra, CRM, enrichment, comp, capacity, automation |
+| Customer Growth | 14 | Health scoring, churn, upsell, partner programs, referrals |
+| Events & Field | 11 | Event strategy, conferences, booth, webinars, ROI tracking |
+| Analytics & Ops | 17 | Campaign analysis, attribution, dashboards, experiments |
+| Freelancer & Agency | 10 | Scoping, onboarding, reporting, case studies, positioning |
 
 **All 151 skills are production-ready.** 28,500+ lines of structured GTM methodology.
 
@@ -168,265 +165,244 @@ The skills are generic by default. To make them specific to your business:
 ## Full Skill Index
 
 <details>
-<summary><strong>Phase 1 -- Research & Diagnostics (15 skills)</strong></summary>
+<summary><strong>GTM Foundations (16 skills)</strong></summary>
 
 | Skill | What it does |
 |-------|-------------|
-| `gtm-diagnostic` | Score GTM maturity across 7 dimensions |
-| `competitor-analysis` | Deep competitive intel with ad intelligence |
-| `intent-signals` | Map and prioritize buying signals |
-| `market-sizing` | TAM/SAM/SOM estimation with sourced data |
-| `icp-challenger` | Stress-test ICP assumptions against market data |
-| `customer-interview-guide` | Generate timed interview scripts with follow-up branches |
-| `win-loss-analyzer` | Extract patterns from won/lost/stalled deals |
-| `tech-stack-analyzer` | Research prospect tech stack from public sources |
-| `pricing-analyzer` | Analyze competitor pricing models and feature gates |
-| `channel-fit-scorer` | Score channel-market fit for GTM channels |
-| `signal-monitor-setup` | Design always-on signal monitoring system |
-| `industry-briefing` | One-page industry primer for new verticals |
-| `g2-review-miner` | Extract pain points from review platforms |
-| `job-posting-analyzer` | Decode company priorities from job postings |
-| `voice-of-customer-extractor` | Extract VoC themes from interviews and reviews |
+| `buying-committee-mapper` | Map 6 decision-maker roles with objections, entry strategies, and cold openers per role |
+| `category-designer` | Define or redefine your competitive category |
+| `channel-fit-scorer` | Evaluate which GTM channels fit your ICP, ACV, and sales cycle |
+| `competitor-analysis` | Deep competitive intelligence with positioning comparison and differentiation matrix |
+| `gtm-diagnostic` | Score a company's GTM maturity across 7 dimensions and produce a prioritized fix plan |
+| `gtm-triangle-builder` | Build a complete GTM Triangle with positioning, ICPs, personas, value mapping, and channels |
+| `icp-challenger` | Stress-test ICP assumptions against data and research |
+| `icp-model-creator` | Create a comprehensive ICP document with 10 sections from source material and research |
+| `industry-briefing` | Produce a market brief for a new vertical or industry |
+| `intent-signals` | Map buying signals for a market with capture methods and messaging angles per signal |
+| `market-sizing` | Estimate TAM/SAM/SOM from ICP criteria |
+| `messaging-matrix` | Generate a full messaging matrix crossing value pillars with personas |
+| `persona-deep-dive` | Create a rich, research-backed buyer persona profile |
+| `pricing-strategy` | Design pricing and packaging strategy with model selection, tier structure, and competitive anchoring |
+| `sales-narrative-generator` | Generate per-persona sales narratives using the 6-part storyline framework |
+| `value-prop-mapper` | Map features to benefits to value outcomes for each persona |
 
 </details>
 
 <details>
-<summary><strong>Phase 2 -- Strategy & Positioning (14 skills)</strong></summary>
+<summary><strong>Outbound Engine (15 skills)</strong></summary>
 
 | Skill | What it does |
 |-------|-------------|
-| `icp-model-creator` | Build comprehensive ICP document |
-| `gtm-triangle-builder` | Positioning + ICP + personas + channels |
-| `buying-committee-mapper` | Map 6 decision-maker roles with entry strategies |
-| `sales-narrative-generator` | 6-part storyline per persona |
-| `value-prop-mapper` | Map features to benefits to value by persona |
-| `objection-library` | Compile objections with reframes and proof |
-| `persona-deep-dive` | Detailed persona profile with psychographics |
-| `messaging-matrix` | Message variants by persona x stage x channel |
-| `category-designer` | Design or redefine your market category |
-| `case-study-builder` | Structure engagement results into case study |
-| `pitch-deck-outliner` | Outline investor or sales deck |
-| `account-tiering-model` | Score and tier accounts by fit + intent + access |
-| `pricing-strategy` | Design pricing tiers, metrics, and migration plan |
-| `launch-strategy` | Plan product/feature launch end-to-end |
+| `ab-test-designer` | Design A/B tests for outbound campaigns with variables, sample sizes, and analysis frameworks |
+| `build-prospect-list` | Build a qualified prospect list with ICP scoring and outreach angles per row |
+| `cold-call-script` | Generate a cold call script with opener, qualifying questions, objection handles, and voicemail |
+| `cold-email-writer` | Write a high-converting cold email using PAS or AIDA framework |
+| `contact-finder` | Find the right contacts at target accounts with buying committee mapping |
+| `follow-up-sequence` | Write a follow-up sequence for prospects who opened but didn't reply |
+| `inbound-follow-up-sequence` | Write follow-up sequences for inbound leads by source type |
+| `lead-enricher` | Enrich companies and contacts with firmographic, technographic, and intent data |
+| `linkedin-message-writer` | Write LinkedIn connection requests and follow-up message sequences |
+| `nurture-sequence-writer` | Write a long-term nurture sequence with 8-12 touches over 3-6 months |
+| `outreach-personalizer` | Generate personalization snippets from prospect research across 5 angles |
+| `referral-email` | Write an internal referral request with a forwardable message |
+| `reply-handler` | Generate response templates for 8 common reply types in outbound sequences |
+| `subject-line-generator` | Generate 10 subject line variants across 5 categories with A/B test pairings |
+| `write-outbound-sequence` | Create a multichannel outbound sequence with 8-12 touchpoints across email, LinkedIn, and phone |
 
 </details>
 
 <details>
-<summary><strong>Phase 3 -- Infrastructure & Data (12 skills)</strong></summary>
+<summary><strong>Content Machine (15 skills)</strong></summary>
 
 | Skill | What it does |
 |-------|-------------|
-| `onboard-client` | Set up new engagement with context files |
-| `domain-setup-guide` | Email infrastructure plan (domains, warmup, DNS) |
-| `crm-field-mapper` | Design CRM field structure and picklists |
-| `lead-scoring-model` | Build Fit + Intent scoring model |
-| `enrichment-waterfall` | Design multi-provider enrichment sequence |
-| `clay-table-designer` | Architect Clay table for a workflow |
-| `crm-hygiene-audit` | Audit CRM data quality with cleanup plan |
-| `deliverability-checker` | Diagnose email deliverability issues |
-| `utm-taxonomy` | Design UTM parameter naming convention |
-| `n8n-workflow-builder` | Generate n8n workflow specifications |
-| `tam-builder` | Build total addressable market list |
-| `tech-stack-auditor` | Audit GTM tool stack for gaps and overlap |
+| `ad-copy-writer` | Write platform-specific ad copy for LinkedIn, Google, and Meta with variants and A/B test pairs |
+| `blog-post-writer` | Write an SEO-optimized blog post with keyword research, competitive analysis, and meta tags |
+| `carousel-outliner` | Outline a LinkedIn carousel with 12-15 slides including headers, body text, and visual direction |
+| `case-study-to-content` | Repurpose a case study into 5-7 LinkedIn post drafts covering different angles |
+| `content-calendar` | Generate a 4-week content calendar with 12 posts balanced across angles and formats |
+| `content-performance-analyzer` | Analyze content performance and recommend next pieces |
+| `content-repurposer` | Turn one piece of content into 5+ derivatives across channels |
+| `hook-generator` | Generate 10 hook variants across 5 frameworks with top 3 recommendations |
+| `landing-page-copy` | Write conversion-optimized landing page copy with all sections from hero to FAQ |
+| `lead-magnet-creator` | Design a lead magnet with content outline, visual spec, promotion post, and DM template |
+| `newsletter-writer` | Write a newsletter edition with subject lines, body sections, and CTA |
+| `seo-content-brief` | Create an SEO content brief with keyword research, competitive analysis, and detailed outline |
+| `video-prospecting-script` | Write a 45-second Loom or Vidyard prospecting video script |
+| `write-linkedin-post` | Draft a LinkedIn post with hook variants, CTA options, and visual recommendations |
+| `youtube-script-writer` | Write a YouTube video script with hook, sections, b-roll suggestions, and thumbnail options |
 
 </details>
 
 <details>
-<summary><strong>Phase 4 -- Prospecting & List Building (11 skills)</strong></summary>
+<summary><strong>Signal Campaigns (12 skills)</strong></summary>
 
 | Skill | What it does |
 |-------|-------------|
-| `build-prospect-list` | Build qualified, enriched prospect list |
-| `lead-enricher` | Enrich companies with firmographic + intent data |
-| `contact-finder` | Find buying committee contacts at target accounts |
-| `lookalike-finder` | Find companies matching your best customers |
-| `signal-list-generator` | Generate prospect list from a buying signal |
-| `linkedin-search-builder` | Convert ICP to Sales Navigator searches |
-| `event-prospector` | Build prospect list from event attendees/speakers |
-| `trigger-campaign-designer` | Design micro-campaign around a trigger event |
-| `warm-lead-reactivator` | Re-engage dormant CRM leads |
-| `account-mapper` | Map organization structure and entry points |
-| `email-validator` | Validate and clean email list |
+| `email-validator` | Validate and clean an email list with format checks, risk scoring, and deliverability flags |
+| `event-prospector` | Build a prospect list from event attendees, speakers, and sponsors |
+| `inbound-qualifier` | Qualify inbound leads with a scoring system and response templates |
+| `job-posting-analyzer` | Analyze job postings to infer company priorities and generate outreach angles |
+| `linkedin-search-builder` | Convert ICP criteria into Sales Navigator search configurations and boolean strings |
+| `lookalike-finder` | Find companies that look like your best customers |
+| `signal-list-generator` | Generate a prospect list from a specific buying signal |
+| `signal-monitor-setup` | Generate Clay/n8n/Zapier configurations for monitoring buying signals |
+| `tam-builder` | Build a Total Addressable Market list with ICP scoring and tiering |
+| `tech-stack-analyzer` | Research a prospect's tech stack for sales intelligence and outreach personalization |
+| `trigger-campaign-designer` | Design a micro-campaign around a trigger event with messaging, channels, and timing |
+| `warm-lead-reactivator` | Identify and re-engage dormant CRM leads worth reactivating |
 
 </details>
 
 <details>
-<summary><strong>Phase 5 -- Outreach & Sequences (15 skills)</strong></summary>
+<summary><strong>ABM Playbook (12 skills)</strong></summary>
 
 | Skill | What it does |
 |-------|-------------|
-| `write-outbound-sequence` | Multichannel outbound sequence |
-| `cold-email-writer` | Write cold email with PAS/AIDA framework |
-| `linkedin-message-writer` | Connection requests and follow-up messages |
-| `cold-call-script` | Call script with objection handles |
-| `follow-up-sequence` | 4-touch follow-up for opens-no-reply |
-| `referral-email` | Internal referral request with forwardable message |
-| `video-prospecting-script` | 45-second Loom/Vidyard script |
-| `multi-thread-sequence` | Multi-persona outreach at one account |
-| `reply-handler` | Response templates for 8 reply types |
-| `subject-line-generator` | 10 subject line variants across 5 frameworks |
-| `outreach-personalizer` | Research-based personalization snippets |
-| `event-follow-up` | Post-event follow-up sequences |
-| `ab-test-designer` | Design A/B tests for outbound campaigns |
-| `nurture-sequence-writer` | Long-term nurture over 3-6 months |
-| `inbound-follow-up-sequence` | Source-specific inbound follow-up |
+| `abm-campaign-planner` | Design a full ABM campaign for a target account list with tier-specific plays |
+| `abm-content-mapper` | Map existing content to buying stages and personas for ABM campaigns |
+| `account-expansion-planner` | Plan expansion within existing accounts by identifying new departments, use cases, and contacts |
+| `account-mapper` | Map an organization's structure, departments, and buying committee |
+| `account-play-designer` | Design a custom play for ONE strategic account with stakeholder map and orchestrated outreach |
+| `account-tiering-model` | Design a Tier 1/2/3 account prioritization model with scoring rubrics and resource allocation |
+| `customer-interview-guide` | Generate a structured discovery interview script with synthesis template |
+| `executive-briefing` | Create a personalized C-level briefing with research, business case, and CTA |
+| `gifting-strategy` | Design a direct mail and gifting strategy for top accounts by tier |
+| `linkedin-ads-abm-setup` | Design a LinkedIn Ads ABM campaign spec with targeting, creative, and measurement |
+| `multi-thread-sequence` | Design multi-persona outreach at the same account with coordinated timing |
+| `social-proof-collector` | Generate templates for collecting testimonials, case study interviews, and approval workflows |
 
 </details>
 
 <details>
-<summary><strong>Phase 6 -- Content & Demand Gen (16 skills)</strong></summary>
+<summary><strong>Sales Enablement (16 skills)</strong></summary>
 
 | Skill | What it does |
 |-------|-------------|
-| `write-linkedin-post` | Draft LinkedIn post matching proven patterns |
-| `lead-magnet-creator` | Design lead magnet with promotion plan |
-| `case-study-to-content` | Repurpose case study into 5-7 posts |
-| `blog-post-writer` | SEO-optimized blog post |
-| `newsletter-writer` | Newsletter edition with commentary |
-| `content-calendar` | 4-week content calendar with briefs |
-| `hook-generator` | 10 hook variants across 5 frameworks |
-| `carousel-outliner` | LinkedIn carousel slide-by-slide outline |
-| `content-repurposer` | Turn one piece into 5+ derivatives |
-| `webinar-planner` | Plan webinar end-to-end |
-| `social-proof-collector` | Templates for collecting testimonials |
-| `seo-content-brief` | SEO content brief from keyword research |
-| `ad-copy-writer` | Ad copy for LinkedIn/Google/Meta |
-| `youtube-script-writer` | YouTube video script with b-roll suggestions |
-| `podcast-guest-pitch` | Podcast guest pitch with topic angles |
-| `landing-page-copy` | Conversion-optimized landing page copy |
+| `battlecard-generator` | Create a competitive battlecard for sales conversations |
+| `case-study-builder` | Structure a client result into a compelling case study |
+| `champion-enablement-kit` | Create materials your champion can use to sell internally |
+| `custom-demo-script` | Write a demo script tailored to a specific account — their use case, pain points, competitive context, and success metrics |
+| `deal-strategy-advisor` | Analyze a deal and recommend next steps to advance or disqualify |
+| `discovery-question-set` | Generate discovery questions using MEDDIC, BANT, or SPICED frameworks |
+| `meeting-recap-writer` | Turn raw call notes into a structured meeting recap with action items |
+| `mutual-action-plan` | Generate a mutual action plan (MAP) to drive a deal to close |
+| `objection-library` | Build a structured objection-handling library organized by persona and objection type |
+| `pitch-deck-outliner` | Generate a persona-tailored pitch deck outline with slide-by-slide content and speaker notes |
+| `pre-call-brief` | Generate a one-page pre-call brief for a prospect meeting |
+| `proposal-writer` | Draft a client proposal with executive summary, methodology, timeline, and pricing |
+| `qbr-deck-builder` | Outline a Quarterly Business Review deck with slide-by-slide content and talking points |
+| `roi-calculator` | Build an ROI model with payback period, 3-year projections, and sensitivity analysis |
+| `sales-coaching-analyzer` | Analyze a sales call transcript for coaching insights with scoring and improvement recommendations |
+| `sales-playbook-writer` | Write a comprehensive sales playbook for a market segment with talk tracks, demo flow, objection handling, and close process |
 
 </details>
 
 <details>
-<summary><strong>Phase 7 -- Sales Enablement (13 skills)</strong></summary>
+<summary><strong>RevOps & Infra (16 skills)</strong></summary>
 
 | Skill | What it does |
 |-------|-------------|
-| `pre-call-brief` | One-page pre-call brief from research |
-| `battlecard-generator` | Competitive battlecard with trap questions |
-| `proposal-writer` | Client proposal with tiered pricing |
-| `discovery-question-set` | Discovery questions using MEDDIC/BANT/SPICED |
-| `deal-strategy-advisor` | Deal health analysis with next steps |
-| `qbr-deck-builder` | QBR deck with slide-by-slide content |
-| `roi-calculator` | ROI model with sensitivity analysis |
-| `mutual-action-plan` | Deal MAP working backwards from close date |
-| `champion-enablement-kit` | Materials for your champion to sell internally |
-| `meeting-recap-writer` | Call notes to structured recap email |
-| `sales-coaching-analyzer` | Analyze call transcript for coaching insights |
-| `sales-playbook-writer` | Sales playbook for a segment |
-| `custom-demo-script` | Account-tailored demo script |
+| `capacity-planner` | Model SDR/AE headcount needs by working backwards from pipeline and revenue targets |
+| `clay-table-designer` | Architect a Clay table blueprint for a specific workflow |
+| `compensation-modeler` | Design a sales compensation plan with base/variable split, accelerators, and payout modeling |
+| `crm-field-mapper` | Design CRM field structure with custom fields, picklists, and automation triggers |
+| `crm-hygiene-audit` | Audit CRM data quality and produce a cleanup action plan |
+| `deliverability-checker` | Diagnose email deliverability issues for sending domains |
+| `domain-setup-guide` | Generate email infrastructure plan for cold outbound |
+| `enrichment-waterfall` | Design a multi-provider data enrichment waterfall with fallback logic |
+| `forecast-model` | Build a pipeline forecast with stage-weighted projections and risk flags |
+| `handoff-designer` | Design the marketing-to-sales handoff with MQL criteria, SLA, and routing rules |
+| `lead-scoring-model` | Build a lead scoring model with fit and intent dimensions |
+| `n8n-workflow-builder` | Generate a human-readable n8n workflow specification from a natural language description |
+| `revops-audit` | Audit revenue operations across 6 dimensions with scoring and prioritized fixes |
+| `sales-process-designer` | Design a sales process with stages, entry/exit criteria, and automation triggers |
+| `territory-planner` | Design sales territories with account distribution, capacity modeling, and quota setting |
+| `utm-taxonomy` | Design a UTM parameter taxonomy for tracking marketing campaigns |
 
 </details>
 
 <details>
-<summary><strong>Phase 8 -- ABM & Account Plays (8 skills)</strong></summary>
+<summary><strong>Customer Growth (14 skills)</strong></summary>
 
 | Skill | What it does |
 |-------|-------------|
-| `abm-campaign-planner` | Full ABM campaign with tier-specific plays |
-| `account-play-designer` | Custom play for one strategic account |
-| `abm-content-mapper` | Map content to buying stages x personas |
-| `executive-briefing` | Personalized C-level briefing |
-| `gifting-strategy` | Direct mail/gifting for top accounts |
-| `linkedin-ads-abm-setup` | LinkedIn Ads ABM campaign spec |
-| `account-expansion-planner` | Expansion in existing accounts |
-| `dinner-event-planner` | Executive dinner planning |
+| `advocacy-program` | Build a customer advocacy program with tiers, engagement cadence, and recruitment |
+| `channel-enablement-kit` | Build enablement materials for channel partners |
+| `churn-prevention-playbook` | Create a churn prevention strategy with early warnings, intervention tiers, and win-back sequences |
+| `co-marketing-planner` | Plan a co-marketing campaign with a partner |
+| `customer-health-scorer` | Design a customer health scoring model with weighted dimensions and alert thresholds |
+| `customer-onboarding-planner` | Design a post-sale customer onboarding plan with milestones and time-to-value targets |
+| `integration-partner-brief` | Create a technology partnership brief for an integration |
+| `marketplace-listing-writer` | Write a marketplace listing for a platform |
+| `nps-survey-designer` | Design an NPS/CSAT survey program with follow-up actions by score segment |
+| `partner-pitch-builder` | Write a pitch to recruit a specific partner |
+| `partner-program-designer` | Design a partner program with tiers, benefits, and requirements |
+| `referral-program-designer` | Design a customer referral program with incentives, tracking, and launch plan |
+| `success-plan-template` | Create a customer success plan with goals, KPIs, milestones, and QBR format |
+| `upsell-trigger-mapper` | Map upsell and cross-sell triggers with detection criteria and outreach templates |
 
 </details>
 
 <details>
-<summary><strong>Phase 9 -- RevOps & Operations (10 skills)</strong></summary>
+<summary><strong>Events & Field (11 skills)</strong></summary>
 
 | Skill | What it does |
 |-------|-------------|
-| `sales-process-designer` | Sales stages with entry/exit criteria |
-| `territory-planner` | Territory design with capacity modeling |
-| `compensation-modeler` | Sales comp plan with accelerators |
-| `forecast-model` | Stage-weighted pipeline forecast |
-| `handoff-designer` | Marketing-to-sales handoff process |
-| `deal-desk-playbook` | Discount authority and approval workflows |
-| `capacity-planner` | SDR/AE headcount model |
-| `revops-audit` | Revenue operations audit (6 dimensions) |
-| `onboarding-ramp-plan` | 90-day new rep onboarding plan |
-| `weekly-ritual-designer` | GTM operating rhythm design |
+| `booth-strategy` | Plan a trade show booth strategy |
+| `conference-talk-outliner` | Outline a conference talk with narrative arc and speaker notes |
+| `deal-desk-playbook` | Design deal desk processes with discount authority, approval workflows, and pricing exceptions |
+| `dinner-event-planner` | Plan an executive dinner event with guest selection, invitation sequence, and follow-up |
+| `event-follow-up` | Write post-event follow-up sequences for speakers, attendees, and booth visitors |
+| `event-gtm-playbook` | Create a full event GTM strategy with pre-event, during-event, and post-event plans |
+| `event-invitation-writer` | Write event invitation email sequences |
+| `field-event-roi-tracker` | Create an event ROI tracking framework |
+| `podcast-guest-pitch` | Write a podcast guest pitch with show research, topic angles, and bio |
+| `webinar-planner` | Plan a webinar end-to-end with agenda, promotion plan, follow-up sequence, and repurposing strategy |
+| `workshop-designer` | Design a hands-on workshop with exercises and takeaway materials |
 
 </details>
 
 <details>
-<summary><strong>Phase 10 -- Customer Success (8 skills)</strong></summary>
+<summary><strong>Analytics & Ops (17 skills)</strong></summary>
 
 | Skill | What it does |
 |-------|-------------|
-| `customer-health-scorer` | Health scoring model with alert thresholds |
-| `churn-prevention-playbook` | Early warning signals and intervention tiers |
-| `nps-survey-designer` | NPS/CSAT program with follow-up actions |
-| `referral-program-designer` | Referral program design |
-| `advocacy-program` | Customer advocacy program (3 tiers) |
-| `upsell-trigger-mapper` | Map upsell/cross-sell triggers |
-| `customer-onboarding-planner` | Post-sale onboarding milestones |
-| `success-plan-template` | Customer success plan with KPIs |
+| `ab-test-analyzer` | Analyze A/B test results with statistical rigor |
+| `attribution-modeler` | Design a marketing attribution model |
+| `campaign-analyzer` | Analyze campaign performance with segmented metrics and recommendations |
+| `cohort-analyzer` | Analyze customer cohorts for retention, LTV, and patterns |
+| `content-performance-analyzer` | Analyze content performance and recommend next pieces |
+| `conversion-funnel-auditor` | Audit a conversion funnel to find and fix drop-off points |
+| `experiment-designer` | Design a GTM experiment with hypothesis, parameters, and analysis framework |
+| `g2-review-miner` | Extract themes from G2/Capterra reviews for competitive intelligence and messaging angles |
+| `onboarding-ramp-plan` | Design a 90-day new rep onboarding and ramp plan with milestones and knowledge checks |
+| `outbound-dashboard-spec` | Design a reporting dashboard for outbound and GTM metrics |
+| `pipeline-health-check` | Audit pipeline health with stage distribution, velocity, and coverage analysis |
+| `pricing-analyzer` | Analyze competitor pricing models and produce a positioning-ready landscape |
+| `tech-stack-auditor` | Audit the GTM tech stack for overlap, gaps, and cost efficiency |
+| `voice-of-customer-extractor` | Synthesize customer language from transcripts, tickets, and reviews into a vocabulary map |
+| `weekly-gtm-report` | Generate a weekly GTM report with metrics, pipeline, and priorities |
+| `weekly-ritual-designer` | Design a GTM operating rhythm with weekly, monthly, and quarterly meetings |
+| `win-loss-analyzer` | Analyze closed deals to extract win/loss patterns and improve sales strategy |
 
 </details>
 
 <details>
-<summary><strong>Phase 11 -- Partnerships (6 skills)</strong></summary>
+<summary><strong>Freelancer & Agency (10 skills)</strong></summary>
 
 | Skill | What it does |
 |-------|-------------|
-| `partner-program-designer` | Partner program with tiers and benefits |
-| `co-marketing-planner` | Joint campaign with lead split rules |
-| `partner-pitch-builder` | Partner recruitment pitch |
-| `integration-partner-brief` | Tech partnership brief |
-| `channel-enablement-kit` | Partner sales materials and certification |
-| `marketplace-listing-writer` | Marketplace listing copy |
-
-</details>
-
-<details>
-<summary><strong>Phase 12 -- Event Marketing (6 skills)</strong></summary>
-
-| Skill | What it does |
-|-------|-------------|
-| `event-gtm-playbook` | Full pre/during/post event strategy |
-| `conference-talk-outliner` | Conference talk with narrative arc |
-| `booth-strategy` | Trade show booth plan |
-| `workshop-designer` | Hands-on workshop design |
-| `field-event-roi-tracker` | Event ROI framework |
-| `event-invitation-writer` | 4-touch invitation sequence |
-
-</details>
-
-<details>
-<summary><strong>Phase 13 -- Analytics & Optimization (10 skills)</strong></summary>
-
-| Skill | What it does |
-|-------|-------------|
-| `campaign-analyzer` | Campaign performance with scale/kill/test recs |
-| `pipeline-health-check` | Pipeline audit with coverage and velocity |
-| `outbound-dashboard-spec` | Reporting dashboard design |
-| `ab-test-analyzer` | A/B test results with significance check |
-| `attribution-modeler` | Attribution model design |
-| `conversion-funnel-auditor` | Funnel drop-off analysis |
-| `cohort-analyzer` | Customer cohort analysis (retention, LTV) |
-| `experiment-designer` | Structured GTM experiment design |
-| `weekly-gtm-report` | One-page weekly GTM report |
-| `content-performance-analyzer` | Content ROI and pattern analysis |
-
-</details>
-
-<details>
-<summary><strong>Phase 14 -- Freelancer & Agency (7 skills)</strong></summary>
-
-| Skill | What it does |
-|-------|-------------|
-| `client-engagement-scoper` | Scope engagement with discovery |
-| `sow-generator` | Statement of Work generator |
-| `client-report-writer` | Client progress report |
-| `case-study-from-engagement` | Extract publishable case study |
-| `freelancer-positioning` | Personal positioning and LinkedIn copy |
-| `service-productizer` | Turn service into productized offering |
-| `inbound-qualifier` | Qualify inbound leads with scorecard |
+| `case-study-from-engagement` | Extract a publishable case study from a client engagement |
+| `client-engagement-scoper` | Scope a client engagement with deliverables, timeline, and pricing |
+| `client-report-writer` | Write a client progress report with results and next steps |
+| `freelancer-positioning` | Define personal positioning for a freelancer or consultant |
+| `gtm-diagnostic` | Score a company's GTM maturity across 7 dimensions and produce a prioritized fix plan |
+| `inbound-qualifier` | Qualify inbound leads with a scoring system and response templates |
+| `launch-strategy` | Plan a product or feature launch with tiered strategy and channel activation timeline |
+| `onboard-client` | Set up a new client engagement with context file, discovery questions, infra checklist, and timeline |
+| `service-productizer` | Turn a service into a productized offering with fixed scope and pricing |
+| `sow-generator` | Generate a Statement of Work from engagement details |
 
 </details>
 
