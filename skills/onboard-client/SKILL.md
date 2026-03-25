@@ -1,6 +1,10 @@
 ---
+name: onboard-client
 description: Set up a new client engagement with context file, discovery questions, infra checklist, and timeline
-tools: Read, Write, WebFetch, WebSearch
+allowed-tools: Read, Write, WebFetch, WebSearch
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Onboard Client

@@ -1,6 +1,10 @@
 ---
+name: upsell-trigger-mapper
 description: Map upsell and cross-sell triggers with detection criteria and outreach templates. Use when someone says "upsell triggers", "cross-sell", "expansion triggers", "upsell signals", "revenue expansion", "growth signals", or "expansion playbook"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Upsell Trigger Mapper
@@ -23,15 +27,15 @@ If product catalog is missing, ask: "What products, tiers, or add-ons can custom
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/ops/upsell-triggers.md` if it exists. If found, present a summary and ask: "An upsell trigger map already exists with {N} triggers. Do you want me to (a) add triggers, (b) update templates, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "An upsell trigger map already exists with {N} triggers. Do you want me to (a) add triggers, (b) update templates, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/ops/customer-health-model.md` -- only upsell healthy accounts
-2. `docs/ops/customer-onboarding.md` -- onboarding milestones that unlock upsell
-3. `docs/sales/expansion-*.md` -- existing expansion plans
+1. **Customer Health Model** documents -- only upsell healthy accounts
+2. **Customer Onboarding** documents -- onboarding milestones that unlock upsell
+3. **Expansion** documents -- existing expansion plans
 4. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Define Usage-Based Triggers
@@ -108,7 +112,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/ops/upsell-triggers.md`:
+Save the output to your project. Suggested filename: `upsell-triggers.md`
 
 ```markdown
 # Upsell and Cross-Sell Trigger Map

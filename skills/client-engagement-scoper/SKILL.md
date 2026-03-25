@@ -1,6 +1,10 @@
 ---
+name: client-engagement-scoper
 description: Scope a client engagement with deliverables, timeline, and pricing. Use when someone says "scope engagement", "client proposal", "scope project", "write proposal", "engagement scope", "project scope", or "client scoping"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Client Engagement Scoper
@@ -21,16 +25,16 @@ If client info or needs are missing, ask: "I need to know who the client is and 
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/sales/proposals/scope-{client-slug}.md` if it exists. If found, present a summary and ask: "A scope for this client already exists. Do you want me to (a) update it, (b) scope a new engagement, or (c) keep it?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A scope for this client already exists. Do you want me to (a) update it, (b) scope a new engagement, or (c) keep it?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/gtm-triangle.md` -- your positioning and ICP
-2. `docs/sales/proposals/*.md` -- prior proposals for format consistency
-3. `docs/case-studies/*.md` -- relevant proof points
-4. `docs/sales/productized-offer-*.md` -- productized offerings that might fit
+1. **GTM Triangle** -- your positioning and ICP
+2. **Proposals** documents -- prior proposals for format consistency
+3. **Case studies** -- relevant proof points
+4. **Productized Offer** documents -- productized offerings that might fit
 5. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Run Discovery (10 Scoping Questions)
@@ -130,7 +134,7 @@ Structure the proposal:
 
 ## Output Format
 
-Save to `docs/sales/proposals/scope-{client-slug}.md`:
+Save the output to your project. Suggested filename: `scope-{client-slug}.md`
 
 ```markdown
 # Engagement Proposal: {Client Name}

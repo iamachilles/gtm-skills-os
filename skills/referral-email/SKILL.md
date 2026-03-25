@@ -1,6 +1,10 @@
 ---
+name: referral-email
 description: Write an internal referral request with a forwardable message. Use when someone says "referral email", "ask for referral", "internal intro", "get introduced", "warm intro", "referral request", or "forward to the right person"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Referral Email
@@ -21,15 +25,15 @@ If contact name, target, or context is missing, ask: "I need three things: who y
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/sequences/referral-request.md` if it exists. If found, present a summary and ask: "A referral request template already exists. Do you want me to (a) create a new one for a different contact, (b) refine the existing one, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A referral request template already exists. Do you want me to (a) create a new one for a different contact, (b) refine the existing one, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/personas/{target-persona-slug}.md` -- target person's profile if available
-2. `docs/messaging-matrix.md` -- relevant messaging for the target persona
-3. `docs/sales-narratives.md` -- narrative context if available
+1. **Persona profiles** -- target person's profile if available
+2. **Messaging matrix** -- relevant messaging for the target persona
+3. **Sales narratives** -- narrative context if available
 4. `CLAUDE.md` -- project-level instructions
 
 Understand the relationship dynamic: the contact is doing you a favor. The request must be easy to say yes to.
@@ -84,7 +88,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/sequences/referral-request.md`:
+Save the output to your project. Suggested filename: `referral-request.md`
 
 ```markdown
 # Referral Request: {Contact Name} -> {Target Name/Role}

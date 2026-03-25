@@ -1,6 +1,10 @@
 ---
+name: linkedin-ads-abm-setup
 description: Design a LinkedIn Ads ABM campaign spec with targeting, creative, and measurement. Use when someone says "LinkedIn ads", "LinkedIn ABM ads", "LinkedIn campaign", "matched audiences", "LinkedIn advertising", "LinkedIn ad strategy", or "account-targeted ads"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # LinkedIn Ads ABM Setup
@@ -24,16 +28,16 @@ If account list is missing, ask: "I need your target account list for the matche
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/content/linkedin-ads-abm-{campaign-slug}.md` if it exists. If found, present a summary and ask: "A LinkedIn Ads spec already exists for {campaign}. Do you want me to (a) update the creative strategy, (b) adjust targeting, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A LinkedIn Ads spec already exists for {campaign}. Do you want me to (a) update the creative strategy, (b) adjust targeting, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/account-tiering-model.md` -- tier definitions for targeting
-2. `docs/personas/*.md` -- persona details for audience building
-3. `docs/messaging-matrix.md` -- messaging by persona
-4. `docs/content/abm-content-map.md` -- available content for ads
+1. **Account tiering model** -- tier definitions for targeting
+2. **Persona profiles** -- persona details for audience building
+3. **Messaging matrix** -- messaging by persona
+4. **Abm Content Map** documents -- available content for ads
 5. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Configure Matched Audience
@@ -122,7 +126,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/content/linkedin-ads-abm-{campaign-slug}.md`:
+Save the output to your project. Suggested filename: `linkedin-ads-abm-{campaign-slug}.md`
 
 ```markdown
 # LinkedIn Ads ABM: {Campaign Name}

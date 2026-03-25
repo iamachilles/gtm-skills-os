@@ -1,6 +1,10 @@
 ---
+name: pre-call-brief
 description: Generate a one-page pre-call brief for a prospect meeting. Trigger phrases — "pre-call brief", "prep for call", "meeting prep", "research prospect", "brief me on {company}", "call prep"
-tools: Read, Write, WebSearch
+allowed-tools: Read, Write, WebSearch
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Pre-Call Brief
@@ -21,15 +25,15 @@ If company name is missing, ask: "Which company is the call with? I'll research 
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/sales/pre-call-{company-slug}.md` if it exists. If found, present a summary and ask: "A pre-call brief for {company} already exists (dated {date}). Do you want me to (a) refresh with new data, or (b) start from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A pre-call brief for {company} already exists (dated {date}). Do you want me to (a) refresh with new data, or (b) start from scratch?" 
 
 ### Step 1 -- Load Context
 
 Read available context files:
 
-1. `docs/icp.md` -- qualification criteria to assess fit
-2. `docs/gtm-triangle.md` -- positioning and messaging context
-3. `docs/personas/` -- relevant persona files for the contact's role
+1. **ICP definition** -- qualification criteria to assess fit
+2. **GTM Triangle** -- positioning and messaging context
+3. **Persona profiles** -- relevant persona files for the contact's role
 4. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Research the Company
@@ -96,7 +100,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/sales/pre-call-{company-slug}.md`:
+Save the output to your project. Suggested filename: `pre-call-{company-slug}.md`
 
 ```markdown
 # Pre-Call Brief: {Company Name}

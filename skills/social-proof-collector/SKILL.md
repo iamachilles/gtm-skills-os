@@ -1,6 +1,10 @@
 ---
+name: social-proof-collector
 description: Generate templates for collecting testimonials, case study interviews, and approval workflows. Use when someone says "collect testimonials", "social proof", "get reviews", "testimonial request", "client feedback", or "case study interview"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Social Proof Collector
@@ -21,15 +25,15 @@ No required inputs. This skill generates reusable templates. If client context i
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/content/social-proof-templates.md`. If found, ask: "Social proof templates already exist. Do you want me to (a) add new templates, (b) personalize for a specific client, or (c) rebuild?"
+Read content documents. If found, ask: "Social proof templates already exist. Do you want me to (a) add new templates, (b) personalize for a specific client, or (c) rebuild?"
 
 ### Step 1 -- Load Context
 
 Read available context:
 
-1. `docs/case-studies/*.md` -- existing case studies
-2. `docs/personas/*.md` -- who provides testimonials
-3. `docs/value-prop-matrix.md` -- what outcomes to highlight
+1. **Case studies** -- existing case studies
+2. **Persona profiles** -- who provides testimonials
+3. **Value proposition mapping** -- what outcomes to highlight
 4. `CLAUDE.md` -- project-level instructions
 
 Identify:
@@ -122,7 +126,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/content/social-proof-templates.md`:
+Save the output to your project. Suggested filename: `social-proof-templates.md`
 
 ```markdown
 # Social Proof Collection Templates

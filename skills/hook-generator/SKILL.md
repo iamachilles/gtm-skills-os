@@ -1,6 +1,10 @@
 ---
+name: hook-generator
 description: Generate 10 hook variants across 5 frameworks with top 3 recommendations. Use when someone says "write hooks", "hook variants", "opening lines", "post openers", "first line options", or "hook ideas"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Hook Generator
@@ -22,14 +26,14 @@ If topic is missing, ask: "What's the post about? Give me the topic and, if you 
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/content/hooks-{topic-slug}.md`. If found, ask: "Hooks for [topic] already exist. Do you want me to (a) add more variants, (b) rewrite with a different angle, or (c) start fresh?"
+Read content documents. If found, ask: "Hooks for [topic] already exist. Do you want me to (a) add more variants, (b) rewrite with a different angle, or (c) start fresh?"
 
 ### Step 1 -- Load Context
 
 Read available context:
 
-1. `docs/content-strategy.md` -- content themes and voice
-2. `docs/personas/*.md` -- who reads this content
+1. **Content strategy** -- content themes and voice
+2. **Persona profiles** -- who reads this content
 3. `CLAUDE.md` -- project-level instructions
 
 Identify:
@@ -102,7 +106,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/content/hooks-{topic-slug}.md`:
+Save the output to your project. Suggested filename: `hooks-{topic-slug}.md`
 
 ```markdown
 # Hook Variants: [Topic]

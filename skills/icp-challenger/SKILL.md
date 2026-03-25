@@ -1,6 +1,10 @@
 ---
+name: icp-challenger
 description: Stress-test ICP assumptions against data and research. Trigger phrases — "challenge the ICP", "stress test ICP", "validate ICP", "ICP assumptions", "are we targeting the right companies"
-tools: Read, Write, WebSearch
+allowed-tools: Read, Write, WebSearch
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # ICP Challenger
@@ -11,8 +15,8 @@ Most ICPs are built on a mix of data, intuition, and hope. This skill separates 
 
 ## Inputs
 
-- **ICP document** (required) — an existing ICP to challenge. If `docs/icp.md` exists, load it automatically.
-- **Win-loss data** (optional) — if `docs/analytics/win-loss-analysis.md` exists, load it to cross-reference
+- **ICP document** (required) — an existing ICP to challenge. If ICP document exists, load it automatically.
+- **Win-loss data** (optional) — if analytics documents exists, load it to cross-reference
 - **Deal data or CRM export** (optional) — closed-won and closed-lost customer data for validation
 - **Market signals** (optional) — any new information that might invalidate current assumptions (market shifts, new competitors, regulation changes)
 - **Specific concerns** (optional) — particular assumptions the user wants tested
@@ -24,10 +28,10 @@ If no ICP document exists, stop and suggest running `icp-model-creator` first.
 ### Step 1 — Load All Available Context
 
 Read existing project documents:
-- `docs/icp.md` — the ICP being challenged (required)
-- `docs/analytics/win-loss-analysis.md` — deal outcome patterns
-- `docs/competitors/competitive-analysis.md` — competitive landscape
-- `docs/market-sizing.md` — market size assumptions
+- ICP document — the ICP being challenged (required)
+- analytics documents — deal outcome patterns
+- competitive analysis — competitive landscape
+- market sizing.md documents — market size assumptions
 - `CLAUDE.md` — company context
 
 Extract every explicit and implicit assumption from the ICP. An assumption is any statement that could be wrong. Examples:
@@ -129,7 +133,7 @@ Before saving, verify:
 
 ## Output Format
 
-Save to `docs/icp-challenge.md`:
+Save the output to your project. Suggested filename: `icp-challenge.md`
 
 ```markdown
 # ICP Challenge Report: [Product/Company Name]

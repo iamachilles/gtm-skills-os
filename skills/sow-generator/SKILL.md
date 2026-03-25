@@ -1,6 +1,10 @@
 ---
+name: sow-generator
 description: Generate a Statement of Work from engagement details. Use when someone says "statement of work", "SOW", "write SOW", "generate SOW", "contract scope", "engagement agreement", or "formal scope document"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # SOW Generator
@@ -19,14 +23,14 @@ If engagement details are missing, ask: "I need the client name, scope, delivera
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/sales/sow-{client-slug}.md` if it exists. If found, present a summary and ask: "A SOW for this client already exists. Do you want me to (a) update it, (b) create a new one for a different engagement, or (c) keep it?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A SOW for this client already exists. Do you want me to (a) update it, (b) create a new one for a different engagement, or (c) keep it?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/sales/proposals/scope-{client-slug}.md` -- approved proposal
-2. `docs/sales/sow-*.md` -- prior SOWs for format consistency
+1. **Scope Client** documents -- approved proposal
+2. **Sow** documents -- prior SOWs for format consistency
 3. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Write Objectives
@@ -119,7 +123,7 @@ Define how scope changes are handled:
 
 ## Output Format
 
-Save to `docs/sales/sow-{client-slug}.md`:
+Save the output to your project. Suggested filename: `sow-{client-slug}.md`
 
 ```markdown
 # Statement of Work: {Client Name}

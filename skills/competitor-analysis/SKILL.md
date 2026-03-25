@@ -1,6 +1,10 @@
 ---
+name: competitor-analysis
 description: Deep competitive intelligence with positioning comparison and differentiation matrix
-tools: Read, Write, WebFetch, WebSearch
+allowed-tools: Read, Write, WebFetch, WebSearch
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Competitor Analysis

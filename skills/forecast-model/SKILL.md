@@ -1,6 +1,10 @@
 ---
+name: forecast-model
 description: Build a pipeline forecast with stage-weighted projections and risk flags. Use when someone says "forecast", "pipeline forecast", "revenue forecast", "deal forecast", "predict revenue", "forecast model", or "pipeline analysis"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Forecast Model
@@ -23,15 +27,15 @@ If pipeline data is missing, ask: "I need your current pipeline by stage. For ea
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/analytics/forecast-model.md` if it exists. If found, present a summary and ask: "A forecast model exists for {period}. Do you want me to (a) refresh with new pipeline data, (b) update conversion rates, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A forecast model exists for {period}. Do you want me to (a) refresh with new pipeline data, (b) update conversion rates, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/ops/sales-process.md` -- stage definitions and probabilities
-2. `docs/ops/territory-plan.md` -- quota context
-3. `docs/analytics/` -- historical data if available
+1. **Sales Process** documents -- stage definitions and probabilities
+2. **Territory Plan** documents -- quota context
+3. **Analytics** documents -- historical data if available
 4. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Define Stage Conversion Rates
@@ -122,7 +126,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/analytics/forecast-model.md`:
+Save the output to your project. Suggested filename: `forecast-model.md`
 
 ```markdown
 # Pipeline Forecast: {Period}

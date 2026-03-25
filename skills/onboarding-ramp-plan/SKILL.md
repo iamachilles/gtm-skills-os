@@ -1,6 +1,10 @@
 ---
+name: onboarding-ramp-plan
 description: Design a 90-day new rep onboarding and ramp plan with milestones and knowledge checks. Use when someone says "onboarding plan", "rep onboarding", "ramp plan", "new hire plan", "sales onboarding", "SDR onboarding", "AE ramp", or "training plan"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Onboarding Ramp Plan
@@ -24,16 +28,16 @@ If role is missing, ask: "Which role is this onboarding plan for? I need the rol
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/ops/onboarding-plan.md` if it exists. If found, present a summary and ask: "An onboarding plan already exists for {role}. Do you want me to (a) update the timeline, (b) add certification milestones, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "An onboarding plan already exists for {role}. Do you want me to (a) update the timeline, (b) add certification milestones, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/ops/sales-process.md` -- the process they'll execute
-2. `docs/ops/compensation-model.md` -- ramp quota structure
-3. `docs/personas/*.md` -- who they'll sell to
-4. `docs/messaging-matrix.md` -- how to talk about the product
+1. **Sales Process** documents -- the process they'll execute
+2. **Compensation Model** documents -- ramp quota structure
+3. **Persona profiles** -- who they'll sell to
+4. **Messaging matrix** -- how to talk about the product
 5. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Design Week 1-2: Foundation
@@ -125,7 +129,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/ops/onboarding-plan.md`:
+Save the output to your project. Suggested filename: `onboarding-plan.md`
 
 ```markdown
 # Onboarding Plan: {Role}

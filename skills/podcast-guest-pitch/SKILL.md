@@ -1,6 +1,10 @@
 ---
+name: podcast-guest-pitch
 description: Write a podcast guest pitch with show research, topic angles, and bio. Use when someone says "podcast pitch", "pitch a podcast", "guest on a podcast", "podcast outreach", "get on a show", or "podcast guest"
-tools: Read, Write, WebSearch
+allowed-tools: Read, Write, WebSearch
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Podcast Guest Pitch
@@ -22,15 +26,15 @@ If show name or topic angle are missing, ask: "Which podcast are you pitching, a
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/content/podcast-pitch-{show-slug}.md`. If found, ask: "A pitch for [show name] already exists. Do you want me to (a) update with a new angle, (b) refresh the research, or (c) rewrite?"
+Read content documents. If found, ask: "A pitch for [show name] already exists. Do you want me to (a) update with a new angle, (b) refresh the research, or (c) rewrite?"
 
 ### Step 1 -- Load Context
 
 Read available context:
 
-1. `docs/gtm-triangle.md` -- your positioning
-2. `docs/personas/*.md` -- your expertise areas
-3. `docs/content-strategy.md` -- content themes
+1. **GTM Triangle** -- your positioning
+2. **Persona profiles** -- your expertise areas
+3. **Content strategy** -- content themes
 4. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Research the Show
@@ -109,7 +113,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/content/podcast-pitch-{show-slug}.md`:
+Save the output to your project. Suggested filename: `podcast-pitch-{show-slug}.md`
 
 ```markdown
 # Podcast Pitch: [Show Name]

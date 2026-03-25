@@ -1,6 +1,10 @@
 ---
+name: sales-narrative-generator
 description: Generate per-persona sales narratives using the 6-part storyline framework
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Sales Narrative Generator

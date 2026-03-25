@@ -1,6 +1,10 @@
 ---
+name: g2-review-miner
 description: Extract themes from G2/Capterra reviews for competitive intelligence and messaging angles. Use when someone asks "analyze reviews", "what do customers say about", "competitor review analysis", "G2 review mining", "review themes", or "customer complaints about [product]"
-tools: Read, Write, WebFetch, WebSearch
+allowed-tools: Read, Write, WebFetch, WebSearch
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # G2 Review Miner
@@ -23,8 +27,8 @@ If product name is missing, ask before proceeding.
 ### Step 1 — Load Context
 
 Check for and read these files if they exist:
-- `docs/competitors/{product-slug}-*.md` — existing competitor analysis
-- `docs/icp.md` — buyer personas to align messaging angles
+- competitive analysis — existing competitor analysis
+- ICP document — buyer personas to align messaging angles
 - `CLAUDE.md` — project context
 
 ### Step 2 — Search for Reviews
@@ -124,7 +128,7 @@ Before saving, verify:
 
 ## Output Format
 
-Save to `docs/competitors/{product-slug}-review-analysis.md`:
+Save the output to your project. Suggested filename: `{product-slug}-review-analysis.md`
 
 ```
 # Review Analysis: [Product Name]

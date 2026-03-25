@@ -1,6 +1,10 @@
 ---
+name: value-prop-mapper
 description: Map features to benefits to value outcomes for each persona. Use when someone says "map value props", "feature benefit mapping", "value proposition matrix", "connect features to outcomes", or "what value do we deliver per persona"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Value Prop Mapper
@@ -22,14 +26,14 @@ If persona profiles or product description are missing, ask: "I need persona pro
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/value-prop-matrix.md` if it exists. If found, present a summary and ask: "A value prop matrix already exists. Do you want me to (a) refine it with new information, (b) overwrite it completely, or (c) merge new personas/features into the existing matrix?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A value prop matrix already exists. Do you want me to (a) refine it with new information, (b) overwrite it completely, or (c) merge new personas/features into the existing matrix?" 
 
 ### Step 1 -- Load Context
 
 Read all available context in this order:
 
-1. `docs/gtm-triangle.md` -- positioning, ICP, and persona summaries
-2. `docs/personas/*.md` -- detailed persona profiles
+1. **GTM Triangle** -- positioning, ICP, and persona summaries
+2. **Persona profiles** -- detailed persona profiles
 3. `CLAUDE.md` -- project-level instructions
 4. Any product documentation, feature lists, or capability decks provided by the user
 
@@ -94,7 +98,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/value-prop-matrix.md`:
+Save the output to your project. Suggested filename: `value-prop-matrix.md`
 
 ```markdown
 # Value Proposition Matrix: [Company/Product Name]

@@ -1,6 +1,10 @@
 ---
+name: category-designer
 description: Define or redefine your competitive category. Use when someone says "category design", "create a category", "define our category", "category of one", "redefine the market", "category creation", or "what category are we in"
-tools: Read, Write, WebSearch
+allowed-tools: Read, Write, WebSearch
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Category Designer
@@ -23,15 +27,15 @@ If company or current category is missing, ask: "I need your company name and th
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/category-design.md` if it exists. If found, present a summary and ask: "A category design document already exists for '[category name]'. Do you want me to (a) refine the category definition, (b) evaluate a different category angle, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A category design document already exists for '[category name]'. Do you want me to (a) refine the category definition, (b) evaluate a different category angle, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/gtm-triangle.md` -- current positioning and market change narrative
-2. `docs/competitor-analysis.md` -- competitive landscape
-3. `docs/value-prop-matrix.md` -- what makes you different
+1. **GTM Triangle** -- current positioning and market change narrative
+2. **Competitive analysis** -- competitive landscape
+3. **Value proposition mapping** -- what makes you different
 4. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Research Existing Category Landscape
@@ -134,7 +138,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/category-design.md`:
+Save the output to your project. Suggested filename: `category-design.md`
 
 ```markdown
 # Category Design: [Category Name]

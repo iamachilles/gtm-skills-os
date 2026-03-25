@@ -1,6 +1,10 @@
 ---
+name: churn-prevention-playbook
 description: Create a churn prevention strategy with early warnings, intervention tiers, and win-back sequences. Use when someone says "churn prevention", "reduce churn", "save plan", "retention strategy", "prevent cancellation", "at-risk customers", or "win back"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Churn Prevention Playbook
@@ -24,15 +28,15 @@ If churn rate is missing, ask: "What's your current churn rate and the top 3 rea
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/ops/churn-prevention.md` if it exists. If found, present a summary and ask: "A churn prevention playbook already exists. Do you want me to (a) update warning signals, (b) redesign save offers, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A churn prevention playbook already exists. Do you want me to (a) update warning signals, (b) redesign save offers, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/ops/customer-health-model.md` -- health scoring for risk identification
-2. `docs/ops/success-plan-template.md` -- success plan structure
-3. `docs/ops/customer-onboarding.md` -- onboarding gaps that lead to churn
+1. **Customer Health Model** documents -- health scoring for risk identification
+2. **Success Plan Template** documents -- success plan structure
+3. **Customer Onboarding** documents -- onboarding gaps that lead to churn
 4. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Define Early Warning Signals
@@ -158,7 +162,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/ops/churn-prevention.md`:
+Save the output to your project. Suggested filename: `churn-prevention.md`
 
 ```markdown
 # Churn Prevention Playbook

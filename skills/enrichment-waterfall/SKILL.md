@@ -1,6 +1,10 @@
 ---
+name: enrichment-waterfall
 description: Design a multi-provider data enrichment waterfall with fallback logic. Use when someone asks "enrichment waterfall", "data enrichment strategy", "email finding setup", "enrichment providers", "data quality pipeline", or "which enrichment tools to use"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Enrichment Waterfall
@@ -23,14 +27,14 @@ If data needs or budget are missing, ask before proceeding.
 
 ### Step 0 — Idempotency Check
 
-Check if `docs/ops/enrichment-waterfall.md` exists. If it does, ask: "An enrichment waterfall spec already exists. Do you want to refine the existing spec or overwrite it?"
+Check if operations documents exists. If it does, ask: "An enrichment waterfall spec already exists. Do you want to refine the existing spec or overwrite it?"
 
 ### Step 1 — Load Context
 
 Read these files if they exist:
-- `docs/icp.md` — to understand what data matters most
-- `docs/ops/crm-fields.md` — to know which fields need filling
-- `docs/ops/lead-scoring-model.md` — to prioritize fields that affect scoring
+- ICP document — to understand what data matters most
+- operations documents — to know which fields need filling
+- operations documents — to prioritize fields that affect scoring
 - `CLAUDE.md` — project context
 
 ### Step 2 — Map Data Fields Needed
@@ -133,7 +137,7 @@ Before saving, verify:
 
 ## Output Format
 
-Save to `docs/ops/enrichment-waterfall.md`:
+Save the output to your project. Suggested filename: `enrichment-waterfall.md`
 
 ```markdown
 # Enrichment Waterfall Specification

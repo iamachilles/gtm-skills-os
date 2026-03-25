@@ -1,6 +1,10 @@
 ---
+name: meeting-recap-writer
 description: Turn raw call notes into a structured meeting recap with action items. Trigger phrases — "meeting recap", "call recap", "summarize call", "write recap", "meeting notes", "recap email", "call summary"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Meeting Recap Writer
@@ -28,7 +32,7 @@ This skill outputs directly rather than saving to a file. If the user provides t
 
 Read available context if it helps interpret the notes:
 
-1. `docs/sales/deal-strategy-{deal-slug}.md` -- existing deal context
+1. **Deal Strategy Deal** documents -- existing deal context
 2. `CLAUDE.md` -- project-level instructions
 
 Keep context loading minimal. This skill prioritizes speed.

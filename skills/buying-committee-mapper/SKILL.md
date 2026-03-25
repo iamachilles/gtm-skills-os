@@ -1,6 +1,10 @@
 ---
+name: buying-committee-mapper
 description: Map 6 decision-maker roles with objections, entry strategies, and cold openers per role
-tools: Read, Write, WebSearch
+allowed-tools: Read, Write, WebSearch
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Buying Committee Mapper

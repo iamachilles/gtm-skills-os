@@ -1,6 +1,10 @@
 ---
+name: marketplace-listing-writer
 description: Write a marketplace listing for a platform. Use when someone says "marketplace listing", "app store listing", "AWS marketplace", "HubSpot marketplace", "Salesforce AppExchange", "marketplace copy", or "listing page"
-tools: Read, Write, WebSearch
+allowed-tools: Read, Write, WebSearch
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Marketplace Listing Writer
@@ -20,15 +24,15 @@ If platform or product details are missing, ask: "I need to know which marketpla
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/content/marketplace-listing-{platform-slug}.md` if it exists. If found, present a summary and ask: "A marketplace listing for [platform] already exists. Do you want me to (a) update it, (b) rewrite for a different angle, or (c) keep it?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A marketplace listing for [platform] already exists. Do you want me to (a) update it, (b) rewrite for a different angle, or (c) keep it?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/gtm-triangle.md` -- positioning
-2. `docs/value-prop-matrix.md` -- value props to highlight
-3. `docs/sales/integration-brief-*.md` -- integration specs
+1. **GTM Triangle** -- positioning
+2. **Value proposition mapping** -- value props to highlight
+3. **Integration Brief** documents -- integration specs
 4. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Research Platform Requirements
@@ -107,7 +111,7 @@ Define what screenshots and media are needed:
 
 ## Output Format
 
-Save to `docs/content/marketplace-listing-{platform-slug}.md`:
+Save the output to your project. Suggested filename: `marketplace-listing-{platform-slug}.md`
 
 ```markdown
 # Marketplace Listing: {Product} on {Platform}

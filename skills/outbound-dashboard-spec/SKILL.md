@@ -1,6 +1,10 @@
 ---
+name: outbound-dashboard-spec
 description: Design a reporting dashboard for outbound and GTM metrics. Use when someone says "dashboard", "reporting dashboard", "metrics dashboard", "outbound reporting", "GTM dashboard", "build a dashboard", or "tracking dashboard"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Outbound Dashboard Spec
@@ -20,14 +24,14 @@ If scope or data sources are missing, ask: "I need to know what you want to trac
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/analytics/dashboard-spec.md` if it exists. If found, present a summary and ask: "A dashboard spec already exists. Do you want me to (a) update it, (b) add new sections, or (c) rebuild?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A dashboard spec already exists. Do you want me to (a) update it, (b) add new sections, or (c) rebuild?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/analytics/*.md` -- existing reports and frameworks
-2. `docs/gtm-triangle.md` -- channels and motion context
+1. **Analytics** documents -- existing reports and frameworks
+2. **GTM Triangle** -- channels and motion context
 3. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Define Section 1: Activity
@@ -123,7 +127,7 @@ For each red alert, define the escalation path: who gets notified and what they 
 
 ## Output Format
 
-Save to `docs/analytics/dashboard-spec.md`:
+Save the output to your project. Suggested filename: `dashboard-spec.md`
 
 ```markdown
 # Outbound Dashboard Spec

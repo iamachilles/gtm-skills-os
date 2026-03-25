@@ -1,6 +1,10 @@
 ---
+name: event-invitation-writer
 description: Write event invitation email sequences. Use when someone says "event invitation", "invite to event", "event email", "event outreach", "event RSVP", "invite sequence", or "event save the date"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Event Invitation Writer
@@ -21,15 +25,15 @@ If event details or guest list type is missing, ask: "I need the event details (
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/sequences/event-invitation-{event-slug}.md` if it exists. If found, present a summary and ask: "An invitation sequence for this event already exists. Do you want me to (a) update it, (b) write for a different audience, or (c) keep it?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "An invitation sequence for this event already exists. Do you want me to (a) update it, (b) write for a different audience, or (c) keep it?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/gtm-triangle.md` -- positioning context
-2. `docs/content/event-playbook-{event-slug}.md` -- event playbook if it exists
-3. `docs/sequences/*.md` -- existing sequences for tone consistency
+1. **GTM Triangle** -- positioning context
+2. **Event Playbook Event** documents -- event playbook if it exists
+3. **Existing outreach sequences** -- existing sequences for tone consistency
 4. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Write Touch 1: Save the Date (4 Weeks Out)
@@ -100,7 +104,7 @@ Purpose: reduce no-shows and build excitement.
 
 ## Output Format
 
-Save to `docs/sequences/event-invitation-{event-slug}.md`:
+Save the output to your project. Suggested filename: `event-invitation-{event-slug}.md`
 
 ```markdown
 # Event Invitation Sequence: {Event Name}

@@ -1,6 +1,10 @@
 ---
+name: reply-handler
 description: Generate response templates for 8 common reply types in outbound sequences. Use when someone says "reply templates", "reply handler", "objection responses", "how to respond", "handle replies", "response templates", or "outbound replies"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Reply Handler
@@ -20,15 +24,15 @@ No required inputs. This skill produces a universal template set. Provide contex
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/sequences/reply-templates.md` if it exists. If found, present a summary and ask: "Reply templates already exist covering [N] reply types. Do you want me to (a) add new reply types, (b) refine existing templates, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "Reply templates already exist covering [N] reply types. Do you want me to (a) add new reply types, (b) refine existing templates, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/messaging-matrix.md` -- messaging to reference in responses
-2. `docs/objection-library.md` -- detailed objection handles if available
-3. `docs/sales-narratives.md` -- narrative framing for reframes
+1. **Messaging matrix** -- messaging to reference in responses
+2. **Objection library** -- detailed objection handles if available
+3. **Sales narratives** -- narrative framing for reframes
 4. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Write Templates for All 8 Reply Types
@@ -103,7 +107,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/sequences/reply-templates.md`:
+Save the output to your project. Suggested filename: `reply-templates.md`
 
 ```markdown
 # Reply Templates

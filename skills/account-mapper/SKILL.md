@@ -1,6 +1,10 @@
 ---
+name: account-mapper
 description: "Map an organization's structure, departments, and buying committee. Trigger: 'map this company', 'org chart for', 'who are the key people at', 'account map', 'map the org'"
-tools: Read, Write, WebSearch
+allowed-tools: Read, Write, WebSearch
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Account Mapper
@@ -20,13 +24,13 @@ If company name is missing, ask: "Which company should I map? Provide the compan
 
 ### Step 0 — Idempotency Check
 
-Check if `docs/prospects/{company-slug}-org-map.md` already exists. If it does, ask: "An org map for this company already exists. Should I update it or start fresh?"
+Check if prospect documents already exists. If it does, ask: "An org map for this company already exists. Should I update it or start fresh?"
 
 ### Step 1 — Load Context
 
 Read available context:
-- `docs/gtm-triangle.md` — to understand which departments and roles matter
-- `docs/icp.md` — for qualification context
+- gtm triangle.md documents — to understand which departments and roles matter
+- ICP document — for qualification context
 - `CLAUDE.md` — project instructions
 
 ### Step 2 — Research Company Overview
@@ -130,7 +134,7 @@ If any check fails, fix before proceeding.
 
 ## Output Format
 
-Save to `docs/prospects/{company-slug}-org-map.md`:
+Save the output to your project. Suggested filename: `{company-slug}-org-map.md`
 
 ```
 # Org Map: {Company Name}

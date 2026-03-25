@@ -1,6 +1,10 @@
 ---
+name: abm-campaign-planner
 description: Design a full ABM campaign for a target account list with tier-specific plays. Use when someone says "ABM campaign", "account-based campaign", "design ABM", "ABM plan", "tier-based campaign", or "account-based marketing plan"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # ABM Campaign Planner
@@ -24,17 +28,17 @@ If account list or ICP is missing, ask: "I need your target account list (or tie
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/sales/abm-campaign-{name-slug}.md` if it exists. If found, present a summary and ask: "An ABM campaign plan already exists for {name}. Do you want me to (a) update the timeline, (b) adjust the channel mix, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "An ABM campaign plan already exists for {name}. Do you want me to (a) update the timeline, (b) adjust the channel mix, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/account-tiering-model.md` -- tier definitions and scoring
-2. `docs/icp.md` or `docs/gtm-triangle.md` -- ICP criteria
-3. `docs/personas/*.md` -- persona details, KPIs, pain points
-4. `docs/messaging-matrix.md` -- existing messaging by persona x pillar
-5. `docs/content/abm-content-map.md` -- content inventory if available
+1. **Account tiering model** -- tier definitions and scoring
+2. ICP document or gtm triangle.md documents -- ICP criteria
+3. **Persona profiles** -- persona details, KPIs, pain points
+4. **Messaging matrix** -- existing messaging by persona x pillar
+5. **Abm Content Map** documents -- content inventory if available
 6. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Select and Tier Accounts
@@ -124,7 +128,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/sales/abm-campaign-{name-slug}.md`:
+Save the output to your project. Suggested filename: `abm-campaign-{name-slug}.md`
 
 ```markdown
 # ABM Campaign: {Campaign Name}

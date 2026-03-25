@@ -1,6 +1,10 @@
 ---
+name: cold-email-writer
 description: Write a high-converting cold email using PAS or AIDA framework. Use when someone says "cold email", "write email", "outbound email", "prospecting email", "PAS email", "AIDA email", or "email copy"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Cold Email Writer
@@ -24,16 +28,16 @@ If persona or pain point is missing, ask: "I need the target persona and their p
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/sequences/cold-email-{persona-slug}.md` if it exists. If found, present a summary and ask: "A cold email for this persona already exists with [N] variants. Do you want me to (a) add new variants, (b) refine existing copy, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A cold email for this persona already exists with [N] variants. Do you want me to (a) add new variants, (b) refine existing copy, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/messaging-matrix.md` -- pull the relevant persona x pillar cell if it exists
-2. `docs/personas/{persona-slug}.md` -- persona language, KPIs, objections
-3. `docs/value-prop-matrix.md` -- feature-benefit-value mapping
-4. `docs/sales-narratives.md` -- narrative framing if available
+1. **Messaging matrix** -- pull the relevant persona x pillar cell if it exists
+2. **Persona profiles** -- persona language, KPIs, objections
+3. **Value proposition mapping** -- feature-benefit-value mapping
+4. **Sales narratives** -- narrative framing if available
 5. `CLAUDE.md` -- project-level instructions
 
 Identify the persona's language patterns. Cold emails that use the reader's vocabulary convert. Marketing speak kills reply rates.
@@ -107,7 +111,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/sequences/cold-email-{persona-slug}.md`:
+Save the output to your project. Suggested filename: `cold-email-{persona-slug}.md`
 
 ```markdown
 # Cold Email: {Persona Title}

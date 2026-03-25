@@ -1,6 +1,10 @@
 ---
+name: inbound-qualifier
 description: Qualify inbound leads with a scoring system and response templates. Use when someone says "qualify leads", "inbound qualification", "lead scoring", "lead qualifier", "qualify inbound", "should I take this lead", or "lead qualification scorecard"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Inbound Qualifier
@@ -20,15 +24,15 @@ If ICP or service details are missing, ask: "I need your ideal client profile an
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/sales/inbound-qualifier.md` if it exists. If found, present a summary and ask: "A qualification scorecard already exists. Do you want me to (a) update the criteria, (b) adjust the thresholds, or (c) keep it?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A qualification scorecard already exists. Do you want me to (a) update the criteria, (b) adjust the thresholds, or (c) keep it?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/gtm-triangle.md` -- ICP and positioning
-2. `docs/sales/productized-offer-*.md` -- productized offerings and their fit criteria
-3. `docs/positioning.md` -- who you serve
+1. **GTM Triangle** -- ICP and positioning
+2. **Productized Offer** documents -- productized offerings and their fit criteria
+3. **Positioning** documents -- who you serve
 4. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Define 5 Qualification Criteria
@@ -138,7 +142,7 @@ Action: [ ] Yes - schedule call  [ ] Maybe - ask questions  [ ] No - polite decl
 
 ## Output Format
 
-Save to `docs/sales/inbound-qualifier.md`:
+Save the output to your project. Suggested filename: `inbound-qualifier.md`
 
 ```markdown
 # Inbound Lead Qualification Scorecard

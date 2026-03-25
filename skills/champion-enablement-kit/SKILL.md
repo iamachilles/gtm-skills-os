@@ -1,6 +1,10 @@
 ---
+name: champion-enablement-kit
 description: Create materials your champion can use to sell internally. Trigger phrases — "champion kit", "champion enablement", "internal selling", "help my champion", "one-pager for champion", "internal advocate materials", "champion emails"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Champion Enablement Kit
@@ -25,17 +29,17 @@ If champion role or key value props are missing, ask: "I need to know who your c
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/sales/champion-kit-{prospect-slug}.md` if it exists. If found, present a summary and ask: "A champion kit for {prospect} already exists. Do you want me to (a) update it, or (b) rebuild?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A champion kit for {prospect} already exists. Do you want me to (a) update it, or (b) rebuild?" 
 
 ### Step 1 -- Load Context
 
 Read available context files:
 
-1. `docs/icp.md` -- buyer profile context
-2. `docs/gtm-triangle.md` -- positioning and messaging
-3. `docs/messaging-matrix.md` -- persona-specific messaging
-4. `docs/sales/roi-model-{prospect-slug}.md` -- ROI data if available
-5. `docs/sales/proposals/{prospect-slug}.md` -- proposal if already written
+1. **ICP definition** -- buyer profile context
+2. **GTM Triangle** -- positioning and messaging
+3. **Messaging matrix** -- persona-specific messaging
+4. **Roi Model Prospect** documents -- ROI data if available
+5. **Prospect** documents -- proposal if already written
 6. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Write the One-Pager
@@ -106,7 +110,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/sales/champion-kit-{prospect-slug}.md`:
+Save the output to your project. Suggested filename: `champion-kit-{prospect-slug}.md`
 
 ```markdown
 # Champion Enablement Kit: {Prospect Company}

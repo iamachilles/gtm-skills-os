@@ -1,6 +1,10 @@
 ---
+name: icp-model-creator
 description: Create a comprehensive ICP document with 10 sections from source material and research
-tools: Read, Write, WebFetch, WebSearch
+allowed-tools: Read, Write, WebFetch, WebSearch
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # ICP Model Creator

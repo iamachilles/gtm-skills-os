@@ -1,6 +1,10 @@
 ---
+name: qbr-deck-builder
 description: Outline a Quarterly Business Review deck with slide-by-slide content and talking points. Trigger phrases — "QBR", "quarterly business review", "QBR deck", "client review", "quarterly review", "build QBR"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # QBR Deck Builder
@@ -24,14 +28,14 @@ If performance data or customer goals are missing, ask: "I need the performance 
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/sales/qbr-{client-slug}.md` if it exists. If found, present a summary and ask: "A QBR deck for {client} already exists (dated {date}). Do you want me to (a) build the new quarter's version, or (b) start fresh?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A QBR deck for {client} already exists (dated {date}). Do you want me to (a) build the new quarter's version, or (b) start fresh?" 
 
 ### Step 1 -- Load Context
 
 Read available context files:
 
-1. `docs/icp.md` -- customer profile context
-2. `docs/gtm-triangle.md` -- positioning for expansion conversations
+1. **ICP definition** -- customer profile context
+2. **GTM Triangle** -- positioning for expansion conversations
 3. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Build Slide Structure
@@ -90,7 +94,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/sales/qbr-{client-slug}.md`:
+Save the output to your project. Suggested filename: `qbr-{client-slug}.md`
 
 ```markdown
 # QBR Deck: {Client Name}

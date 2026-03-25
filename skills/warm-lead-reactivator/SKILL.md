@@ -1,6 +1,10 @@
 ---
+name: warm-lead-reactivator
 description: "Identify and re-engage dormant CRM leads worth reactivating. Trigger: 'reactivate old leads', 'dormant leads', 're-engage cold leads', 'revive dead pipeline', 'CRM reactivation'"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Warm Lead Reactivator
@@ -20,13 +24,13 @@ If lead list is missing, ask: "Please provide the list of dormant leads to evalu
 
 ### Step 0 — Idempotency Check
 
-Check if `docs/sequences/reactivation-plan.md` already exists. If it does, ask: "A reactivation plan already exists. Should I replace it or create a new version?"
+Check if existing sequences already exists. If it does, ask: "A reactivation plan already exists. Should I replace it or create a new version?"
 
 ### Step 1 — Load Context
 
 Read available context:
-- `docs/icp.md` — current ICP criteria (may have changed since leads went dormant)
-- `docs/gtm-triangle.md` — current value proposition
+- ICP document — current ICP criteria (may have changed since leads went dormant)
+- gtm triangle.md documents — current value proposition
 - `CLAUDE.md` — project instructions
 
 ### Step 2 — Segment Dormant Leads
@@ -120,7 +124,7 @@ If any check fails, fix before proceeding.
 
 ## Output Format
 
-Save to `docs/sequences/reactivation-plan.md`:
+Save the output to your project. Suggested filename: `reactivation-plan.md`
 
 ```
 # Lead Reactivation Plan

@@ -1,6 +1,10 @@
 ---
+name: campaign-analyzer
 description: Analyze campaign performance with segmented metrics and recommendations. Use when someone says "analyze campaign", "campaign report", "campaign performance", "campaign metrics", "campaign results", "what's working", or "campaign review"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Campaign Analyzer
@@ -21,15 +25,15 @@ If campaign data is missing, ask: "I need the campaign metrics (open rate, reply
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/analytics/campaign-report-{campaign-slug}.md` if it exists. If found, present a summary and ask: "A campaign report already exists. Do you want me to (a) update with new data, (b) analyze a different time period, or (c) rebuild?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A campaign report already exists. Do you want me to (a) update with new data, (b) analyze a different time period, or (c) rebuild?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/analytics/*.md` -- prior campaign reports for comparison
-2. `docs/sequences/*.md` -- campaign assets being analyzed
-3. `docs/analytics/dashboard-spec.md` -- reporting standards
+1. **Analytics** documents -- prior campaign reports for comparison
+2. **Existing outreach sequences** -- campaign assets being analyzed
+3. **Dashboard Spec** documents -- reporting standards
 4. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Calculate Metrics by Segment
@@ -102,7 +106,7 @@ Rules:
 
 ## Output Format
 
-Save to `docs/analytics/campaign-report-{campaign-slug}.md`:
+Save the output to your project. Suggested filename: `campaign-report-{campaign-slug}.md`
 
 ```markdown
 # Campaign Report: {Campaign Name}

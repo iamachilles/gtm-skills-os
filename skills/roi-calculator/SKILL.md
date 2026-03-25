@@ -1,6 +1,10 @@
 ---
+name: roi-calculator
 description: Build an ROI model with payback period, 3-year projections, and sensitivity analysis. Trigger phrases — "ROI model", "ROI calculator", "calculate ROI", "business case", "payback period", "cost justification", "total cost of ownership"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # ROI Calculator
@@ -23,15 +27,15 @@ If solution cost or expected outcomes are missing, ask: "I need the total soluti
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/sales/roi-model-{prospect-slug}.md` if it exists. If found, present a summary and ask: "An ROI model for {prospect} already exists. Do you want me to (a) update the numbers, or (b) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "An ROI model for {prospect} already exists. Do you want me to (a) update the numbers, or (b) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
 Read available context files:
 
-1. `docs/icp.md` -- typical customer profile for benchmarking
-2. `docs/gtm-triangle.md` -- value proposition context
-3. `docs/case-studies/` -- proof points with real ROI data
+1. **ICP definition** -- typical customer profile for benchmarking
+2. **GTM Triangle** -- value proposition context
+3. **Case studies** -- proof points with real ROI data
 4. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Define Total Investment
@@ -102,7 +106,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/sales/roi-model-{prospect-slug}.md`:
+Save the output to your project. Suggested filename: `roi-model-{prospect-slug}.md`
 
 ```markdown
 # ROI Model: {Prospect Company}

@@ -10,8 +10,12 @@ Every skill follows this skeleton:
 
 ```markdown
 ---
+name: [skill-name-in-kebab-case]
 description: [what it does + when to use it, with trigger phrases]
-tools: [explicit comma-separated tool list]
+allowed-tools: [space-separated tool list, e.g. "Read Write WebSearch"]
+metadata:
+  author: [your name]
+  version: "1.0.0"
 ---
 
 # Skill Name
@@ -54,8 +58,10 @@ Read any relevant project files (CLAUDE.md, ICP docs, etc.) before doing anythin
 ## The 14 Patterns That Matter
 
 ### 1. Frontmatter = Contract
+- `name`: kebab-case, must match folder name
 - `description`: what it does + trigger phrases ("Use when...")
-- `tools`: explicit capability list — only declare what's needed
+- `allowed-tools`: explicit space-separated tool list — only declare what's needed
+- `metadata`: author, version, and any custom fields
 
 ### 2. Input Gate — Ask Before Proceeding
 - List required vs optional inputs clearly
@@ -171,8 +177,8 @@ For simple skills, ~30-50 lines is fine:
 Before asking the user anything, check if context already exists in project files.
 ```
 ### Step 1 — Context Loading
-Check if `docs/icp.md` exists using Read.
-If it exists: load it, extract relevant fields, summarize to user.
+Search the project for an ICP document (check project root, docs/, or any organized directory).
+If found: load it, extract relevant fields, summarize to user.
 If not: ask these questions: [...]
 ```
 
@@ -195,10 +201,10 @@ Set explicit numerical limits: word counts, character counts, max items.
 ```
 
 ### 18. Idempotency — Check Before Overwriting
-Before writing output, check if the file already exists. Offer: refine, overwrite, or merge.
+Before writing output, search the project for existing output from a previous run. Offer: refine, overwrite, or merge.
 ```
 Step 0 — Check for Existing Output
-Read `docs/icp.md`. If it exists:
+Search the project for an existing ICP document. If found:
 - Present summary
 - Ask: "(A) refine it, (B) start fresh, (C) add a new segment?"
 ```
@@ -211,14 +217,15 @@ Ask: "Do these look right? Should I adjust any?"
 Wait for confirmation before Step 3.
 ```
 
-### 20. File Convention for Skill Chaining
-Skills produce outputs at known paths. Downstream skills check for those files automatically.
+### 20. Portable Context Discovery for Skill Chaining
+Skills should search for upstream outputs rather than hardcode paths. This ensures skills work in any project structure.
 ```
-docs/icp.md          ← ICP Architect output
-docs/signals/         ← Signal Scanner output
-docs/sequences/       ← Outreach Builder output
-docs/battlecards/     ← Battlecard Generator output
+Search the project for an ICP document      ← ICP Model Creator output
+Search for intent signal reports             ← Signal Scanner output
+Search for existing outreach sequences       ← Outreach Builder output
+Search for competitive battlecards           ← Battlecard Generator output
 ```
+Users who want a fixed directory convention can create a `docs/` folder in their project. Skills will find files there automatically. But skills must not assume this structure exists.
 
 ---
 
@@ -250,52 +257,15 @@ docs/battlecards/     ← Battlecard Generator output
 
 ---
 
-## GTM Skills OS File Convention
+## Suggested Project Structure
 
-All skills should read from and write to these standard paths. This enables automatic chaining.
+If you want a consistent directory for skill outputs, create a `docs/` folder in your project root. This is optional but helps with skill chaining.
 
-```
-docs/
-├── icp.md                    ← ICP Model Creator output
-├── gtm-triangle.md           ← GTM Triangle Builder output
-├── buying-committee.md       ← Buying Committee Mapper output
-├── sales-narratives.md       ← Sales Narrative Generator output
-├── positioning.md            ← Positioning Statement output
-├── messaging-matrix.md       ← Messaging Matrix output
-├── objection-library.md      ← Objection Library output
-├── pricing-strategy.md       ← Pricing Strategy output
-├── signals/
-│   ├── signal-map.md         ← Intent Signals output
-│   └── {company}.md          ← Per-company signal reports
-├── competitors/
-│   ├── landscape.md          ← Competitor Analysis summary
-│   └── {competitor}.md       ← Per-competitor battlecards
-├── prospects/
-│   ├── prospect-list.csv     ← Build Prospect List output
-│   └── {account}.md          ← Per-account research briefs
-├── sequences/
-│   ├── {persona}-sequence.md ← Outbound sequence per persona
-│   └── {trigger}-campaign.md ← Micro-campaign per trigger
-├── content/
-│   ├── calendar.md           ← Content Calendar output
-│   ├── posts/                ← LinkedIn post drafts
-│   └── assets/               ← Lead magnets, carousels
-├── sales/
-│   ├── playbook.md           ← Sales Playbook output
-│   ├── battlecards/          ← Competitive battlecards
-│   └── proposals/            ← Client proposals
-├── analytics/
-│   ├── campaign-report.md    ← Campaign Analyzer output
-│   └── pipeline-audit.md     ← Pipeline Health Check output
-└── ops/
-    ├── sales-process.md      ← Sales Process Designer output
-    ├── crm-fields.md         ← CRM Field Mapper output
-    └── tech-stack-audit.md   ← Tech Stack Auditor output
-```
+Skills will search the project for context files and save outputs with descriptive filenames. If you organize outputs into folders, downstream skills will find them automatically.
 
 ### Convention Rules
-1. Every skill's Step 1 checks for upstream files at these paths
-2. Every skill's save step writes to the convention path
-3. If a file exists, offer to refine/overwrite/merge (idempotency)
+1. Every skill's Step 1 searches the project for upstream outputs (not hardcoded paths)
+2. Every skill suggests a descriptive filename for its output
+3. If a previous version exists, offer to refine/overwrite/merge (idempotency)
 4. Use `{slug}` variables derived from company/persona/competitor names
-5. Skills that produce multiple files should also update a README or index in their directory
+5. Skills must be portable -- they work with any project structure, not just `docs/`

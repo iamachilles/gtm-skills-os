@@ -1,6 +1,10 @@
 ---
+name: service-productizer
 description: Turn a service into a productized offering with fixed scope and pricing. Use when someone says "productize", "productized service", "fixed scope", "package my service", "create an offer", "standardize my service", or "turn service into product"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Service Productizer
@@ -20,16 +24,16 @@ If the service or past engagements are missing, ask: "I need to know which servi
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/sales/productized-offer-{service-slug}.md` if it exists. If found, present a summary and ask: "A productized offer already exists. Do you want me to (a) update it, (b) create a different package, or (c) keep it?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A productized offer already exists. Do you want me to (a) update it, (b) create a different package, or (c) keep it?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/gtm-triangle.md` -- positioning and ICP
-2. `docs/sales/proposals/*.md` -- past engagement scopes
-3. `docs/case-studies/*.md` -- results from past engagements
-4. `docs/positioning.md` -- personal positioning
+1. **GTM Triangle** -- positioning and ICP
+2. **Proposals** documents -- past engagement scopes
+3. **Case studies** -- results from past engagements
+4. **Positioning** documents -- personal positioning
 5. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Identify the Most Repeatable Service
@@ -157,7 +161,7 @@ List criteria that determine if someone is a fit:
 
 ## Output Format
 
-Save to `docs/sales/productized-offer-{service-slug}.md`:
+Save the output to your project. Suggested filename: `productized-offer-{service-slug}.md`
 
 ```markdown
 # Productized Offer: {Service Name}

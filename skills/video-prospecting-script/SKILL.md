@@ -1,6 +1,10 @@
 ---
+name: video-prospecting-script
 description: Write a 45-second Loom or Vidyard prospecting video script. Use when someone says "video script", "loom script", "vidyard script", "video prospecting", "personalized video", or "video outreach"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Video Prospecting Script
@@ -20,15 +24,15 @@ If prospect data is missing, ask: "I need the prospect's name, company, role, an
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/sequences/video-script-{prospect-slug}.md` if it exists. If found, present a summary and ask: "A video script for this prospect already exists. Do you want me to (a) update with new data, (b) try a different angle, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A video script for this prospect already exists. Do you want me to (a) update with new data, (b) try a different angle, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/personas/{persona-slug}.md` -- persona profile if available
-2. `docs/sequences/personalization-{prospect-slug}.md` -- personalization snippets if available
-3. `docs/messaging-matrix.md` -- relevant messaging
+1. **Persona profiles** -- persona profile if available
+2. **Persona profiles** -- personalization snippets if available
+3. **Messaging matrix** -- relevant messaging
 4. `CLAUDE.md` -- project-level instructions
 
 Identify the single strongest personalization angle. The video lives or dies on specificity.
@@ -93,7 +97,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/sequences/video-script-{prospect-slug}.md`:
+Save the output to your project. Suggested filename: `video-script-{prospect-slug}.md`
 
 ```markdown
 # Video Script: {Prospect Name} at {Company}

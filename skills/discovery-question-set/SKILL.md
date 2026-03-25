@@ -1,6 +1,10 @@
 ---
+name: discovery-question-set
 description: Generate discovery questions using MEDDIC, BANT, or SPICED frameworks. Trigger phrases — "discovery questions", "MEDDIC questions", "BANT questions", "SPICED questions", "qualification questions", "discovery call prep", "conversation flow"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Discovery Question Set
@@ -23,15 +27,15 @@ If framework is missing, ask: "Which framework do you want: MEDDIC (complex ente
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/sales/discovery-{persona-slug}.md` if it exists. If found, present a summary and ask: "A discovery question set for {persona} already exists using {framework}. Do you want me to (a) add questions for a different framework, (b) refine existing questions, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A discovery question set for {persona} already exists using {framework}. Do you want me to (a) add questions for a different framework, (b) refine existing questions, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
 Read available context files:
 
-1. `docs/icp.md` -- qualification criteria
-2. `docs/gtm-triangle.md` -- positioning context
-3. `docs/personas/{persona-slug}.md` -- persona details, pains, KPIs
+1. **ICP definition** -- qualification criteria
+2. **GTM Triangle** -- positioning context
+3. **Persona profiles** -- persona details, pains, KPIs
 4. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Select and Structure Framework
@@ -99,7 +103,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/sales/discovery-{persona-slug}.md`:
+Save the output to your project. Suggested filename: `discovery-{persona-slug}.md`
 
 ```markdown
 # Discovery Questions: {Persona Title}

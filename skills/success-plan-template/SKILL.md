@@ -1,6 +1,10 @@
 ---
+name: success-plan-template
 description: Create a customer success plan with goals, KPIs, milestones, and QBR format. Use when someone says "success plan", "customer success plan", "QBR template", "customer goals", "success metrics", "customer KPIs", or "quarterly business review"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Success Plan Template
@@ -24,15 +28,15 @@ If customer goals are missing, ask: "What does this customer want to achieve? I 
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/ops/success-plan-template.md` if it exists. If found, present a summary and ask: "A success plan template already exists. Do you want me to (a) update KPIs, (b) redesign the QBR format, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A success plan template already exists. Do you want me to (a) update KPIs, (b) redesign the QBR format, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/ops/customer-onboarding.md` -- onboarding milestones achieved
-2. `docs/ops/customer-health-model.md` -- health dimensions to track
-3. `docs/ops/upsell-triggers.md` -- expansion opportunities
+1. **Customer Onboarding** documents -- onboarding milestones achieved
+2. **Customer Health Model** documents -- health dimensions to track
+3. **Upsell Triggers** documents -- expansion opportunities
 4. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Define Customer Goals
@@ -144,7 +148,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/ops/success-plan-template.md`:
+Save the output to your project. Suggested filename: `success-plan-template.md`
 
 ```markdown
 # Customer Success Plan: {Customer Name}

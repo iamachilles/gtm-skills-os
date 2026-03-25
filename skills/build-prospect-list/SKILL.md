@@ -1,6 +1,10 @@
 ---
+name: build-prospect-list
 description: Build a qualified prospect list with ICP scoring and outreach angles per row
-tools: Read, Write, WebSearch
+allowed-tools: Read, Write, WebSearch
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Build Prospect List

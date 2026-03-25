@@ -1,6 +1,10 @@
 ---
+name: ab-test-analyzer
 description: Analyze A/B test results with statistical rigor. Use when someone says "analyze A/B test", "test results", "split test results", "which variant won", "A/B test analysis", "test significance", or "compare variants"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # A/B Test Analyzer
@@ -21,14 +25,14 @@ If test data is missing, ask: "I need the performance data for both variants (se
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/analytics/ab-test-results-{test-slug}.md` if it exists. If found, present a summary and ask: "Results for this test already exist. Do you want me to (a) update with new data, (b) analyze a different segment, or (c) keep the existing analysis?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "Results for this test already exist. Do you want me to (a) update with new data, (b) analyze a different segment, or (c) keep the existing analysis?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/analytics/ab-test-*.md` -- the test design and any prior results
-2. `docs/analytics/campaign-report-*.md` -- campaign context
+1. **Ab Test** documents -- the test design and any prior results
+2. **Campaign Report** documents -- campaign context
 3. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Calculate Metrics Per Variant
@@ -104,7 +108,7 @@ Structure as:
 
 ## Output Format
 
-Save to `docs/analytics/ab-test-results-{test-slug}.md`:
+Save the output to your project. Suggested filename: `ab-test-results-{test-slug}.md`
 
 ```markdown
 # A/B Test Results: {Test Name}

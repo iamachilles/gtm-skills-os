@@ -1,6 +1,10 @@
 ---
+name: gtm-diagnostic
 description: Score a company's GTM maturity across 7 dimensions and produce a prioritized fix plan
-tools: Read, Write, WebFetch, WebSearch
+allowed-tools: Read, Write, WebFetch, WebSearch
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # GTM Diagnostic

@@ -1,6 +1,10 @@
 ---
+name: voice-of-customer-extractor
 description: Synthesize customer language from transcripts, tickets, and reviews into a vocabulary map. Use when someone asks "extract customer language", "voice of customer", "VOC analysis", "what do customers actually say", "buyer language map", or "how do customers describe their problems"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Voice of Customer Extractor
@@ -23,9 +27,9 @@ If no source material is provided, ask for it. Do not proceed without source mat
 ### Step 1 — Load Source Material and Context
 
 Read all provided source material files. Also check for:
-- `docs/icp.md` — buyer personas to map language by role
-- `docs/voice-of-customer.md` — existing VOC data to build on
-- `docs/messaging-matrix.md` — current messaging to compare
+- ICP document — buyer personas to map language by role
+- voice of customer.md documents — existing VOC data to build on
+- messaging documents — current messaging to compare
 - `CLAUDE.md` — project context
 
 Inventory the source material:
@@ -120,7 +124,7 @@ Before saving, verify:
 
 ## Output Format
 
-Save to `docs/voice-of-customer.md`:
+Save the output to your project. Suggested filename: `voice-of-customer.md`
 
 ```
 # Voice of Customer: [Product/Company Name]

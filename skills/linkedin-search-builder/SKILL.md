@@ -1,6 +1,10 @@
 ---
+name: linkedin-search-builder
 description: "Convert ICP criteria into Sales Navigator search configurations and boolean strings. Trigger: 'build LinkedIn searches', 'Sales Navigator filters', 'boolean search for LinkedIn', 'search config for Sales Nav'"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # LinkedIn Search Builder
@@ -13,19 +17,19 @@ Translate ICP criteria into ready-to-use LinkedIn Sales Navigator search configu
 - **Search type** (optional) — "lead search" (find people) or "account search" (find companies) or "both". Default: both
 - **Platform** (optional) — "Sales Navigator" or "LinkedIn basic". Default: Sales Navigator
 
-If ICP criteria are missing, check `docs/icp.md`. If that does not exist, ask: "What ICP criteria should I translate into LinkedIn searches? I need: target titles, industry, company size, geography, and any qualifying keywords."
+If ICP criteria are missing, check ICP document. If that does not exist, ask: "What ICP criteria should I translate into LinkedIn searches? I need: target titles, industry, company size, geography, and any qualifying keywords."
 
 ## Steps
 
 ### Step 0 — Idempotency Check
 
-Check if `docs/prospects/linkedin-searches.md` already exists. If it does, ask: "LinkedIn search configs already exist. Should I overwrite or append new searches?"
+Check if prospect documents already exists. If it does, ask: "LinkedIn search configs already exist. Should I overwrite or append new searches?"
 
 ### Step 1 — Load Context
 
 Read available context:
-- `docs/icp.md` — ICP criteria to translate
-- `docs/gtm-triangle.md` — positioning context for keyword selection
+- ICP document — ICP criteria to translate
+- gtm triangle.md documents — positioning context for keyword selection
 - `CLAUDE.md` — project instructions
 
 ### Step 2 — Map ICP to Filters
@@ -88,7 +92,7 @@ If any check fails, fix before proceeding.
 
 ## Output Format
 
-Save to `docs/prospects/linkedin-searches.md`:
+Save the output to your project. Suggested filename: `linkedin-searches.md`
 
 ```
 # LinkedIn Sales Navigator Search Configs

@@ -1,6 +1,10 @@
 ---
+name: weekly-ritual-designer
 description: Design a GTM operating rhythm with weekly, monthly, and quarterly meetings. Use when someone says "weekly rituals", "operating rhythm", "meeting cadence", "GTM cadence", "pipeline review cadence", "sales meetings", or "team rhythm"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Weekly Ritual Designer
@@ -23,15 +27,15 @@ If team structure is missing, ask: "I need your team structure to design the rhy
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/ops/weekly-rituals.md` if it exists. If found, present a summary and ask: "A meeting cadence already exists with {N} weekly meetings. Do you want me to (a) optimize the schedule, (b) redesign agendas, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A meeting cadence already exists with {N} weekly meetings. Do you want me to (a) optimize the schedule, (b) redesign agendas, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/ops/sales-process.md` -- what pipeline reviews should cover
-2. `docs/analytics/forecast-model.md` -- forecast methodology
-3. `docs/ops/handoff-process.md` -- marketing-sales touchpoints
+1. **Sales Process** documents -- what pipeline reviews should cover
+2. **Forecast Model** documents -- forecast methodology
+3. **Handoff Process** documents -- marketing-sales touchpoints
 4. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Define Weekly Meetings
@@ -115,7 +119,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/ops/weekly-rituals.md`:
+Save the output to your project. Suggested filename: `weekly-rituals.md`
 
 ```markdown
 # GTM Operating Rhythm

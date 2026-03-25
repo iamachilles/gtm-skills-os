@@ -1,6 +1,10 @@
 ---
+name: deal-strategy-advisor
 description: Analyze a deal and recommend next steps to advance or disqualify. Trigger phrases — "deal strategy", "deal review", "analyze this deal", "deal health", "next steps for deal", "should I pursue this deal", "deal stuck"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Deal Strategy Advisor
@@ -24,15 +28,15 @@ If deal notes are missing, ask: "I need your deal notes to analyze this. Share w
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/sales/deal-strategy-{deal-slug}.md` if it exists. If found, present a summary and ask: "A strategy for this deal already exists (dated {date}). Do you want me to (a) update based on new information, or (b) start fresh?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A strategy for this deal already exists (dated {date}). Do you want me to (a) update based on new information, or (b) start fresh?" 
 
 ### Step 1 -- Load Context
 
 Read available context files:
 
-1. `docs/icp.md` -- check deal against qualification criteria
-2. `docs/gtm-triangle.md` -- positioning context
-3. `docs/sales/battlecards/` -- competitive intel if relevant
+1. **ICP definition** -- check deal against qualification criteria
+2. **GTM Triangle** -- positioning context
+3. **Battlecards** documents -- competitive intel if relevant
 4. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Assess Deal Health
@@ -99,7 +103,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/sales/deal-strategy-{deal-slug}.md`:
+Save the output to your project. Suggested filename: `deal-strategy-{deal-slug}.md`
 
 ```markdown
 # Deal Strategy: {Company Name}

@@ -1,6 +1,10 @@
 ---
+name: account-play-designer
 description: Design a custom play for ONE strategic account with stakeholder map and orchestrated outreach. Use when someone says "account play", "strategic account", "account plan", "target account strategy", "key account play", or "named account plan"
-tools: Read, Write, WebSearch
+allowed-tools: Read, Write, WebSearch
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Account Play Designer
@@ -23,16 +27,16 @@ If company name is missing, ask: "Which company are we designing this play for, 
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/sales/account-plays/{company-slug}.md` if it exists. If found, present a summary and ask: "An account play for {company} already exists. Do you want me to (a) update the stakeholder map, (b) refresh the research, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "An account play for {company} already exists. Do you want me to (a) update the stakeholder map, (b) refresh the research, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/icp.md` or `docs/gtm-triangle.md` -- ICP criteria to confirm fit
-2. `docs/personas/*.md` -- buying committee roles
-3. `docs/messaging-matrix.md` -- messaging by persona
-4. `docs/account-tiering-model.md` -- verify this is a Tier 1 account
+1. ICP document or gtm triangle.md documents -- ICP criteria to confirm fit
+2. **Persona profiles** -- buying committee roles
+3. **Messaging matrix** -- messaging by persona
+4. **Account tiering model** -- verify this is a Tier 1 account
 5. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Research the Account
@@ -116,7 +120,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/sales/account-plays/{company-slug}.md`:
+Save the output to your project. Suggested filename: `{company-slug}.md`
 
 ```markdown
 # Account Play: {Company Name}

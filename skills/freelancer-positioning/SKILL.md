@@ -1,6 +1,10 @@
 ---
+name: freelancer-positioning
 description: Define personal positioning for a freelancer or consultant. Use when someone says "positioning", "personal brand", "freelancer positioning", "consultant positioning", "LinkedIn profile", "how to position myself", or "differentiation"
-tools: Read, Write, WebSearch
+allowed-tools: Read, Write, WebSearch
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Freelancer Positioning
@@ -21,14 +25,14 @@ If background or target client is missing, ask: "I need your background (skills,
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/positioning.md` if it exists. If found, present a summary and ask: "A positioning document already exists. Do you want me to (a) refine it, (b) reposition for a different audience, or (c) keep it?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A positioning document already exists. Do you want me to (a) refine it, (b) reposition for a different audience, or (c) keep it?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/gtm-triangle.md` -- if positioning work has been done
-2. `docs/case-studies/*.md` -- proof points
+1. **GTM Triangle** -- if positioning work has been done
+2. **Case studies** -- proof points
 3. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Research Competitive Landscape
@@ -111,7 +115,7 @@ Example: "I combine enterprise sales experience with content marketing skills an
 
 ## Output Format
 
-Save to `docs/positioning.md`:
+Save the output to your project. Suggested filename: `positioning.md`
 
 ```markdown
 # Personal Positioning

@@ -1,6 +1,10 @@
 ---
+name: gtm-triangle-builder
 description: Build a complete GTM Triangle with positioning, ICPs, personas, value mapping, and channels
-tools: Read, Write, WebFetch, WebSearch
+allowed-tools: Read, Write, WebFetch, WebSearch
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # GTM Triangle Builder

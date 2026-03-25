@@ -1,6 +1,10 @@
 ---
+name: contact-finder
 description: "Find the right contacts at target accounts with buying committee mapping. Trigger: 'find contacts at', 'who should I reach out to at', 'find decision makers', 'build contact list'"
-tools: Read, Write, WebSearch
+allowed-tools: Read, Write, WebSearch
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Contact Finder
@@ -21,13 +25,13 @@ If target roles are missing, ask: "What roles or titles should I look for? (e.g.
 
 ### Step 0 — Idempotency Check
 
-For each company, check if `docs/prospects/contacts-{company-slug}.md` already exists. If it does, ask whether to update or skip that company.
+For each company, check if prospect documents already exists. If it does, ask whether to update or skip that company.
 
 ### Step 1 — Load Context
 
 Read available context:
-- `docs/gtm-triangle.md` — for persona definitions and buying committee roles
-- `docs/icp.md` — for qualifying criteria
+- gtm triangle.md documents — for persona definitions and buying committee roles
+- ICP document — for qualifying criteria
 - `CLAUDE.md` — project instructions
 
 ### Step 2 — Define the Buying Committee
@@ -94,7 +98,7 @@ If any check fails, fix before proceeding.
 
 ## Output Format
 
-Save to `docs/prospects/contacts-{company-slug}.md` (one file per company):
+Save the output to your project. Suggested filename: `contacts-{company-slug}.md` (one file per company):
 
 ```
 # Contacts: {Company Name}

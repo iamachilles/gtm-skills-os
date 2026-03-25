@@ -1,6 +1,10 @@
 ---
+name: email-validator
 description: "Validate and clean an email list with format checks, risk scoring, and deliverability flags. Trigger: 'validate emails', 'clean email list', 'check these emails', 'email list hygiene', 'email validation'"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Email Validator
@@ -19,7 +23,7 @@ If the email list is missing, ask: "Please provide the email list to validate. P
 
 ### Step 0 — Idempotency Check
 
-Check if `docs/prospects/validated-emails.md` already exists. If it does, ask: "A validated email list already exists. Should I overwrite it or save with a different name?"
+Check if prospect documents already exists. If it does, ask: "A validated email list already exists. Should I overwrite it or save with a different name?"
 
 ### Step 1 — Load Context
 
@@ -107,7 +111,7 @@ If any check fails, fix before proceeding.
 
 ## Output Format
 
-Save to `docs/prospects/validated-emails.md`:
+Save the output to your project. Suggested filename: `validated-emails.md`
 
 ```
 # Email Validation Report

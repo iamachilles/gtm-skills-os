@@ -1,6 +1,10 @@
 ---
+name: conference-talk-outliner
 description: Outline a conference talk with narrative arc and speaker notes. Use when someone says "conference talk", "talk outline", "speaking outline", "presentation outline", "keynote outline", "session outline", or "talk structure"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Conference Talk Outliner
@@ -21,15 +25,15 @@ If topic, audience, or time slot is missing, ask: "I need the topic, who the aud
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/content/talk-{topic-slug}.md` if it exists. If found, present a summary and ask: "A talk outline on this topic already exists. Do you want me to (a) refine it, (b) restructure for a different audience, or (c) rebuild?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A talk outline on this topic already exists. Do you want me to (a) refine it, (b) restructure for a different audience, or (c) rebuild?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/gtm-triangle.md` -- positioning (ensures talk reinforces your narrative)
-2. `docs/case-studies/*.md` -- proof points and stories to include
-3. `docs/content/*.md` -- existing content on this topic
+1. **GTM Triangle** -- positioning (ensures talk reinforces your narrative)
+2. **Case studies** -- proof points and stories to include
+3. **Content** documents -- existing content on this topic
 4. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Define the Thesis
@@ -120,7 +124,7 @@ Each slide concept should be describable in one sentence. If you need a paragrap
 
 ## Output Format
 
-Save to `docs/content/talk-{topic-slug}.md`:
+Save the output to your project. Suggested filename: `talk-{topic-slug}.md`
 
 ```markdown
 # Talk: {Title}

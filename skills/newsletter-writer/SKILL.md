@@ -1,6 +1,10 @@
 ---
+name: newsletter-writer
 description: Write a newsletter edition with subject lines, body sections, and CTA. Use when someone says "write a newsletter", "email newsletter", "newsletter edition", "weekly update", or "subscriber email"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Newsletter Writer
@@ -21,14 +25,14 @@ If topic is missing, ask: "What's the focus for this edition? A single topic you
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/content/newsletter-{date}.md`. If found, present summary and ask: "A newsletter edition for [date] already exists. Do you want me to (a) edit specific sections, (b) change the format, or (c) rewrite?"
+Read content documents. If found, present summary and ask: "A newsletter edition for [date] already exists. Do you want me to (a) edit specific sections, (b) change the format, or (c) rewrite?"
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/content-strategy.md` -- content positioning
-2. `docs/personas/*.md` -- subscriber profiles
+1. **Content strategy** -- content positioning
+2. **Persona profiles** -- subscriber profiles
 3. Recent content provided by the user
 4. `CLAUDE.md` -- project-level instructions
 
@@ -115,7 +119,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/content/newsletter-{date}.md`:
+Save the output to your project. Suggested filename: `newsletter-{date}.md`
 
 ```markdown
 # Newsletter: [Edition Title]

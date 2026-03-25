@@ -2,7 +2,7 @@
 
 **151 Claude Code skills for B2B Go-To-Market teams.** 14 phases, from research to revenue.
 
-Built from 15 months running GTM for 10+ B2B clients. Every skill encodes a repeatable framework — not a prompt hack.
+Built from 18 months running GTM for 10+ B2B clients. Every skill encodes a repeatable framework, not a prompt hack.
 
 ## What's Inside
 
@@ -31,33 +31,68 @@ Explore all 151 skills with filters, search, and detailed metadata:
 
 **[Open the GTM Skills OS on Notion](https://www.notion.so/3264221fbab181c8bdcfeeb2c93db34b)**
 
-The Notion hub includes the full skill directory, install instructions, and skill chain examples.
+## Prerequisites
 
-Every skill includes: one-liner, who it's for, required inputs, expected output, which skills it chains with, and difficulty level.
+- **Claude Code** (CLI) or **Claude.ai** with skills support
+- For research-oriented skills (competitor analysis, market sizing, etc.): **WebSearch** and **WebFetch** tools are required. These are available on Claude Max/Pro plans or via MCP servers with web access.
+- Skills that only need Read + Write (cold email writer, LinkedIn post writer, etc.) work on any Claude plan.
 
 ## Install
 
-### Option 1 — Install a single skill
+### Recommended: Install by pack
 
-```bash
-# Copy the skill folder into your Claude Code skills directory
-cp -r skills/gtm-diagnostic ~/.claude/skills/gtm-diagnostic
-```
+Don't install all 151 skills at once. Claude loads every skill description into context at startup. More than 50 skills causes triggering collisions and slower responses.
 
-### Option 2 — Install all skills
+Instead, pick 1-2 packs that match your role:
 
 ```bash
 git clone https://github.com/iamachilles/gtm-skills-os.git
-cp -r gtm-skills-os/skills/* ~/.claude/skills/
+cd gtm-skills-os
+./install.sh outbound-engine
 ```
 
-### Option 3 — Cherry-pick specific skills
+### Available Packs
+
+| Pack | Skills | Best for |
+|------|--------|----------|
+| `gtm-foundations` | 12 | Anyone starting GTM from scratch. ICP, positioning, personas, competitive intel. |
+| `outbound-engine` | 12 | SDRs, AEs, outbound teams. Cold email, LinkedIn, calls, sequences, list building. |
+| `content-machine` | 10 | Content marketers, founders. LinkedIn posts, blogs, newsletters, repurposing. |
+| `abm-playbook` | 10 | ABM teams, enterprise sellers. Account mapping, executive outreach, multi-threading. |
+| `sales-enablement` | 10 | Sales teams, managers. Battlecards, proposals, discovery, deal coaching. |
+| `revops-infra` | 12 | RevOps, ops teams. Email infra, CRM, enrichment, scoring, forecasting. |
+| `freelancer-agency` | 8 | Freelancers, consultants. Scoping, onboarding, reporting, positioning. |
+
+Install multiple packs at once:
 
 ```bash
-# Example: install just the prospecting skills
-for skill in build-prospect-list lead-enricher contact-finder lookalike-finder signal-list-generator linkedin-search-builder event-prospector trigger-campaign-designer warm-lead-reactivator account-mapper email-validator; do
-  cp -r "gtm-skills-os/skills/$skill" "$HOME/.claude/skills/$skill"
-done
+./install.sh gtm-foundations outbound-engine
+```
+
+List all packs:
+
+```bash
+./install.sh list
+```
+
+### Install a single skill
+
+```bash
+cp -r skills/gtm-diagnostic ~/.claude/skills/gtm-diagnostic
+```
+
+### Install all skills (not recommended)
+
+```bash
+./install.sh all
+```
+
+This will warn you about context budget impact and ask for confirmation.
+
+### Uninstall
+
+```bash
+./install.sh uninstall
 ```
 
 After installing, restart Claude Code and type `/skills` to see your new skills.
@@ -68,39 +103,43 @@ Skills are most powerful when composed. Each phase's output feeds the next.
 
 ```
 New market entry (7 skills):
-market-sizing → industry-briefing → icp-model-creator → gtm-triangle-builder
-→ buying-committee-mapper → sales-narrative-generator → write-outbound-sequence
+market-sizing -> industry-briefing -> icp-model-creator -> gtm-triangle-builder
+-> buying-committee-mapper -> sales-narrative-generator -> write-outbound-sequence
 
 Signal-based micro-campaign (5 skills):
-intent-signals → signal-monitor-setup → signal-list-generator
-→ outreach-personalizer → trigger-campaign-designer
+intent-signals -> signal-monitor-setup -> signal-list-generator
+-> outreach-personalizer -> trigger-campaign-designer
 
 ABM play for a strategic account (6 skills):
-account-mapper → account-play-designer → executive-briefing
-→ custom-demo-script → multi-thread-sequence → event-follow-up
+account-mapper -> account-play-designer -> executive-briefing
+-> custom-demo-script -> multi-thread-sequence -> event-follow-up
 
 Content engine (5 skills):
-content-calendar → hook-generator → write-linkedin-post
-→ content-repurposer → content-performance-analyzer
+content-calendar -> hook-generator -> write-linkedin-post
+-> content-repurposer -> content-performance-analyzer
 
 Full client engagement (6 skills):
-client-engagement-scoper → onboard-client → gtm-diagnostic
-→ gtm-triangle-builder → build-prospect-list → write-outbound-sequence
+client-engagement-scoper -> onboard-client -> gtm-diagnostic
+-> gtm-triangle-builder -> build-prospect-list -> write-outbound-sequence
 ```
 
 ## Skill File Format
 
-Each skill is a Markdown file with YAML frontmatter:
+Each skill follows the [Agent Skills open standard](https://agentskills.io/specification.md):
 
-```markdown
+```yaml
 ---
-description: What the skill does (shown in /skills menu)
-tools: Read, Write, WebSearch
+name: skill-name
+description: What it does. Use when user asks to [specific trigger phrases].
+allowed-tools: Read, Write, WebSearch
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Skill Name
 
-Instructions for Claude Code to execute the skill.
+Instructions for Claude to execute the skill.
 
 ## Inputs
 - What the user provides
@@ -125,7 +164,7 @@ The skills are generic by default. To make them specific to your business:
 ## Full Skill Index
 
 <details>
-<summary><strong>Phase 1 — Research & Diagnostics (15 skills)</strong></summary>
+<summary><strong>Phase 1 -- Research & Diagnostics (15 skills)</strong></summary>
 
 | Skill | What it does |
 |-------|-------------|
@@ -148,7 +187,7 @@ The skills are generic by default. To make them specific to your business:
 </details>
 
 <details>
-<summary><strong>Phase 2 — Strategy & Positioning (14 skills)</strong></summary>
+<summary><strong>Phase 2 -- Strategy & Positioning (14 skills)</strong></summary>
 
 | Skill | What it does |
 |-------|-------------|
@@ -170,7 +209,7 @@ The skills are generic by default. To make them specific to your business:
 </details>
 
 <details>
-<summary><strong>Phase 3 — Infrastructure & Data (12 skills)</strong></summary>
+<summary><strong>Phase 3 -- Infrastructure & Data (12 skills)</strong></summary>
 
 | Skill | What it does |
 |-------|-------------|
@@ -190,7 +229,7 @@ The skills are generic by default. To make them specific to your business:
 </details>
 
 <details>
-<summary><strong>Phase 4 — Prospecting & List Building (11 skills)</strong></summary>
+<summary><strong>Phase 4 -- Prospecting & List Building (11 skills)</strong></summary>
 
 | Skill | What it does |
 |-------|-------------|
@@ -209,7 +248,7 @@ The skills are generic by default. To make them specific to your business:
 </details>
 
 <details>
-<summary><strong>Phase 5 — Outreach & Sequences (15 skills)</strong></summary>
+<summary><strong>Phase 5 -- Outreach & Sequences (15 skills)</strong></summary>
 
 | Skill | What it does |
 |-------|-------------|
@@ -232,7 +271,7 @@ The skills are generic by default. To make them specific to your business:
 </details>
 
 <details>
-<summary><strong>Phase 6 — Content & Demand Gen (16 skills)</strong></summary>
+<summary><strong>Phase 6 -- Content & Demand Gen (16 skills)</strong></summary>
 
 | Skill | What it does |
 |-------|-------------|
@@ -256,7 +295,7 @@ The skills are generic by default. To make them specific to your business:
 </details>
 
 <details>
-<summary><strong>Phase 7 — Sales Enablement (13 skills)</strong></summary>
+<summary><strong>Phase 7 -- Sales Enablement (13 skills)</strong></summary>
 
 | Skill | What it does |
 |-------|-------------|
@@ -277,7 +316,7 @@ The skills are generic by default. To make them specific to your business:
 </details>
 
 <details>
-<summary><strong>Phase 8 — ABM & Account Plays (8 skills)</strong></summary>
+<summary><strong>Phase 8 -- ABM & Account Plays (8 skills)</strong></summary>
 
 | Skill | What it does |
 |-------|-------------|
@@ -293,7 +332,7 @@ The skills are generic by default. To make them specific to your business:
 </details>
 
 <details>
-<summary><strong>Phase 9 — RevOps & Operations (10 skills)</strong></summary>
+<summary><strong>Phase 9 -- RevOps & Operations (10 skills)</strong></summary>
 
 | Skill | What it does |
 |-------|-------------|
@@ -311,7 +350,7 @@ The skills are generic by default. To make them specific to your business:
 </details>
 
 <details>
-<summary><strong>Phase 10 — Customer Success (8 skills)</strong></summary>
+<summary><strong>Phase 10 -- Customer Success (8 skills)</strong></summary>
 
 | Skill | What it does |
 |-------|-------------|
@@ -327,7 +366,7 @@ The skills are generic by default. To make them specific to your business:
 </details>
 
 <details>
-<summary><strong>Phase 11 — Partnerships (6 skills)</strong></summary>
+<summary><strong>Phase 11 -- Partnerships (6 skills)</strong></summary>
 
 | Skill | What it does |
 |-------|-------------|
@@ -341,7 +380,7 @@ The skills are generic by default. To make them specific to your business:
 </details>
 
 <details>
-<summary><strong>Phase 12 — Event Marketing (6 skills)</strong></summary>
+<summary><strong>Phase 12 -- Event Marketing (6 skills)</strong></summary>
 
 | Skill | What it does |
 |-------|-------------|
@@ -355,7 +394,7 @@ The skills are generic by default. To make them specific to your business:
 </details>
 
 <details>
-<summary><strong>Phase 13 — Analytics & Optimization (10 skills)</strong></summary>
+<summary><strong>Phase 13 -- Analytics & Optimization (10 skills)</strong></summary>
 
 | Skill | What it does |
 |-------|-------------|
@@ -373,7 +412,7 @@ The skills are generic by default. To make them specific to your business:
 </details>
 
 <details>
-<summary><strong>Phase 14 — Freelancer & Agency (7 skills)</strong></summary>
+<summary><strong>Phase 14 -- Freelancer & Agency (7 skills)</strong></summary>
 
 | Skill | What it does |
 |-------|-------------|
@@ -393,11 +432,12 @@ Found a bug? Want to add a skill? PRs welcome.
 
 1. Fork the repo
 2. Add your skill in `skills/your-skill-name/SKILL.md`
-3. Submit a PR with a description of what the skill does and which phase it belongs to
+3. Follow the format in [SKILL-WRITING-GUIDE.md](SKILL-WRITING-GUIDE.md)
+4. Submit a PR with a description of what the skill does and which phase it belongs to
 
 ## Who Built This
 
-**Achille Morin-Lemoine** — GTM Engineering as a Service
+**Achille Morin-Lemoine** -- GTM Engineering as a Service
 
 I build outbound systems for B2B growth teams: ICP, signals, infrastructure, sequences, CRM ops, and automation. Everything a GTM Engineer would own, without the full-time hire.
 
@@ -405,4 +445,4 @@ I build outbound systems for B2B growth teams: ICP, signals, infrastructure, seq
 
 ## License
 
-MIT — use it, fork it, build on it.
+MIT -- use it, fork it, build on it.

@@ -1,6 +1,10 @@
 ---
+name: clay-table-designer
 description: Architect a Clay table blueprint for a specific workflow. Use when someone asks "design a Clay table", "Clay workflow", "Clay enrichment table", "set up Clay columns", "Clay table architecture", or "build Clay pipeline"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Clay Table Designer
@@ -22,15 +26,15 @@ If workflow description is missing, ask before proceeding.
 
 ### Step 0 — Idempotency Check
 
-Determine the workflow slug from the description (e.g., "prospect-enrichment", "signal-monitoring", "lead-scoring"). Check if `docs/ops/clay-table-{workflow-slug}.md` exists. If it does, ask: "A Clay table spec for this workflow already exists. Do you want to refine it or overwrite it?"
+Determine the workflow slug from the description (e.g., "prospect-enrichment", "signal-monitoring", "lead-scoring"). Check if operations documents exists. If it does, ask: "A Clay table spec for this workflow already exists. Do you want to refine it or overwrite it?"
 
 ### Step 1 — Load Context
 
 Read these files if they exist:
-- `docs/icp.md` — ICP criteria for filtering/scoring columns
-- `docs/ops/enrichment-waterfall.md` — enrichment provider sequence
-- `docs/ops/lead-scoring-model.md` — scoring logic to implement
-- `docs/ops/crm-fields.md` — CRM field mapping for output columns
+- ICP document — ICP criteria for filtering/scoring columns
+- operations documents — enrichment provider sequence
+- operations documents — scoring logic to implement
+- operations documents — CRM field mapping for output columns
 - `CLAUDE.md` — project context
 
 ### Step 2 — Define Input Columns
@@ -126,7 +130,7 @@ Before saving, verify:
 
 ## Output Format
 
-Save to `docs/ops/clay-table-{workflow-slug}.md`:
+Save the output to your project. Suggested filename: `clay-table-{workflow-slug}.md`
 
 ```markdown
 # Clay Table Blueprint: [Workflow Name]

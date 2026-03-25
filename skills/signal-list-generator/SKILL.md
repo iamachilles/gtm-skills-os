@@ -1,6 +1,10 @@
 ---
+name: signal-list-generator
 description: "Generate a prospect list from a specific buying signal. Trigger: 'find companies that just raised funding', 'who is hiring for', 'companies with recent', 'signal-based list', 'build trigger list'"
-tools: Read, Write, WebSearch
+allowed-tools: Read, Write, WebSearch
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Signal List Generator
@@ -22,13 +26,13 @@ If signal type is missing, ask: "What buying signal should I search for? Options
 
 ### Step 0 — Idempotency Check
 
-Check if `docs/prospects/signal-{signal-type}-{date}.md` already exists. If it does, inform the user and ask whether to create a new version or update.
+Check if prospect documents already exists. If it does, inform the user and ask whether to create a new version or update.
 
 ### Step 1 — Load Context
 
 Read available context:
-- `docs/icp.md` — ICP criteria for scoring
-- `docs/gtm-triangle.md` — value proposition for outreach angles
+- ICP document — ICP criteria for scoring
+- gtm triangle.md documents — value proposition for outreach angles
 - `CLAUDE.md` — project instructions
 
 ### Step 2 — Define Signal Search Criteria
@@ -111,7 +115,7 @@ If any check fails, fix before proceeding.
 
 ## Output Format
 
-Save to `docs/prospects/signal-{signal-type}-{date}.md`:
+Save the output to your project. Suggested filename: `signal-{signal-type}-{date}.md`
 
 ```
 # Signal List: {Signal Type}

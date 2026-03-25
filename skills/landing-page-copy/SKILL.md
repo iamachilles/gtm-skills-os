@@ -1,6 +1,10 @@
 ---
+name: landing-page-copy
 description: Write conversion-optimized landing page copy with all sections from hero to FAQ. Use when someone says "landing page", "landing page copy", "conversion page", "sales page", "write a landing page", or "page copy"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Landing Page Copy
@@ -23,17 +27,17 @@ If persona or offer are missing, ask: "I need to know who this page is for and w
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/content/landing-page-{offer-slug}.md`. If found, ask: "Landing page copy for [offer] already exists. Do you want me to (a) revise specific sections, (b) change the persona angle, or (c) rewrite?"
+Read content documents. If found, ask: "Landing page copy for [offer] already exists. Do you want me to (a) revise specific sections, (b) change the persona angle, or (c) rewrite?"
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/personas/*.md` -- target persona profile
-2. `docs/messaging-matrix.md` -- messaging by persona
-3. `docs/value-prop-matrix.md` -- features, benefits, value
-4. `docs/gtm-triangle.md` -- market positioning
-5. `docs/case-studies/*.md` -- proof points
+1. **Persona profiles** -- target persona profile
+2. **Messaging matrix** -- messaging by persona
+3. **Value proposition mapping** -- features, benefits, value
+4. **GTM Triangle** -- market positioning
+5. **Case studies** -- proof points
 6. `CLAUDE.md` -- project-level instructions
 
 Extract for this persona:
@@ -108,7 +112,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/content/landing-page-{offer-slug}.md`:
+Save the output to your project. Suggested filename: `landing-page-{offer-slug}.md`
 
 ```markdown
 # Landing Page: [Offer Name]

@@ -1,6 +1,10 @@
 ---
+name: gifting-strategy
 description: Design a direct mail and gifting strategy for top accounts by tier. Use when someone says "gifting strategy", "direct mail", "send gifts", "gift campaign", "ABM gifting", "account gifts", or "corporate gifting"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Gifting Strategy
@@ -23,16 +27,16 @@ If target accounts are missing, ask: "Which accounts should receive gifts? I nee
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/sales/gifting-strategy.md` if it exists. If found, present a summary and ask: "A gifting strategy already exists. Do you want me to (a) update gift selections, (b) adjust the timeline, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A gifting strategy already exists. Do you want me to (a) update gift selections, (b) adjust the timeline, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/account-tiering-model.md` -- tier definitions
-2. `docs/sales/abm-campaign-*.md` -- active campaigns
-3. `docs/sales/account-plays/*.md` -- individual account plays
-4. `docs/personas/*.md` -- persona preferences
+1. **Account tiering model** -- tier definitions
+2. **Abm Campaign** documents -- active campaigns
+3. **Account Plays** documents -- individual account plays
+4. **Persona profiles** -- persona preferences
 5. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Segment Accounts by Gift Tier
@@ -95,7 +99,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/sales/gifting-strategy.md`:
+Save the output to your project. Suggested filename: `gifting-strategy.md`
 
 ```markdown
 # Gifting Strategy

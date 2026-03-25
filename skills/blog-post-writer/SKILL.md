@@ -1,6 +1,10 @@
 ---
+name: blog-post-writer
 description: Write an SEO-optimized blog post with keyword research, competitive analysis, and meta tags. Use when someone says "write a blog post", "blog article", "SEO content", "write for the blog", or "long-form content"
-tools: Read, Write, WebSearch
+allowed-tools: Read, Write, WebSearch
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Blog Post Writer
@@ -23,15 +27,15 @@ If topic, keyword, or audience are missing, ask: "I need a topic, target keyword
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/content/blog-{slug}.md` where slug is derived from the keyword. If found, ask: "A blog post targeting [keyword] already exists. Do you want me to (a) update it with new research, (b) rewrite specific sections, or (c) start fresh?"
+Read content documents where slug is derived from the keyword. If found, ask: "A blog post targeting [keyword] already exists. Do you want me to (a) update it with new research, (b) rewrite specific sections, or (c) start fresh?"
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/content-strategy.md` -- content positioning
-2. `docs/gtm-triangle.md` -- market positioning
-3. `docs/personas/*.md` -- audience profiles
+1. **Content strategy** -- content positioning
+2. **GTM Triangle** -- market positioning
+3. **Persona profiles** -- audience profiles
 4. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Research the Keyword
@@ -120,7 +124,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/content/blog-{slug}.md`:
+Save the output to your project. Suggested filename: `blog-{slug}.md`
 
 ```markdown
 # [Blog Title]

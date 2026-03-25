@@ -1,6 +1,10 @@
 ---
+name: tech-stack-auditor
 description: Audit the GTM tech stack for overlap, gaps, and cost efficiency. Use when someone asks "audit tech stack", "tool audit", "GTM tools review", "consolidate tools", "tech stack analysis", "which tools to keep", or "tool overlap"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Tech Stack Auditor
@@ -20,14 +24,14 @@ If the tool list is missing, ask for it before proceeding. Need at minimum: tool
 
 ### Step 0 — Idempotency Check
 
-Check if `docs/ops/tech-stack-audit.md` exists. If it does, ask: "A tech stack audit already exists. Do you want to run a fresh audit or update the existing one?"
+Check if operations documents exists. If it does, ask: "A tech stack audit already exists. Do you want to run a fresh audit or update the existing one?"
 
 ### Step 1 — Load Context
 
 Read these files if they exist:
-- `docs/icp.md` — for understanding GTM requirements
-- `docs/gtm-triangle.md` — for channel and motion context
-- `docs/ops/enrichment-waterfall.md` — for enrichment tool context
+- ICP document — for understanding GTM requirements
+- gtm triangle.md documents — for channel and motion context
+- operations documents — for enrichment tool context
 - `CLAUDE.md` — project context
 
 ### Step 2 — Categorize Tools by Function
@@ -151,7 +155,7 @@ Before saving, verify:
 
 ## Output Format
 
-Save to `docs/ops/tech-stack-audit.md`:
+Save the output to your project. Suggested filename: `tech-stack-audit.md`
 
 ```markdown
 # GTM Tech Stack Audit

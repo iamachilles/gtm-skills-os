@@ -1,6 +1,10 @@
 ---
+name: carousel-outliner
 description: Outline a LinkedIn carousel with 12-15 slides including headers, body text, and visual direction. Use when someone says "carousel", "slide deck for LinkedIn", "carousel outline", "swipe post", or "LinkedIn slides"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Carousel Outliner
@@ -22,14 +26,14 @@ If topic or key points are missing, ask: "I need a topic and 5-8 key points for 
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/content/carousel-{topic-slug}.md`. If found, ask: "A carousel on [topic] already exists with [N] slides. Do you want me to (a) revise specific slides, (b) reorder, or (c) rebuild?"
+Read content documents. If found, ask: "A carousel on [topic] already exists with [N] slides. Do you want me to (a) revise specific slides, (b) reorder, or (c) rebuild?"
 
 ### Step 1 -- Load Context
 
 Read available context:
 
-1. `docs/content-strategy.md` -- content positioning
-2. `docs/personas/*.md` -- audience profiles
+1. **Content strategy** -- content positioning
+2. **Persona profiles** -- audience profiles
 3. `CLAUDE.md` -- project-level instructions
 
 Identify:
@@ -119,7 +123,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/content/carousel-{topic-slug}.md`:
+Save the output to your project. Suggested filename: `carousel-{topic-slug}.md`
 
 ```markdown
 # Carousel: [Topic]

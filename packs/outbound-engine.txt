@@ -1,0 +1,15 @@
+# Outbound Engine Pack (12 skills)
+# For: SDRs, AEs, outbound teams
+# Covers: Cold email, LinkedIn, calls, sequences, list building
+write-outbound-sequence
+cold-email-writer
+linkedin-message-writer
+cold-call-script
+follow-up-sequence
+subject-line-generator
+outreach-personalizer
+reply-handler
+ab-test-designer
+build-prospect-list
+lead-enricher
+contact-finder

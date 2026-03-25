@@ -1,6 +1,10 @@
 ---
+name: integration-partner-brief
 description: Create a technology partnership brief for an integration. Use when someone says "integration brief", "tech partnership", "integration partner", "API partnership", "product integration", "joint solution", or "integration spec"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Integration Partner Brief
@@ -21,15 +25,15 @@ If partner or integration concept is missing, ask: "I need to know which partner
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/sales/integration-brief-{partner-slug}.md` if it exists. If found, present a summary and ask: "An integration brief for [partner] already exists. Do you want me to (a) update it, (b) add a new use case, or (c) rebuild?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "An integration brief for [partner] already exists. Do you want me to (a) update it, (b) add a new use case, or (c) rebuild?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/gtm-triangle.md` -- positioning context
-2. `docs/sales/partner-pitch-{partner-slug}.md` -- if a pitch already exists
-3. `docs/ops/partner-program.md` -- partner program structure
+1. **GTM Triangle** -- positioning context
+2. **Partner Pitch Partner** documents -- if a pitch already exists
+3. **Partner Program** documents -- partner program structure
 4. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Define the Integration Use Case
@@ -99,7 +103,7 @@ Define how to take the integration to market:
 
 ## Output Format
 
-Save to `docs/sales/integration-brief-{partner-slug}.md`:
+Save the output to your project. Suggested filename: `integration-brief-{partner-slug}.md`
 
 ```markdown
 # Integration Brief: {Your Product} + {Partner Product}

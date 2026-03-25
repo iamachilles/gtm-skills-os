@@ -1,6 +1,10 @@
 ---
+name: nurture-sequence-writer
 description: Write a long-term nurture sequence with 8-12 touches over 3-6 months. Use when someone says "nurture sequence", "drip campaign", "long-term nurture", "stay in touch sequence", "nurture emails", "warm nurture", or "re-engagement campaign"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Nurture Sequence Writer
@@ -20,15 +24,15 @@ If persona or content assets are missing, ask: "I need the target persona and a 
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/sequences/nurture-{persona-slug}.md` if it exists. If found, present a summary and ask: "A nurture sequence for this persona already exists with [N] touches. Do you want me to (a) add more touches, (b) update content references, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A nurture sequence for this persona already exists with [N] touches. Do you want me to (a) add more touches, (b) update content references, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/personas/{persona-slug}.md` -- persona interests and content preferences
-2. `docs/messaging-matrix.md` -- messaging angles for value-adds
-3. `docs/sequences/follow-up-{persona-slug}.md` -- the outbound sequence they didn't respond to (to avoid repeating angles)
+1. **Persona profiles** -- persona interests and content preferences
+2. **Messaging matrix** -- messaging angles for value-adds
+3. **Persona profiles** -- the outbound sequence they didn't respond to (to avoid repeating angles)
 4. `CLAUDE.md` -- project-level instructions
 
 Identify content topics this persona would find genuinely useful, independent of buying intent.
@@ -102,7 +106,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/sequences/nurture-{persona-slug}.md`:
+Save the output to your project. Suggested filename: `nurture-{persona-slug}.md`
 
 ```markdown
 # Nurture Sequence: {Persona Title}

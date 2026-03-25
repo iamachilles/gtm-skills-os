@@ -1,6 +1,10 @@
 ---
+name: booth-strategy
 description: Plan a trade show booth strategy. Use when someone says "booth strategy", "trade show booth", "booth plan", "booth messaging", "exhibition plan", "booth design", or "trade show presence"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Booth Strategy
@@ -22,15 +26,15 @@ If event name or booth details are missing, ask: "I need the event name, booth s
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/content/booth-strategy-{event-slug}.md` if it exists. If found, present a summary and ask: "A booth strategy for this event already exists. Do you want me to (a) update it, (b) plan for a new year, or (c) keep it?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A booth strategy for this event already exists. Do you want me to (a) update it, (b) plan for a new year, or (c) keep it?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/gtm-triangle.md` -- positioning and messaging
-2. `docs/content/event-playbook-{event-slug}.md` -- if an event playbook exists
-3. `docs/sales/*.md` -- existing sales materials to adapt
+1. **GTM Triangle** -- positioning and messaging
+2. **Event Playbook Event** documents -- if an event playbook exists
+3. **Sales** documents -- existing sales materials to adapt
 4. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Define Booth Goals
@@ -140,7 +144,7 @@ Rotation: switch every 2 hours to prevent fatigue.
 
 ## Output Format
 
-Save to `docs/content/booth-strategy-{event-slug}.md`:
+Save the output to your project. Suggested filename: `booth-strategy-{event-slug}.md`
 
 ```markdown
 # Booth Strategy: {Event Name}

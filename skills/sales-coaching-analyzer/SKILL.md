@@ -1,6 +1,10 @@
 ---
+name: sales-coaching-analyzer
 description: Analyze a sales call transcript for coaching insights with scoring and improvement recommendations. Trigger phrases — "coaching analysis", "sales coaching", "analyze call", "call review", "coach me", "talk ratio", "call scoring", "rep feedback"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Sales Coaching Analyzer
@@ -22,14 +26,14 @@ If transcript is missing, ask: "Paste the call transcript and I'll analyze it fo
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/sales/coaching-{rep-slug}-{date}.md` if it exists. If found, present a summary and ask: "A coaching analysis for {rep} from {date} already exists. Do you want me to (a) analyze a new call, or (b) compare against this previous analysis?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A coaching analysis for {rep} from {date} already exists. Do you want me to (a) analyze a new call, or (b) compare against this previous analysis?" 
 
 ### Step 1 -- Load Context
 
 Read available context files:
 
-1. `docs/personas/` -- to assess whether the rep adapted to the persona
-2. `docs/sales/discovery-*.md` -- recommended discovery questions for comparison
+1. **Persona profiles** -- to assess whether the rep adapted to the persona
+2. **Discovery** documents -- recommended discovery questions for comparison
 3. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Calculate Talk Ratio
@@ -106,7 +110,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/sales/coaching-{rep-slug}-{date}.md`:
+Save the output to your project. Suggested filename: `coaching-{rep-slug}-{date}.md`
 
 ```markdown
 # Sales Call Coaching: {Rep Name}

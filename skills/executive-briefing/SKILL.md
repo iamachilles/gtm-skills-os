@@ -1,6 +1,10 @@
 ---
+name: executive-briefing
 description: Create a personalized C-level briefing with research, business case, and CTA. Use when someone says "executive briefing", "exec brief", "C-level brief", "CEO briefing", "CXO prep", "executive meeting prep", or "board-level pitch"
-tools: Read, Write, WebSearch
+allowed-tools: Read, Write, WebSearch
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Executive Briefing
@@ -23,16 +27,16 @@ If executive name is missing, ask: "Which executive are we preparing this briefi
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/sales/exec-briefing-{name-slug}.md` if it exists. If found, present a summary and ask: "An executive briefing for {name} already exists from {date}. Do you want me to (a) refresh the research, (b) update the business case, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "An executive briefing for {name} already exists from {date}. Do you want me to (a) refresh the research, (b) update the business case, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/sales/account-plays/{company-slug}.md` -- existing account play
-2. `docs/personas/*.md` -- persona matching this executive's role
-3. `docs/messaging-matrix.md` -- messaging pillars
-4. `docs/value-prop-matrix.md` -- feature-benefit mapping
+1. **Company** documents -- existing account play
+2. **Persona profiles** -- persona matching this executive's role
+3. **Messaging matrix** -- messaging pillars
+4. **Value proposition mapping** -- feature-benefit mapping
 5. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Research the Executive
@@ -100,7 +104,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/sales/exec-briefing-{name-slug}.md`:
+Save the output to your project. Suggested filename: `exec-briefing-{name-slug}.md`
 
 ```markdown
 # Executive Briefing: {Executive Name}

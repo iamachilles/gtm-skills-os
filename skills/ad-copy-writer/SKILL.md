@@ -1,6 +1,10 @@
 ---
+name: ad-copy-writer
 description: Write platform-specific ad copy for LinkedIn, Google, and Meta with variants and A/B test pairs. Use when someone says "write ad copy", "ad variants", "LinkedIn ads", "Google ads", "Meta ads", "Facebook ads", "ad creative", or "campaign copy"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Ad Copy Writer
@@ -23,16 +27,16 @@ If persona, offer, or platform are missing, ask: "I need to know who this is for
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/content/ads-{campaign-slug}.md`. If found, ask: "Ad copy for [campaign] already exists. Do you want me to (a) add new variants, (b) update for a different audience, or (c) rebuild?"
+Read content documents. If found, ask: "Ad copy for [campaign] already exists. Do you want me to (a) add new variants, (b) update for a different audience, or (c) rebuild?"
 
 ### Step 1 -- Load Context
 
 Read available context:
 
-1. `docs/personas/*.md` -- target persona profile
-2. `docs/messaging-matrix.md` -- messaging by persona
-3. `docs/value-prop-matrix.md` -- value propositions
-4. `docs/gtm-triangle.md` -- positioning
+1. **Persona profiles** -- target persona profile
+2. **Messaging matrix** -- messaging by persona
+3. **Value proposition mapping** -- value propositions
+4. **GTM Triangle** -- positioning
 5. `CLAUDE.md` -- project-level instructions
 
 Extract for this persona:
@@ -126,7 +130,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/content/ads-{campaign-slug}.md`:
+Save the output to your project. Suggested filename: `ads-{campaign-slug}.md`
 
 ```markdown
 # Ad Copy: [Campaign Name]

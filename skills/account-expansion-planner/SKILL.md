@@ -1,6 +1,10 @@
 ---
+name: account-expansion-planner
 description: Plan expansion within existing accounts by identifying new departments, use cases, and contacts. Use when someone says "account expansion", "expand account", "upsell plan", "cross-sell strategy", "land and expand", "grow account", or "account growth plan"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Account Expansion Planner
@@ -23,16 +27,16 @@ If account name is missing, ask: "Which existing account are we planning expansi
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/sales/expansion-{account-slug}.md` if it exists. If found, present a summary and ask: "An expansion plan for {account} already exists. Do you want me to (a) update contacts, (b) add new use cases, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "An expansion plan for {account} already exists. Do you want me to (a) update contacts, (b) add new use cases, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/sales/account-plays/{account-slug}.md` -- original account play
-2. `docs/ops/customer-health-model.md` -- health scoring if available
-3. `docs/ops/upsell-triggers.md` -- trigger definitions
-4. `docs/personas/*.md` -- persona definitions for new contacts
+1. **Account** documents -- original account play
+2. **Customer Health Model** documents -- health scoring if available
+3. **Upsell Triggers** documents -- trigger definitions
+4. **Persona profiles** -- persona definitions for new contacts
 5. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Analyze Current Engagement
@@ -117,7 +121,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/sales/expansion-{account-slug}.md`:
+Save the output to your project. Suggested filename: `expansion-{account-slug}.md`
 
 ```markdown
 # Account Expansion: {Company Name}

@@ -1,6 +1,10 @@
 ---
+name: co-marketing-planner
 description: Plan a co-marketing campaign with a partner. Use when someone says "co-marketing", "joint campaign", "partner marketing", "webinar with partner", "co-authored content", "email swap", "joint event", or "partner campaign"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Co-Marketing Planner
@@ -22,15 +26,15 @@ If partner name or campaign goal is missing, ask: "I need to know who the partne
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/content/co-marketing-{partner-slug}.md` if it exists. If found, present a summary and ask: "A co-marketing plan with this partner already exists. Do you want me to (a) update it, (b) plan a new campaign, or (c) keep it?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A co-marketing plan with this partner already exists. Do you want me to (a) update it, (b) plan a new campaign, or (c) keep it?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/gtm-triangle.md` -- your positioning
-2. `docs/ops/partner-program.md` -- partner program structure
-3. `docs/content/*.md` -- existing content for format reference
+1. **GTM Triangle** -- your positioning
+2. **Partner Program** documents -- partner program structure
+3. **Content** documents -- existing content for format reference
 4. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Define Joint Audience Overlap
@@ -123,7 +127,7 @@ Define metrics both partners agree on:
 
 ## Output Format
 
-Save to `docs/content/co-marketing-{partner-slug}.md`:
+Save the output to your project. Suggested filename: `co-marketing-{partner-slug}.md`
 
 ```markdown
 # Co-Marketing Campaign: {Your Company} x {Partner}

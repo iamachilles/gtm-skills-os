@@ -1,6 +1,10 @@
 ---
+name: crm-field-mapper
 description: Design CRM field structure with custom fields, picklists, and automation triggers. Use when someone asks "set up CRM fields", "CRM structure", "HubSpot field mapping", "Salesforce custom fields", "CRM properties", or "design CRM schema"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # CRM Field Mapper
@@ -23,14 +27,14 @@ If CRM platform or ICP is missing, ask before proceeding.
 
 ### Step 0 — Idempotency Check
 
-Check if `docs/ops/crm-fields.md` exists. If it does, ask: "A CRM field mapping already exists. Do you want to refine the existing spec or overwrite it?"
+Check if operations documents exists. If it does, ask: "A CRM field mapping already exists. Do you want to refine the existing spec or overwrite it?"
 
 ### Step 1 — Load Context
 
 Read these files if they exist:
-- `docs/icp.md` — ICP criteria to derive custom fields
-- `docs/gtm-triangle.md` — positioning and persona context
-- `docs/ops/lead-scoring-model.md` — scoring dimensions to support
+- ICP document — ICP criteria to derive custom fields
+- gtm triangle.md documents — positioning and persona context
+- operations documents — scoring dimensions to support
 - `CLAUDE.md` — project context
 
 ### Step 2 — Define Standard Company Fields
@@ -139,7 +143,7 @@ Before saving, verify:
 
 ## Output Format
 
-Save to `docs/ops/crm-fields.md`:
+Save the output to your project. Suggested filename: `crm-fields.md`
 
 ```markdown
 # CRM Field Structure: [Company Name]

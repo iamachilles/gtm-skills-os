@@ -1,6 +1,10 @@
 ---
+name: revops-audit
 description: Audit revenue operations across 6 dimensions with scoring and prioritized fixes. Use when someone says "revops audit", "revenue operations audit", "ops assessment", "GTM audit", "sales ops review", "process audit", or "operations health check"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # RevOps Audit
@@ -23,16 +27,16 @@ If tools and team structure are missing, ask: "I need your current tech stack (C
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/ops/revops-audit.md` if it exists. If found, present a summary and ask: "A RevOps audit already exists from {date} with scores [list]. Do you want me to (a) re-score based on changes, (b) focus on the top 3 fixes, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A RevOps audit already exists from {date} with scores [list]. Do you want me to (a) re-score based on changes, (b) focus on the top 3 fixes, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/ops/sales-process.md` -- process definitions
-2. `docs/ops/handoff-process.md` -- handoff documentation
-3. `docs/ops/deal-desk-playbook.md` -- pricing processes
-4. `docs/analytics/forecast-model.md` -- reporting maturity
+1. **Sales Process** documents -- process definitions
+2. **Handoff Process** documents -- handoff documentation
+3. **Deal Desk Playbook** documents -- pricing processes
+4. **Forecast Model** documents -- reporting maturity
 5. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Assess Dimension 1: Process Maturity (1-5)
@@ -133,7 +137,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/ops/revops-audit.md`:
+Save the output to your project. Suggested filename: `revops-audit.md`
 
 ```markdown
 # RevOps Audit

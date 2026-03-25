@@ -1,6 +1,10 @@
 ---
+name: partner-pitch-builder
 description: Write a pitch to recruit a specific partner. Use when someone says "partner pitch", "recruit a partner", "partnership proposal", "pitch a partner", "partner outreach", or "partnership email"
-tools: Read, Write, WebSearch
+allowed-tools: Read, Write, WebSearch
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Partner Pitch Builder
@@ -22,15 +26,15 @@ If partner company or your context is missing, ask: "I need to know which compan
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/sales/partner-pitch-{partner-slug}.md` if it exists. If found, present a summary and ask: "A partner pitch for [partner] already exists. Do you want me to (a) update it, (b) try a different angle, or (c) keep it?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A partner pitch for [partner] already exists. Do you want me to (a) update it, (b) try a different angle, or (c) keep it?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/gtm-triangle.md` -- your positioning
-2. `docs/ops/partner-program.md` -- partner program details
-3. `docs/case-studies/*.md` -- proof points to include
+1. **GTM Triangle** -- your positioning
+2. **Partner Program** documents -- partner program details
+3. **Case studies** -- proof points to include
 4. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Research the Partner
@@ -90,7 +94,7 @@ Rules:
 
 ## Output Format
 
-Save to `docs/sales/partner-pitch-{partner-slug}.md`:
+Save the output to your project. Suggested filename: `partner-pitch-{partner-slug}.md`
 
 ```markdown
 # Partner Pitch: {Partner Company}

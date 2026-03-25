@@ -1,6 +1,10 @@
 ---
+name: trigger-campaign-designer
 description: "Design a micro-campaign around a trigger event with messaging, channels, and timing. Trigger: 'design trigger campaign', 'campaign around event', 'micro-campaign for', 'trigger-based outreach campaign'"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Trigger Campaign Designer
@@ -23,13 +27,13 @@ If trigger type is missing, ask: "What trigger event should this campaign be bui
 
 ### Step 0 — Idempotency Check
 
-Check if `docs/sequences/{trigger-slug}-campaign.md` already exists. If it does, ask: "A campaign for this trigger already exists. Should I update it or create a new version?"
+Check if existing sequences already exists. If it does, ask: "A campaign for this trigger already exists. Should I update it or create a new version?"
 
 ### Step 1 — Load Context
 
 Read available context:
-- `docs/gtm-triangle.md` — value proposition and positioning
-- `docs/icp.md` — ICP criteria for qualification
+- gtm triangle.md documents — value proposition and positioning
+- ICP document — ICP criteria for qualification
 - `CLAUDE.md` — project instructions
 
 ### Step 2 — Define the Trigger Precisely
@@ -117,7 +121,7 @@ If any check fails, fix before proceeding.
 
 ## Output Format
 
-Save to `docs/sequences/{trigger-slug}-campaign.md`:
+Save the output to your project. Suggested filename: `{trigger-slug}-campaign.md`
 
 ```
 # Micro-Campaign: {Trigger Name}

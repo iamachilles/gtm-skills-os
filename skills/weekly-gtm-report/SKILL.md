@@ -1,6 +1,10 @@
 ---
+name: weekly-gtm-report
 description: Generate a weekly GTM report with metrics, pipeline, and priorities. Use when someone says "weekly report", "GTM report", "weekly update", "weekly metrics", "weekly summary", "status report", or "weekly review"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Weekly GTM Report
@@ -22,15 +26,15 @@ If activity data is missing, ask: "I need this week's activity data (sends, repl
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/analytics/weekly-report-{date}.md` if it exists. If found, present a summary and ask: "A weekly report for this date already exists. Do you want me to (a) update it, (b) keep it, or (c) rebuild?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A weekly report for this date already exists. Do you want me to (a) update it, (b) keep it, or (c) rebuild?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/analytics/weekly-report-*.md` -- last week's report for comparison
-2. `docs/analytics/dashboard-spec.md` -- metric definitions and targets
-3. `docs/analytics/pipeline-audit.md` -- pipeline context
+1. **Weekly Report** documents -- last week's report for comparison
+2. **Dashboard Spec** documents -- metric definitions and targets
+3. **Pipeline Audit** documents -- pipeline context
 4. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Section 1: Key Metrics
@@ -111,7 +115,7 @@ Rules:
 
 ## Output Format
 
-Save to `docs/analytics/weekly-report-{date}.md`:
+Save the output to your project. Suggested filename: `weekly-report-{date}.md`
 
 ```markdown
 # Weekly GTM Report: {Date Range}

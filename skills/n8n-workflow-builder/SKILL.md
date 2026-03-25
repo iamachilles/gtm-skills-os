@@ -1,6 +1,10 @@
 ---
+name: n8n-workflow-builder
 description: Generate a human-readable n8n workflow specification from a natural language description. Use when someone asks "build n8n workflow", "automate this in n8n", "n8n automation", "design n8n flow", "workflow automation spec", or "connect these tools with n8n"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # n8n Workflow Builder
@@ -22,14 +26,14 @@ If the workflow description is missing or too vague to design nodes, ask for cla
 
 ### Step 0 — Idempotency Check
 
-Derive a name slug from the workflow description (e.g., "lead-enrichment-notify", "signal-to-sequence"). Check if `docs/ops/n8n-workflow-{name-slug}.md` exists. If it does, ask: "A spec for this workflow already exists. Do you want to refine it or overwrite it?"
+Derive a name slug from the workflow description (e.g., "lead-enrichment-notify", "signal-to-sequence"). Check if operations documents exists. If it does, ask: "A spec for this workflow already exists. Do you want to refine it or overwrite it?"
 
 ### Step 1 — Load Context
 
 Read these files if they exist:
-- `docs/ops/enrichment-waterfall.md` — for enrichment step details
-- `docs/ops/crm-fields.md` — for CRM field mappings
-- `docs/ops/lead-scoring-model.md` — for scoring logic
+- operations documents — for enrichment step details
+- operations documents — for CRM field mappings
+- operations documents — for scoring logic
 - `CLAUDE.md` — project context
 
 ### Step 2 — Parse Workflow into Steps
@@ -151,7 +155,7 @@ Before saving, verify:
 
 ## Output Format
 
-Save to `docs/ops/n8n-workflow-{name-slug}.md`:
+Save the output to your project. Suggested filename: `n8n-workflow-{name-slug}.md`
 
 ```markdown
 # n8n Workflow Spec: [Workflow Name]

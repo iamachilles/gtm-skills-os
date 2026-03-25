@@ -1,6 +1,10 @@
 ---
+name: multi-thread-sequence
 description: Design multi-persona outreach at the same account with coordinated timing. Use when someone says "multi-thread", "multi-threading", "buying committee outreach", "account-based sequence", "surround the account", or "contact multiple stakeholders"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Multi-Thread Sequence
@@ -23,16 +27,16 @@ If account or buying committee is missing, ask: "I need the account details and 
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/sequences/multi-thread-{account-slug}.md` if it exists. If found, present a summary and ask: "A multi-thread sequence for this account already exists covering [N] contacts. Do you want me to (a) add new contacts, (b) update messaging, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A multi-thread sequence for this account already exists covering [N] contacts. Do you want me to (a) add new contacts, (b) update messaging, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/buying-committees/{account-slug}.md` -- buying committee mapping
-2. `docs/personas/*.md` -- persona profiles for each role
-3. `docs/messaging-matrix.md` -- role-specific messaging
-4. `docs/sales-narratives.md` -- narrative framing
+1. **Buying committee mapping** -- buying committee mapping
+2. **Persona profiles** -- persona profiles for each role
+3. **Messaging matrix** -- role-specific messaging
+4. **Sales narratives** -- narrative framing
 5. `CLAUDE.md` -- project-level instructions
 
 For each contact, identify:
@@ -107,7 +111,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/sequences/multi-thread-{account-slug}.md`:
+Save the output to your project. Suggested filename: `multi-thread-{account-slug}.md`
 
 ```markdown
 # Multi-Thread Sequence: {Account Name}

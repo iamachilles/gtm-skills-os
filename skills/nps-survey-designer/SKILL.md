@@ -1,6 +1,10 @@
 ---
+name: nps-survey-designer
 description: Design an NPS/CSAT survey program with follow-up actions by score segment. Use when someone says "NPS survey", "CSAT survey", "customer survey", "satisfaction survey", "NPS program", "customer feedback", or "survey design"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # NPS Survey Designer
@@ -23,15 +27,15 @@ If survey type is missing, ask: "Do you want to measure overall relationship sat
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/ops/nps-program.md` if it exists. If found, present a summary and ask: "An NPS program already exists. Do you want me to (a) update follow-up actions, (b) redesign questions, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "An NPS program already exists. Do you want me to (a) update follow-up actions, (b) redesign questions, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/ops/customer-health-model.md` -- how NPS feeds health scoring
-2. `docs/ops/churn-prevention.md` -- how Detractor responses trigger intervention
-3. `docs/ops/advocacy-program.md` -- how Promoter responses feed advocacy
+1. **Customer Health Model** documents -- how NPS feeds health scoring
+2. **Churn Prevention** documents -- how Detractor responses trigger intervention
+3. **Advocacy Program** documents -- how Promoter responses feed advocacy
 4. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Choose Survey Type and Timing
@@ -124,7 +128,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/ops/nps-program.md`:
+Save the output to your project. Suggested filename: `nps-program.md`
 
 ```markdown
 # NPS/CSAT Program

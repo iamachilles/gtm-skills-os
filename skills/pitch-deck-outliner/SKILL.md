@@ -1,6 +1,10 @@
 ---
+name: pitch-deck-outliner
 description: Generate a persona-tailored pitch deck outline with slide-by-slide content and speaker notes. Use when someone says "pitch deck", "deck outline", "sales deck", "presentation outline", "build a deck", or "pitch structure"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Pitch Deck Outliner
@@ -25,18 +29,18 @@ If persona or positioning are missing, ask: "I need a target persona and your po
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/sales/pitch-deck-{persona-slug}.md` where `{persona-slug}` is the persona title slugified. If found, present a summary and ask: "A pitch deck outline for [persona] already exists with [N] slides. Do you want me to (a) update specific slides, (b) restructure the flow, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A pitch deck outline for [persona] already exists with [N] slides. Do you want me to (a) update specific slides, (b) restructure the flow, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/gtm-triangle.md` -- positioning and market change
-2. `docs/personas/{persona-slug}.md` -- detailed persona profile
-3. `docs/value-prop-matrix.md` -- value props for this persona
-4. `docs/sales-narratives.md` -- narrative structure if available
-5. `docs/case-studies/*.md` -- proof points for the Proof slide
-6. `docs/objection-library.md` -- objections to preempt
+1. **GTM Triangle** -- positioning and market change
+2. **Persona profiles** -- detailed persona profile
+3. **Value proposition mapping** -- value props for this persona
+4. **Sales narratives** -- narrative structure if available
+5. **Case studies** -- proof points for the Proof slide
+6. **Objection library** -- objections to preempt
 7. `CLAUDE.md` -- project-level instructions
 
 For the target persona, extract:
@@ -138,7 +142,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/sales/pitch-deck-{persona-slug}.md`:
+Save the output to your project. Suggested filename: `pitch-deck-{persona-slug}.md`
 
 ```markdown
 # Pitch Deck: [Persona Title]

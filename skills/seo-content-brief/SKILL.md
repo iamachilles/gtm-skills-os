@@ -1,6 +1,10 @@
 ---
+name: seo-content-brief
 description: Create an SEO content brief with keyword research, competitive analysis, and detailed outline. Use when someone says "SEO brief", "content brief", "keyword brief", "write a brief for", "SEO outline", or "what should this article cover"
-tools: Read, Write, WebSearch
+allowed-tools: Read, Write, WebSearch
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # SEO Content Brief
@@ -21,14 +25,14 @@ If target keyword is missing, ask: "What keyword do you want to rank for? Give m
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/content/seo-brief-{keyword-slug}.md`. If found, ask: "An SEO brief for [keyword] already exists. Do you want me to (a) update with fresh competitive data, (b) expand the outline, or (c) rebuild?"
+Read content documents. If found, ask: "An SEO brief for [keyword] already exists. Do you want me to (a) update with fresh competitive data, (b) expand the outline, or (c) rebuild?"
 
 ### Step 1 -- Load Context
 
 Read available context:
 
-1. `docs/content-strategy.md` -- content positioning
-2. `docs/personas/*.md` -- who searches for this term
+1. **Content strategy** -- content positioning
+2. **Persona profiles** -- who searches for this term
 3. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Research the Keyword
@@ -111,7 +115,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/content/seo-brief-{keyword-slug}.md`:
+Save the output to your project. Suggested filename: `seo-brief-{keyword-slug}.md`
 
 ```markdown
 # SEO Content Brief: [Keyword]

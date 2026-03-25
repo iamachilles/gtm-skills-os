@@ -1,6 +1,10 @@
 ---
+name: utm-taxonomy
 description: Design a UTM parameter taxonomy for tracking marketing campaigns. Use when someone asks "UTM naming convention", "UTM taxonomy", "campaign tracking setup", "UTM parameters", "attribution tracking", or "how to tag campaign URLs"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # UTM Taxonomy
@@ -20,13 +24,13 @@ If channels or campaign types are missing, ask before proceeding.
 
 ### Step 0 — Idempotency Check
 
-Check if `docs/ops/utm-taxonomy.md` exists. If it does, ask: "A UTM taxonomy already exists. Do you want to refine it or overwrite it?"
+Check if operations documents exists. If it does, ask: "A UTM taxonomy already exists. Do you want to refine it or overwrite it?"
 
 ### Step 1 — Load Context
 
 Read these files if they exist:
-- `docs/icp.md` — for segment naming
-- `docs/gtm-triangle.md` — for channel context
+- ICP document — for segment naming
+- gtm triangle.md documents — for channel context
 - `CLAUDE.md` — project context
 
 ### Step 2 — Define utm_source Values
@@ -153,7 +157,7 @@ Before saving, verify:
 
 ## Output Format
 
-Save to `docs/ops/utm-taxonomy.md`:
+Save the output to your project. Suggested filename: `utm-taxonomy.md`
 
 ```markdown
 # UTM Taxonomy

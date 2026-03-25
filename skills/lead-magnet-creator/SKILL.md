@@ -1,6 +1,10 @@
 ---
+name: lead-magnet-creator
 description: Design a lead magnet with content outline, visual spec, promotion post, and DM template. Use when someone says "lead magnet", "create a freebie", "gated content", "content asset", "downloadable resource", or "build a guide for leads"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Lead Magnet Creator
@@ -22,16 +26,16 @@ If topic or audience are missing, ask: "I need a topic area and target audience.
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/content/assets/lead-magnet-{topic-slug}.md`. If found, present summary and ask: "A lead magnet on [topic] already exists. Do you want me to (a) update the outline, (b) change the format, or (c) rebuild from scratch?"
+Read content documents. If found, present summary and ask: "A lead magnet on [topic] already exists. Do you want me to (a) update the outline, (b) change the format, or (c) rebuild from scratch?"
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/personas/*.md` -- target audience profiles
-2. `docs/content-strategy.md` -- content positioning and themes
-3. `docs/gtm-triangle.md` -- market positioning
-4. `docs/value-prop-matrix.md` -- value props for this audience
+1. **Persona profiles** -- target audience profiles
+2. **Content strategy** -- content positioning and themes
+3. **GTM Triangle** -- market positioning
+4. **Value proposition mapping** -- value props for this audience
 5. `CLAUDE.md` -- project-level instructions
 
 Extract from persona files:
@@ -121,7 +125,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/content/assets/lead-magnet-{topic-slug}.md`:
+Save the output to your project. Suggested filename: `lead-magnet-{topic-slug}.md`
 
 ```markdown
 # Lead Magnet: [Title]

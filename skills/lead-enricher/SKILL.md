@@ -1,6 +1,10 @@
 ---
+name: lead-enricher
 description: "Enrich companies and contacts with firmographic, technographic, and intent data. Trigger: 'enrich these leads', 'enrich this list', 'add data to prospects', 'research these companies'"
-tools: Read, Write, WebSearch
+allowed-tools: Read, Write, WebSearch
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Lead Enricher
@@ -22,16 +26,16 @@ If the list is missing or unclear, ask: "Please provide the list of companies or
 
 ### Step 0 — Idempotency Check
 
-Check if `docs/prospects/enriched-list.md` already exists. If it does, ask: "An enriched list already exists. Should I overwrite it, append to it, or save with a different name?"
+Check if prospect documents already exists. If it does, ask: "An enriched list already exists. Should I overwrite it, append to it, or save with a different name?"
 
 ### Step 1 — Load Context
 
 Read available context files:
-- `docs/icp.md` — ICP criteria for scoring
-- `docs/gtm-triangle.md` — positioning context
+- ICP document — ICP criteria for scoring
+- gtm triangle.md documents — positioning context
 - `CLAUDE.md` — project instructions
 
-If ICP criteria were not provided and `docs/icp.md` does not exist, ask for scoring criteria before proceeding.
+If ICP criteria were not provided and ICP document does not exist, ask for scoring criteria before proceeding.
 
 ### Step 2 — Parse Input List
 
@@ -108,7 +112,7 @@ If any check fails, fix before proceeding.
 
 ## Output Format
 
-Save to `docs/prospects/enriched-list.md`:
+Save the output to your project. Suggested filename: `enriched-list.md`
 
 ```
 # Enriched Lead List

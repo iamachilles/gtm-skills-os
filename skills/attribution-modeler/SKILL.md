@@ -1,6 +1,10 @@
 ---
+name: attribution-modeler
 description: Design a marketing attribution model. Use when someone says "attribution model", "attribution", "marketing attribution", "track attribution", "first touch last touch", "multi-touch attribution", or "channel attribution"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Attribution Modeler
@@ -20,15 +24,15 @@ If channels or sales cycle are missing, ask: "I need to know which channels you 
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/analytics/attribution-model.md` if it exists. If found, present a summary and ask: "An attribution model already exists. Do you want me to (a) update it, (b) switch model types, or (c) keep it?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "An attribution model already exists. Do you want me to (a) update it, (b) switch model types, or (c) keep it?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/analytics/*.md` -- existing analytics frameworks
-2. `docs/gtm-triangle.md` -- channels and GTM motion
-3. `docs/analytics/dashboard-spec.md` -- current reporting
+1. **Analytics** documents -- existing analytics frameworks
+2. **GTM Triangle** -- channels and GTM motion
+3. **Dashboard Spec** documents -- current reporting
 4. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Choose Model Type
@@ -128,7 +132,7 @@ Be honest about what the model can and cannot tell you:
 
 ## Output Format
 
-Save to `docs/analytics/attribution-model.md`:
+Save the output to your project. Suggested filename: `attribution-model.md`
 
 ```markdown
 # Attribution Model

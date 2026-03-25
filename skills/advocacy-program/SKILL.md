@@ -1,6 +1,10 @@
 ---
+name: advocacy-program
 description: Build a customer advocacy program with tiers, engagement cadence, and recruitment. Use when someone says "advocacy program", "customer advocates", "customer advisory board", "reference program", "customer champions", "brand ambassadors", or "customer community"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Advocacy Program
@@ -21,15 +25,15 @@ If customer base is missing, ask: "How many active customers do you have, and wh
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/ops/advocacy-program.md` if it exists. If found, present a summary and ask: "An advocacy program already exists. Do you want me to (a) update tiers, (b) redesign engagement, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "An advocacy program already exists. Do you want me to (a) update tiers, (b) redesign engagement, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/ops/nps-program.md` -- Promoter identification
-2. `docs/ops/customer-health-model.md` -- health data for qualification
-3. `docs/ops/referral-program.md` -- overlap with referral program
+1. **Nps Program** documents -- Promoter identification
+2. **Customer Health Model** documents -- health data for qualification
+3. **Referral Program** documents -- overlap with referral program
 4. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Define Advocate Criteria
@@ -137,7 +141,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/ops/advocacy-program.md`:
+Save the output to your project. Suggested filename: `advocacy-program.md`
 
 ```markdown
 # Customer Advocacy Program

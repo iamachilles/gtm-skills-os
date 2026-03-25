@@ -1,6 +1,10 @@
 ---
+name: customer-interview-guide
 description: Generate a structured discovery interview script with synthesis template. Trigger phrases — "interview guide", "customer interview", "discovery questions", "interview script", "customer research questions"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Customer Interview Guide
@@ -12,9 +16,9 @@ Good interview questions are open-ended, specific enough to avoid rambling, and 
 ## Inputs
 
 - **Interview purpose** (required) — what you're trying to learn. Examples: "Validate ICP pain points," "Understand why we lost 5 deals last quarter," "Map the buying process for enterprise deals," "Test messaging for new product launch"
-- **ICP document** (optional) — if `docs/icp.md` exists, load it for persona context
+- **ICP document** (optional) — if ICP document exists, load it for persona context
 - **Persona target** (optional) — which specific persona(s) will be interviewed
-- **Win-loss analysis** (optional) — if `docs/analytics/win-loss-analysis.md` exists, load it to inform loss-related questions
+- **Win-loss analysis** (optional) — if analytics documents exists, load it to inform loss-related questions
 - **Specific hypotheses to test** (optional) — particular assumptions the interviews should validate or invalidate
 - **Interview format** (optional, default: 30-minute call) — length and medium (call, in-person, async survey)
 
@@ -25,9 +29,9 @@ If the interview purpose is missing, ask before proceeding. A guide without a cl
 ### Step 1 — Load Context
 
 Read existing project documents to inform question design:
-- Check for `docs/icp.md` — load personas, pain points, buying triggers
-- Check for `docs/analytics/win-loss-analysis.md` — load loss patterns and open questions
-- Check for `docs/icp-challenge.md` — load unvalidated assumptions that need testing
+- Check for ICP document — load personas, pain points, buying triggers
+- Check for analytics documents — load loss patterns and open questions
+- Check for ICP document — load unvalidated assumptions that need testing
 - Check for `CLAUDE.md` — load company context and positioning
 
 From the loaded context, extract:
@@ -107,7 +111,7 @@ Before saving, verify:
 
 ## Output Format
 
-Save to `docs/customer-interview-guide.md`:
+Save the output to your project. Suggested filename: `customer-interview-guide.md`
 
 ```markdown
 # Customer Interview Guide

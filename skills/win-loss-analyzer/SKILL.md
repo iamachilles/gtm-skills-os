@@ -1,6 +1,10 @@
 ---
+name: win-loss-analyzer
 description: Analyze closed deals to extract win/loss patterns and improve sales strategy. Trigger phrases — "win loss analysis", "why are we losing deals", "deal analysis", "analyze closed deals", "sales patterns"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Win-Loss Analyzer
@@ -12,7 +16,7 @@ The best win-loss analysis challenges assumptions. If the findings just confirm 
 ## Inputs
 
 - **Deal data** (required) — CRM export, deal notes, sales call transcripts, or structured notes from the user. Must include at least 10 deals for meaningful patterns. Minimum fields: company name, outcome (won/lost/stalled), deal size, and any context on why.
-- **ICP document** (optional) — if `docs/icp.md` exists, load it to compare deal patterns against ICP criteria
+- **ICP document** (optional) — if ICP document exists, load it to compare deal patterns against ICP criteria
 - **Time period** (optional) — scope the analysis to a specific window
 - **Specific questions** (optional) — anything the user wants investigated ("Why do we lose to Competitor X?", "Are larger deals harder to close?")
 
@@ -22,8 +26,8 @@ If deal data is missing or contains fewer than 5 deals, ask the user to provide 
 
 ### Step 1 — Load Context and Ingest Data
 
-- Check for `docs/icp.md` — load ICP criteria for fit comparison
-- Check for `docs/competitors/competitive-analysis.md` — load competitor context
+- Check for ICP document — load ICP criteria for fit comparison
+- Check for competitive analysis — load competitor context
 - Check for `CLAUDE.md` — load company context
 - Ingest and normalize the deal data into a consistent format:
   - Company name
@@ -123,7 +127,7 @@ Before saving, verify:
 
 ## Output Format
 
-Save to `docs/analytics/win-loss-analysis.md`:
+Save the output to your project. Suggested filename: `win-loss-analysis.md`
 
 ```markdown
 # Win-Loss Analysis: [Company/Product Name]

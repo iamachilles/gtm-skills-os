@@ -1,6 +1,10 @@
 ---
+name: case-study-to-content
 description: Repurpose a case study into 5-7 LinkedIn post drafts covering different angles. Use when someone says "repurpose case study", "turn case study into posts", "case study content", "extract posts from engagement", or "content from client work"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Case Study to Content
@@ -21,16 +25,16 @@ If case study is missing, ask: "I need a case study to repurpose. Do you have a 
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/content/posts/case-study-series-{client-slug}.md`. If found, present summary and ask: "A content series for [client] already exists with [N] drafts. Do you want me to (a) add new angles, (b) rewrite specific posts, or (c) rebuild the full series?"
+Read case studies. If found, present summary and ask: "A content series for [client] already exists with [N] drafts. Do you want me to (a) add new angles, (b) rewrite specific posts, or (c) rebuild the full series?"
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. The case study document (provided or from `docs/case-studies/`)
-2. `docs/content-strategy.md` -- content themes and angles
-3. `docs/personas/*.md` -- who the content is for
-4. `docs/gtm-triangle.md` -- positioning context
+1. The case study document (provided or from case studies)
+2. **Content strategy** -- content themes and angles
+3. **Persona profiles** -- who the content is for
+4. **GTM Triangle** -- positioning context
 5. `CLAUDE.md` -- project-level instructions
 
 From the case study, extract:
@@ -105,7 +109,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/content/posts/case-study-series-{client-slug}.md`:
+Save the output to your project. Suggested filename: `case-study-series-{client-slug}.md`
 
 ```markdown
 # Case Study Content Series: [Client/Project Name]

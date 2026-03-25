@@ -1,6 +1,10 @@
 ---
+name: customer-onboarding-planner
 description: Design a post-sale customer onboarding plan with milestones and time-to-value targets. Use when someone says "customer onboarding", "post-sale onboarding", "implementation plan", "customer kickoff", "time to value", "onboarding milestones", or "customer go-live"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Customer Onboarding Planner
@@ -24,15 +28,15 @@ If product or success criteria is missing, ask: "What product is the customer on
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/ops/customer-onboarding.md` if it exists. If found, present a summary and ask: "A customer onboarding plan already exists. Do you want me to (a) adjust the timeline, (b) add milestones, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A customer onboarding plan already exists. Do you want me to (a) adjust the timeline, (b) add milestones, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/ops/customer-health-model.md` -- how onboarding affects health scores
-2. `docs/ops/success-plan-template.md` -- longer-term success planning
-3. `docs/ops/churn-prevention.md` -- onboarding failures that lead to churn
+1. **Customer Health Model** documents -- how onboarding affects health scores
+2. **Success Plan Template** documents -- longer-term success planning
+3. **Churn Prevention** documents -- onboarding failures that lead to churn
 4. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Define Onboarding Milestones
@@ -131,7 +135,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/ops/customer-onboarding.md`:
+Save the output to your project. Suggested filename: `customer-onboarding.md`
 
 ```markdown
 # Customer Onboarding Plan

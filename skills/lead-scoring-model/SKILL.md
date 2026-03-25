@@ -1,6 +1,10 @@
 ---
+name: lead-scoring-model
 description: Build a lead scoring model with fit and intent dimensions. Use when someone asks "lead scoring", "score leads", "prioritize leads", "lead scoring model", "ICP scoring rubric", "qualify leads automatically", or "lead prioritization"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Lead Scoring Model
@@ -20,15 +24,15 @@ If ICP criteria or available signals are missing, ask before proceeding.
 
 ### Step 0 — Idempotency Check
 
-Check if `docs/ops/lead-scoring-model.md` exists. If it does, ask: "A lead scoring model already exists. Do you want to refine the existing model or overwrite it?"
+Check if operations documents exists. If it does, ask: "A lead scoring model already exists. Do you want to refine the existing model or overwrite it?"
 
 ### Step 1 — Load Context
 
 Read these files if they exist:
-- `docs/icp.md` — ICP criteria for fit scoring
-- `docs/gtm-triangle.md` — positioning and persona context
-- `docs/intent-signals.md` — signal definitions
-- `docs/ops/crm-fields.md` — available CRM fields
+- ICP document — ICP criteria for fit scoring
+- gtm triangle.md documents — positioning and persona context
+- intent signals.md documents — signal definitions
+- operations documents — available CRM fields
 - `CLAUDE.md` — project context
 
 ### Step 2 — Define Fit Score Dimensions (0-50 points)
@@ -121,7 +125,7 @@ Before saving, verify:
 
 ## Output Format
 
-Save to `docs/ops/lead-scoring-model.md`:
+Save the output to your project. Suggested filename: `lead-scoring-model.md`
 
 ```markdown
 # Lead Scoring Model: [Company Name]

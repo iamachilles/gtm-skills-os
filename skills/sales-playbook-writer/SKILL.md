@@ -1,6 +1,10 @@
 ---
+name: sales-playbook-writer
 description: Write a comprehensive sales playbook for a market segment with talk tracks, demo flow, objection handling, and close process. Trigger phrases — "sales playbook", "write playbook", "playbook for {segment}", "sales process", "selling guide", "rep onboarding"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Sales Playbook Writer
@@ -25,19 +29,19 @@ If segment details or sales process is missing, ask: "I need to know (1) who thi
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/sales/playbook-{segment-slug}.md` if it exists. If found, present a summary and ask: "A playbook for {segment} already exists. Do you want me to (a) update specific sections, or (b) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A playbook for {segment} already exists. Do you want me to (a) update specific sections, or (b) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
 Read all available context files:
 
-1. `docs/icp.md` -- ideal customer profile
-2. `docs/gtm-triangle.md` -- positioning and messaging
-3. `docs/personas/` -- all persona files
-4. `docs/messaging-matrix.md` -- persona x pillar messaging
-5. `docs/sales-narratives.md` -- narrative framing
-6. `docs/sales/battlecards/` -- competitive intel
-7. `docs/competitors/competitive-analysis.md` -- competitive landscape
+1. **ICP definition** -- ideal customer profile
+2. **GTM Triangle** -- positioning and messaging
+3. **Persona profiles** -- all persona files
+4. **Messaging matrix** -- persona x pillar messaging
+5. **Sales narratives** -- narrative framing
+6. **Battlecards** documents -- competitive intel
+7. **Competitive analysis** -- competitive landscape
 8. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Define Qualification Criteria
@@ -145,7 +149,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/sales/playbook-{segment-slug}.md`:
+Save the output to your project. Suggested filename: `playbook-{segment-slug}.md`
 
 ```markdown
 # Sales Playbook: {Segment Name}

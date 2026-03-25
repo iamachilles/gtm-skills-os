@@ -1,0 +1,13 @@
+# ABM Playbook Pack (10 skills)
+# For: ABM teams, enterprise sellers
+# Covers: Account mapping, executive outreach, multi-threading, events
+account-mapper
+account-play-designer
+executive-briefing
+multi-thread-sequence
+abm-campaign-planner
+abm-content-mapper
+custom-demo-script
+gifting-strategy
+account-tiering-model
+account-expansion-planner

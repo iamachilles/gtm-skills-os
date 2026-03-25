@@ -1,6 +1,10 @@
 ---
+name: mutual-action-plan
 description: Generate a mutual action plan (MAP) to drive a deal to close. Trigger phrases — "mutual action plan", "MAP", "close plan", "deal timeline", "path to close", "buying process", "joint execution plan"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Mutual Action Plan
@@ -24,15 +28,15 @@ If target close date is missing, ask: "When does this deal need to close? I'll w
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/sales/map-{deal-slug}.md` if it exists. If found, present a summary and ask: "A MAP for this deal already exists (dated {date}). Do you want me to (a) update with new milestones, or (b) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A MAP for this deal already exists (dated {date}). Do you want me to (a) update with new milestones, or (b) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
 Read available context files:
 
-1. `docs/icp.md` -- typical buying process for this ICP
-2. `docs/gtm-triangle.md` -- solution context
-3. `docs/sales/deal-strategy-{deal-slug}.md` -- existing deal analysis if available
+1. **ICP definition** -- typical buying process for this ICP
+2. **GTM Triangle** -- solution context
+3. **Deal Strategy Deal** documents -- existing deal analysis if available
 4. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Work Backwards from Close Date
@@ -93,7 +97,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/sales/map-{deal-slug}.md`:
+Save the output to your project. Suggested filename: `map-{deal-slug}.md`
 
 ```markdown
 # Mutual Action Plan: {Company Name}

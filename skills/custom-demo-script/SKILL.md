@@ -1,6 +1,10 @@
 ---
+name: custom-demo-script
 description: Write a demo script tailored to a specific account — their use case, pain points, competitive context, and success metrics. Use when preparing a demo for a prospect, customizing a product walkthrough, or writing a demo flow for a strategic account.
-tools: Read, Write, WebSearch
+allowed-tools: Read, Write, WebSearch
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Custom Demo Script
@@ -21,16 +25,16 @@ If required inputs are missing, ask the user before proceeding.
 
 ### Step 0 — Check for Existing Script
 
-Check if `docs/sales/demo-script-{company-slug}.md` exists.
+Check if sales documents exists.
 If it does, ask: "(A) update it with new context, (B) start fresh, (C) keep it and skip?"
 
 ### Step 1 — Load Context
 
 Read these files if they exist:
-- `docs/icp.md` — for persona and pain point context
-- `docs/sales/pre-call-{company-slug}.md` — for account research
-- `docs/sales/battlecards/` — for competitive positioning
-- `docs/buying-committee.md` — for stakeholder dynamics
+- ICP document — for persona and pain point context
+- sales documents — for account research
+- battlecards — for competitive positioning
+- buying committee.md documents — for stakeholder dynamics
 - `CLAUDE.md` — for product context and positioning
 
 ### Step 2 — Research the Account
@@ -96,7 +100,7 @@ If any check fails, revise before saving.
 
 ### Step 6 — Save and Report
 
-Write to `docs/sales/demo-script-{company-slug}.md`.
+Write to sales documents.
 
 Report:
 - Demo structure summary

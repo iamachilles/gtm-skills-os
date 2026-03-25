@@ -1,0 +1,15 @@
+# RevOps & Infra Pack (12 skills)
+# For: RevOps, operations teams
+# Covers: Email infra, CRM, enrichment, scoring, forecasting, automation
+domain-setup-guide
+crm-field-mapper
+lead-scoring-model
+enrichment-waterfall
+deliverability-checker
+sales-process-designer
+handoff-designer
+forecast-model
+revops-audit
+territory-planner
+clay-table-designer
+n8n-workflow-builder

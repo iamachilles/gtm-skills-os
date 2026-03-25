@@ -1,6 +1,10 @@
 ---
+name: messaging-matrix
 description: Generate a full messaging matrix crossing value pillars with personas. Use when someone says "messaging matrix", "messaging framework", "value pillars", "persona messaging", "messaging by audience", or "tailor messaging per persona"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Messaging Matrix
@@ -23,16 +27,16 @@ If value prop matrix or personas are missing, ask: "I need the value prop matrix
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/messaging-matrix.md` if it exists. If found, present a summary and ask: "A messaging matrix already exists with [N] pillars x [N] personas. Do you want me to (a) add new pillars or personas, (b) refine the copy quality, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A messaging matrix already exists with [N] pillars x [N] personas. Do you want me to (a) add new pillars or personas, (b) refine the copy quality, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/value-prop-matrix.md` -- the value propositions to translate into messaging
-2. `docs/personas/*.md` -- persona profiles for language and tone matching
-3. `docs/gtm-triangle.md` -- positioning context and market change narrative
-4. `docs/sales-narratives.md` -- narrative framing if available
+1. **Value proposition mapping** -- the value propositions to translate into messaging
+2. **Persona profiles** -- persona profiles for language and tone matching
+3. **GTM Triangle** -- positioning context and market change narrative
+4. **Sales narratives** -- narrative framing if available
 5. `CLAUDE.md` -- project-level instructions
 
 For each persona, note:
@@ -109,7 +113,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/messaging-matrix.md`:
+Save the output to your project. Suggested filename: `messaging-matrix.md`
 
 ```markdown
 # Messaging Matrix: [Company/Product Name]

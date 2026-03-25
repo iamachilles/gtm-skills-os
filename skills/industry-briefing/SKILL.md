@@ -1,6 +1,10 @@
 ---
+name: industry-briefing
 description: Produce a market brief for a new vertical or industry. Use when someone asks "research this industry", "industry overview", "market brief", "vertical analysis", "should we enter this market", or "new vertical assessment"
-tools: Read, Write, WebFetch, WebSearch
+allowed-tools: Read, Write, WebFetch, WebSearch
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Industry Briefing
@@ -23,8 +27,8 @@ If industry name or geography are missing, ask before proceeding.
 ### Step 1 — Load Existing Context
 
 Check for and read these files if they exist:
-- `docs/icp.md` — current ICP (to understand adjacency)
-- `docs/gtm-triangle.md` — existing positioning
+- ICP document — current ICP (to understand adjacency)
+- gtm triangle.md documents — existing positioning
 - `CLAUDE.md` — project context
 
 This helps frame the briefing relative to the company's current market position.
@@ -114,7 +118,7 @@ Before saving, verify:
 
 ## Output Format
 
-Save to `docs/industry-briefings/{industry-slug}.md`:
+Save the output to your project. Suggested filename: `{industry-slug}.md`
 
 ```
 # Industry Brief: [Industry Name] — [Geography]

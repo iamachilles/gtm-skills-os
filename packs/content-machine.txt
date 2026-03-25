@@ -1,0 +1,13 @@
+# Content Machine Pack (10 skills)
+# For: Content marketers, founders building audience
+# Covers: LinkedIn, blogs, newsletters, repurposing, lead magnets
+write-linkedin-post
+hook-generator
+content-calendar
+carousel-outliner
+content-repurposer
+blog-post-writer
+case-study-to-content
+newsletter-writer
+content-performance-analyzer
+lead-magnet-creator

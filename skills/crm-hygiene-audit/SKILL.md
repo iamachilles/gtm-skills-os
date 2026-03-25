@@ -1,6 +1,10 @@
 ---
+name: crm-hygiene-audit
 description: Audit CRM data quality and produce a cleanup action plan. Use when someone asks "audit CRM data", "CRM data quality", "clean up CRM", "fix CRM data", "deduplicate CRM", "CRM hygiene", or "data quality audit"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # CRM Hygiene Audit
@@ -20,14 +24,14 @@ If no CRM data or description is provided, ask for at least a summary of record 
 
 ### Step 0 — Idempotency Check
 
-Check if `docs/ops/crm-hygiene-audit.md` exists. If it does, ask: "A CRM hygiene audit already exists. Do you want to run a fresh audit or update the existing one?"
+Check if operations documents exists. If it does, ask: "A CRM hygiene audit already exists. Do you want to run a fresh audit or update the existing one?"
 
 ### Step 1 — Load Context
 
 Read these files if they exist:
-- `docs/ops/crm-fields.md` — expected field structure
-- `docs/ops/lead-scoring-model.md` — fields required for scoring
-- `docs/icp.md` — ICP criteria for data validation
+- operations documents — expected field structure
+- operations documents — fields required for scoring
+- ICP document — ICP criteria for data validation
 - `CLAUDE.md` — project context
 
 ### Step 2 — Check for Duplicates
@@ -152,7 +156,7 @@ Before saving, verify:
 
 ## Output Format
 
-Save to `docs/ops/crm-hygiene-audit.md`:
+Save the output to your project. Suggested filename: `crm-hygiene-audit.md`
 
 ```markdown
 # CRM Hygiene Audit

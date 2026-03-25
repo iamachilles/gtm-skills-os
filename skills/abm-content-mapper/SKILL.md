@@ -1,6 +1,10 @@
 ---
+name: abm-content-mapper
 description: Map existing content to buying stages and personas for ABM campaigns. Use when someone says "content map", "content mapping", "ABM content", "content gap analysis", "buying stage content", or "content inventory"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # ABM Content Mapper
@@ -22,16 +26,16 @@ If content inventory is missing, ask: "I need a list of your existing content as
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/content/abm-content-map.md` if it exists. If found, present a summary and ask: "A content map already exists with {N} assets mapped. Do you want me to (a) add new assets, (b) re-prioritize gaps, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A content map already exists with {N} assets mapped. Do you want me to (a) add new assets, (b) re-prioritize gaps, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/personas/*.md` -- persona definitions
-2. `docs/content/` -- existing content assets
-3. `docs/sales/abm-campaign-*.md` -- active ABM campaigns
-4. `docs/messaging-matrix.md` -- messaging by persona x pillar
+1. **Persona profiles** -- persona definitions
+2. **Content** documents -- existing content assets
+3. **Abm Campaign** documents -- active ABM campaigns
+4. **Messaging matrix** -- messaging by persona x pillar
 5. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Inventory Existing Content
@@ -101,7 +105,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/content/abm-content-map.md`:
+Save the output to your project. Suggested filename: `abm-content-map.md`
 
 ```markdown
 # ABM Content Map

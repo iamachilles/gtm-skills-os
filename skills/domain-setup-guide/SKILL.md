@@ -1,6 +1,10 @@
 ---
+name: domain-setup-guide
 description: Generate email infrastructure plan for cold outbound. Use when someone asks "set up sending domains", "email infrastructure plan", "domain setup for cold email", "how many domains do I need", "warmup schedule", or "DNS records for outbound"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Domain Setup Guide
@@ -21,13 +25,13 @@ If any required input is missing, ask for it before proceeding.
 
 ### Step 0 — Idempotency Check
 
-Check if `docs/ops/domain-setup.md` exists. If it does, ask: "A domain setup plan already exists. Do you want to refine the existing plan or overwrite it?"
+Check if operations documents exists. If it does, ask: "A domain setup plan already exists. Do you want to refine the existing plan or overwrite it?"
 
 ### Step 1 — Load Context
 
 Read these files if they exist:
-- `docs/icp.md` — for understanding the business context
-- `docs/gtm-triangle.md` — for positioning context
+- ICP document — for understanding the business context
+- gtm triangle.md documents — for positioning context
 - `CLAUDE.md` — project context
 
 ### Step 2 — Calculate Domain Requirements
@@ -142,7 +146,7 @@ Before saving, verify:
 
 ## Output Format
 
-Save to `docs/ops/domain-setup.md`:
+Save the output to your project. Suggested filename: `domain-setup.md`
 
 ```markdown
 # Email Infrastructure Plan

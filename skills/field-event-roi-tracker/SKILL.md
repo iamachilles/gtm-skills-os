@@ -1,6 +1,10 @@
 ---
+name: field-event-roi-tracker
 description: Create an event ROI tracking framework. Use when someone says "event ROI", "event tracking", "event metrics", "measure event success", "event cost analysis", "event attribution", or "conference ROI"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Field Event ROI Tracker
@@ -20,15 +24,15 @@ If event types or budget context is missing, ask: "I need to know which types of
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/analytics/event-roi-framework.md` if it exists. If found, present a summary and ask: "An event ROI framework already exists. Do you want me to (a) update it, (b) rebuild for new event types, or (c) keep it?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "An event ROI framework already exists. Do you want me to (a) update it, (b) rebuild for new event types, or (c) keep it?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/analytics/*.md` -- existing analytics and reporting frameworks
-2. `docs/content/event-playbook-*.md` -- event playbooks with goals
-3. `docs/analytics/attribution-model.md` -- if an attribution model exists
+1. **Analytics** documents -- existing analytics and reporting frameworks
+2. **Event Playbook** documents -- event playbooks with goals
+3. **Attribution Model** documents -- if an attribution model exists
 4. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Define Cost Categories
@@ -132,7 +136,7 @@ For brand/awareness events where direct attribution is difficult:
 
 ## Output Format
 
-Save to `docs/analytics/event-roi-framework.md`:
+Save the output to your project. Suggested filename: `event-roi-framework.md`
 
 ```markdown
 # Event ROI Framework

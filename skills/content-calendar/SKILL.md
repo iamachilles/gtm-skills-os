@@ -1,6 +1,10 @@
 ---
+name: content-calendar
 description: Generate a 4-week content calendar with 12 posts balanced across angles and formats. Use when someone says "content calendar", "content plan", "plan my posts", "monthly content", "what should I post", or "content schedule"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Content Calendar
@@ -20,16 +24,16 @@ If strategy document is missing, ask: "I need your content strategy or at least 
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/content/calendar-{month}.md`. If found, present summary and ask: "A content calendar for [month] already exists. Do you want me to (a) adjust specific weeks, (b) swap topics, or (c) rebuild from scratch?"
+Read content documents. If found, present summary and ask: "A content calendar for [month] already exists. Do you want me to (a) adjust specific weeks, (b) swap topics, or (c) rebuild from scratch?"
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/content-strategy.md` -- themes, angles, and positioning
-2. `docs/content/posts/*.md` -- recent post drafts
-3. `docs/personas/*.md` -- who the content is for
-4. `docs/gtm-triangle.md` -- market positioning
+1. **Content strategy** -- themes, angles, and positioning
+2. **Posts** documents -- recent post drafts
+3. **Persona profiles** -- who the content is for
+4. **GTM Triangle** -- market positioning
 5. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Analyze Recent Performance
@@ -100,7 +104,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/content/calendar-{month}.md`:
+Save the output to your project. Suggested filename: `calendar-{month}.md`
 
 ```markdown
 # Content Calendar: [Month Year]

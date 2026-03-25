@@ -1,6 +1,10 @@
 ---
+name: follow-up-sequence
 description: Write a follow-up sequence for prospects who opened but didn't reply. Use when someone says "follow-up", "follow up sequence", "no reply", "opens no reply", "re-engage", "follow-up emails", or "nurture non-responders"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Follow-Up Sequence
@@ -20,16 +24,16 @@ If original message or persona is missing, ask: "I need the original message tha
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/sequences/follow-up-{persona-slug}.md` if it exists. If found, present a summary and ask: "A follow-up sequence for this persona already exists. Do you want me to (a) add new touches, (b) refine existing copy, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A follow-up sequence for this persona already exists. Do you want me to (a) add new touches, (b) refine existing copy, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/sequences/cold-email-{persona-slug}.md` -- the original email for reference
-2. `docs/personas/{persona-slug}.md` -- persona profile
-3. `docs/messaging-matrix.md` -- alternative messaging angles
-4. `docs/sales-narratives.md` -- narrative framing if available
+1. **Persona profiles** -- the original email for reference
+2. **Persona profiles** -- persona profile
+3. **Messaging matrix** -- alternative messaging angles
+4. **Sales narratives** -- narrative framing if available
 5. `CLAUDE.md` -- project-level instructions
 
 Identify which angles the original message used so the follow-ups can introduce new ones.
@@ -99,7 +103,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/sequences/follow-up-{persona-slug}.md`:
+Save the output to your project. Suggested filename: `follow-up-{persona-slug}.md`
 
 ```markdown
 # Follow-Up Sequence: {Persona Title}

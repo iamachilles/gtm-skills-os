@@ -1,6 +1,10 @@
 ---
+name: tam-builder
 description: Build a Total Addressable Market list with ICP scoring and tiering. Use when someone asks "build TAM list", "total addressable market", "find target companies", "build company list", "TAM analysis", "market list", or "identify target accounts"
-tools: Read, Write, WebSearch
+allowed-tools: Read, Write, WebSearch
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # TAM Builder
@@ -24,14 +28,14 @@ If ICP criteria, geography, or size filters are missing, ask before proceeding.
 
 ### Step 0 — Idempotency Check
 
-Check if `docs/prospects/tam-list.md` exists. If it does, ask: "A TAM list already exists. Do you want to expand it, refresh it, or overwrite it?"
+Check if prospect documents exists. If it does, ask: "A TAM list already exists. Do you want to expand it, refresh it, or overwrite it?"
 
 ### Step 1 — Load Context
 
 Read these files if they exist:
-- `docs/icp.md` — ICP definition
-- `docs/gtm-triangle.md` — positioning and market context
-- `docs/ops/lead-scoring-model.md` — scoring criteria to apply
+- ICP document — ICP definition
+- gtm triangle.md documents — positioning and market context
+- operations documents — scoring criteria to apply
 - `CLAUDE.md` — project context
 
 ### Step 2 — Define Search Criteria
@@ -140,7 +144,7 @@ Before saving, verify:
 
 ## Output Format
 
-Save to `docs/prospects/tam-list.md`:
+Save the output to your project. Suggested filename: `tam-list.md`
 
 ```markdown
 # Total Addressable Market List

@@ -1,6 +1,10 @@
 ---
+name: channel-enablement-kit
 description: Build enablement materials for channel partners. Use when someone says "partner enablement", "channel enablement", "partner sales kit", "partner materials", "enable partners", "partner certification", or "partner training"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Channel Enablement Kit
@@ -20,17 +24,17 @@ If partner type or product details are missing, ask: "I need to know which partn
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/sales/partner-enablement-{partner-slug}.md` if it exists. If found, present a summary and ask: "An enablement kit for this partner already exists. Do you want me to (a) update it, (b) add a new section, or (c) rebuild?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "An enablement kit for this partner already exists. Do you want me to (a) update it, (b) add a new section, or (c) rebuild?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/gtm-triangle.md` -- positioning and messaging
-2. `docs/value-prop-matrix.md` -- value props by persona
-3. `docs/battlecards/*.md` -- competitive intelligence
-4. `docs/sales/*.md` -- existing sales materials
-5. `docs/ops/partner-program.md` -- partner program structure
+1. **GTM Triangle** -- positioning and messaging
+2. **Value proposition mapping** -- value props by persona
+3. **Battlecards** documents -- competitive intelligence
+4. **Sales** documents -- existing sales materials
+5. **Partner Program** documents -- partner program structure
 6. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Create Partner Sales Deck Outline
@@ -125,7 +129,7 @@ Define the fields for deal registration:
 
 ## Output Format
 
-Save to `docs/sales/partner-enablement-{partner-slug}.md`:
+Save the output to your project. Suggested filename: `partner-enablement-{partner-slug}.md`
 
 ```markdown
 # Partner Enablement Kit: {Partner Name or Type}

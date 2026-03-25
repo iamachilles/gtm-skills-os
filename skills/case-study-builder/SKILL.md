@@ -1,6 +1,10 @@
 ---
+name: case-study-builder
 description: Structure a client result into a compelling case study. Use when someone says "write a case study", "build a case study", "document a win", "client success story", "customer story", or "case study from this engagement"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Case Study Builder
@@ -24,15 +28,15 @@ If client name and results are missing, ask: "I need the client name (or anonymo
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/case-studies/{client-slug}.md` where `{client-slug}` is the client name slugified. If found, present a summary and ask: "A case study for [client] already exists. Do you want me to (a) update it with new results, (b) rewrite it with a different angle, or (c) keep it?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A case study for [client] already exists. Do you want me to (a) update it with new results, (b) rewrite it with a different angle, or (c) keep it?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/case-studies/*.md` -- existing case studies for format consistency
-2. `docs/gtm-triangle.md` -- positioning context (ensures the case study reinforces your narrative)
-3. `docs/value-prop-matrix.md` -- which value props this case study proves
+1. **Case studies** -- existing case studies for format consistency
+2. **GTM Triangle** -- positioning context (ensures the case study reinforces your narrative)
+3. **Value proposition mapping** -- which value props this case study proves
 4. `CLAUDE.md` -- project-level instructions
 5. Any engagement notes, project docs, or raw material provided
 
@@ -139,7 +143,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/case-studies/{client-slug}.md`:
+Save the output to your project. Suggested filename: `{client-slug}.md`
 
 ```markdown
 # Case Study: [Client Name or Descriptor]

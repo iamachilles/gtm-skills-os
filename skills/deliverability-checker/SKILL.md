@@ -1,6 +1,10 @@
 ---
+name: deliverability-checker
 description: Diagnose email deliverability issues for sending domains. Use when someone asks "check deliverability", "email landing in spam", "DNS records check", "domain blacklist", "email warmup status", "deliverability audit", or "why are my emails bouncing"
-tools: Read, Write, WebSearch
+allowed-tools: Read, Write, WebSearch
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Deliverability Checker
@@ -20,12 +24,12 @@ If no domains are provided, ask for them before proceeding.
 
 ### Step 0 — Idempotency Check
 
-Check if `docs/ops/deliverability-report.md` exists. If it does, ask: "A deliverability report already exists. Do you want to run a fresh check or update the existing report?"
+Check if operations documents exists. If it does, ask: "A deliverability report already exists. Do you want to run a fresh check or update the existing report?"
 
 ### Step 1 — Load Context
 
 Read these files if they exist:
-- `docs/ops/domain-setup.md` — domain infrastructure plan
+- operations documents — domain infrastructure plan
 - `CLAUDE.md` — project context
 
 ### Step 2 — Check SPF Records
@@ -151,7 +155,7 @@ Before saving, verify:
 
 ## Output Format
 
-Save to `docs/ops/deliverability-report.md`:
+Save the output to your project. Suggested filename: `deliverability-report.md`
 
 ```markdown
 # Email Deliverability Report

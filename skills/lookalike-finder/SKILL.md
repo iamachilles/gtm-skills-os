@@ -1,6 +1,10 @@
 ---
+name: lookalike-finder
 description: "Find companies that look like your best customers. Trigger: 'find similar companies', 'lookalike companies', 'companies like our best customers', 'find more companies like'"
-tools: Read, Write, WebSearch
+allowed-tools: Read, Write, WebSearch
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Lookalike Finder
@@ -20,13 +24,13 @@ If fewer than 3 companies are provided, ask: "I need at least 3 best customer ex
 
 ### Step 0 — Idempotency Check
 
-Check if `docs/prospects/lookalike-list.md` already exists. If it does, ask: "A lookalike list already exists. Should I overwrite it or save with a different name?"
+Check if prospect documents already exists. If it does, ask: "A lookalike list already exists. Should I overwrite it or save with a different name?"
 
 ### Step 1 — Load Context
 
 Read available context:
-- `docs/icp.md` — existing ICP criteria to compare against
-- `docs/gtm-triangle.md` — positioning and market context
+- ICP document — existing ICP criteria to compare against
+- gtm triangle.md documents — positioning and market context
 - `CLAUDE.md` — project instructions
 
 ### Step 2 — Research Best Customers
@@ -103,7 +107,7 @@ If any check fails, fix before proceeding.
 
 ## Output Format
 
-Save to `docs/prospects/lookalike-list.md`:
+Save the output to your project. Suggested filename: `lookalike-list.md`
 
 ```
 # Lookalike Companies

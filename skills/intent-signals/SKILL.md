@@ -1,6 +1,10 @@
 ---
+name: intent-signals
 description: Map buying signals for a market with capture methods and messaging angles per signal
-tools: Read, Write, WebSearch
+allowed-tools: Read, Write, WebSearch
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Intent Signals

@@ -1,6 +1,10 @@
 ---
+name: ab-test-designer
 description: Design A/B tests for outbound campaigns with variables, sample sizes, and analysis frameworks. Use when someone says "A/B test", "split test", "test email", "test subject line", "optimize campaign", "test outreach", or "experiment design"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # A/B Test Designer
@@ -20,14 +24,14 @@ If campaign details or test variable is missing, ask: "I need the campaign detai
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/analytics/ab-test-{test-slug}.md` if it exists. If found, present a summary and ask: "An A/B test design for this variable already exists. Do you want me to (a) update the design, (b) design a follow-up test, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "An A/B test design for this variable already exists. Do you want me to (a) update the design, (b) design a follow-up test, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/sequences/*.md` -- the campaign assets being tested
-2. `docs/analytics/*.md` -- any prior test results
+1. **Existing outreach sequences** -- the campaign assets being tested
+2. **Analytics** documents -- any prior test results
 3. `CLAUDE.md` -- project-level instructions
 
 Understand the current campaign performance to set realistic improvement targets.
@@ -131,7 +135,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/analytics/ab-test-{test-slug}.md`:
+Save the output to your project. Suggested filename: `ab-test-{test-slug}.md`
 
 ```markdown
 # A/B Test: {Test Name}

@@ -1,6 +1,10 @@
 ---
+name: write-linkedin-post
 description: Draft a LinkedIn post with hook variants, CTA options, and visual recommendations
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Write LinkedIn Post

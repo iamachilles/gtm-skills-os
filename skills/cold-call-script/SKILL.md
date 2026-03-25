@@ -1,6 +1,10 @@
 ---
+name: cold-call-script
 description: Generate a cold call script with opener, qualifying questions, objection handles, and voicemail. Use when someone says "cold call script", "call script", "phone script", "cold calling", "voicemail script", or "call talk track"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Cold Call Script
@@ -21,16 +25,16 @@ If persona or pain points are missing, ask: "I need the target persona and their
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/sequences/cold-call-{persona-slug}.md` if it exists. If found, present a summary and ask: "A cold call script for this persona already exists. Do you want me to (a) update objection handles, (b) refine the opener, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A cold call script for this persona already exists. Do you want me to (a) update objection handles, (b) refine the opener, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/personas/{persona-slug}.md` -- persona profile, language, priorities
-2. `docs/messaging-matrix.md` -- relevant messaging for this persona
-3. `docs/objection-library.md` -- known objections and responses if available
-4. `docs/sales-narratives.md` -- narrative framing if available
+1. **Persona profiles** -- persona profile, language, priorities
+2. **Messaging matrix** -- relevant messaging for this persona
+3. **Objection library** -- known objections and responses if available
+4. **Sales narratives** -- narrative framing if available
 5. `CLAUDE.md` -- project-level instructions
 
 Focus on how this persona talks about their problems. The script should mirror their language, not your marketing copy.
@@ -104,7 +108,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/sequences/cold-call-{persona-slug}.md`:
+Save the output to your project. Suggested filename: `cold-call-{persona-slug}.md`
 
 ```markdown
 # Cold Call Script: {Persona Title}

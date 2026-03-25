@@ -1,6 +1,10 @@
 ---
+name: battlecard-generator
 description: Create a competitive battlecard for sales conversations. Trigger phrases — "battlecard", "competitive battlecard", "compete against {competitor}", "how to sell against", "competitive positioning", "objection matrix"
-tools: Read, Write, WebSearch
+allowed-tools: Read, Write, WebSearch
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Battlecard Generator
@@ -22,15 +26,15 @@ If competitor name is missing, ask: "Which competitor do you need the battlecard
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/sales/battlecards/{competitor-slug}.md` if it exists. If found, present a summary and ask: "A battlecard for {competitor} already exists (dated {date}). Do you want me to (a) update with new intel, or (b) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A battlecard for {competitor} already exists (dated {date}). Do you want me to (a) update with new intel, or (b) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
 Read available context files:
 
-1. `docs/icp.md` -- your target buyer profile
-2. `docs/gtm-triangle.md` -- your positioning and messaging
-3. `docs/competitors/competitive-analysis.md` -- existing competitive intel
+1. **ICP definition** -- your target buyer profile
+2. **GTM Triangle** -- your positioning and messaging
+3. **Competitive analysis** -- existing competitive intel
 4. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Research Competitor Positioning
@@ -92,7 +96,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/sales/battlecards/{competitor-slug}.md`:
+Save the output to your project. Suggested filename: `{competitor-slug}.md`
 
 ```markdown
 # Battlecard: {Competitor Name}

@@ -1,6 +1,10 @@
 ---
+name: proposal-writer
 description: Draft a client proposal with executive summary, methodology, timeline, and pricing. Trigger phrases — "write proposal", "draft proposal", "create proposal", "proposal for {prospect}", "scope of work", "SOW"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Proposal Writer
@@ -23,16 +27,16 @@ If prospect needs or scope is missing, ask: "I need to understand what the prosp
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/sales/proposals/{prospect-slug}.md` if it exists. If found, present a summary and ask: "A proposal for {prospect} already exists. Do you want me to (a) revise it, or (b) start fresh?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A proposal for {prospect} already exists. Do you want me to (a) revise it, or (b) start fresh?" 
 
 ### Step 1 -- Load Context
 
 Read available context files:
 
-1. `docs/icp.md` -- qualification criteria and ideal buyer profile
-2. `docs/gtm-triangle.md` -- positioning and messaging
-3. `docs/messaging-matrix.md` -- persona-specific messaging if available
-4. `docs/sales-narratives.md` -- narrative framing
+1. **ICP definition** -- qualification criteria and ideal buyer profile
+2. **GTM Triangle** -- positioning and messaging
+3. **Messaging matrix** -- persona-specific messaging if available
+4. **Sales narratives** -- narrative framing
 5. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Write Executive Summary
@@ -110,7 +114,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/sales/proposals/{prospect-slug}.md`:
+Save the output to your project. Suggested filename: `{prospect-slug}.md`
 
 ```markdown
 # Proposal: {Prospect Company Name}

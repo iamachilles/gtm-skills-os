@@ -1,6 +1,10 @@
 ---
+name: sales-process-designer
 description: Design a sales process with stages, entry/exit criteria, and automation triggers. Use when someone says "sales process", "sales stages", "pipeline stages", "deal stages", "sales methodology", "sales workflow", or "CRM stages"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Sales Process Designer
@@ -24,16 +28,16 @@ If sales motion is missing, ask: "What's your primary sales motion (inbound, out
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/ops/sales-process.md` if it exists. If found, present a summary and ask: "A sales process already exists with {N} stages. Do you want me to (a) refine criteria, (b) add automation triggers, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A sales process already exists with {N} stages. Do you want me to (a) refine criteria, (b) add automation triggers, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/icp.md` or `docs/gtm-triangle.md` -- qualification criteria
-2. `docs/personas/*.md` -- buying committee context
-3. `docs/ops/handoff-process.md` -- marketing-to-sales handoff if exists
-4. `docs/ops/deal-desk-playbook.md` -- pricing and approval workflows
+1. ICP document or gtm triangle.md documents -- qualification criteria
+2. **Persona profiles** -- buying committee context
+3. **Handoff Process** documents -- marketing-to-sales handoff if exists
+4. **Deal Desk Playbook** documents -- pricing and approval workflows
 5. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Define Sales Stages
@@ -104,7 +108,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/ops/sales-process.md`:
+Save the output to your project. Suggested filename: `sales-process.md`
 
 ```markdown
 # Sales Process

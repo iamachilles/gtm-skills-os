@@ -1,6 +1,10 @@
 ---
+name: territory-planner
 description: Design sales territories with account distribution, capacity modeling, and quota setting. Use when someone says "territory plan", "territory design", "sales territories", "territory mapping", "account distribution", "rep assignment", or "territory balance"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Territory Planner
@@ -24,16 +28,16 @@ If account list or rep count is missing, ask: "I need your total account list an
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/ops/territory-plan.md` if it exists. If found, present a summary and ask: "A territory plan already exists with {N} territories. Do you want me to (a) rebalance accounts, (b) adjust quotas, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A territory plan already exists with {N} territories. Do you want me to (a) rebalance accounts, (b) adjust quotas, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/account-tiering-model.md` -- tier distribution
-2. `docs/icp.md` or `docs/gtm-triangle.md` -- ICP criteria
-3. `docs/ops/sales-process.md` -- sales cycle expectations
-4. `docs/ops/capacity-plan.md` -- capacity modeling if exists
+1. **Account tiering model** -- tier distribution
+2. ICP document or gtm triangle.md documents -- ICP criteria
+3. **Sales Process** documents -- sales cycle expectations
+4. **Capacity Plan** documents -- capacity modeling if exists
 5. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Choose Segmentation Model
@@ -109,7 +113,7 @@ If any check fails, rebalance before proceeding.
 
 ## Output Format
 
-Save to `docs/ops/territory-plan.md`:
+Save the output to your project. Suggested filename: `territory-plan.md`
 
 ```markdown
 # Territory Plan

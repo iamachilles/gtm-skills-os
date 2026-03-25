@@ -1,6 +1,10 @@
 ---
+name: pipeline-health-check
 description: Audit pipeline health with stage distribution, velocity, and coverage analysis. Use when someone says "pipeline audit", "pipeline health", "pipeline review", "pipeline analysis", "deal review", "forecast check", or "pipeline coverage"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Pipeline Health Check
@@ -20,14 +24,14 @@ If pipeline data or revenue target is missing, ask: "I need your pipeline data (
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/analytics/pipeline-audit.md` if it exists. If found, present a summary and ask: "A pipeline audit already exists. Do you want me to (a) update with current data, (b) compare to the previous audit, or (c) rebuild?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A pipeline audit already exists. Do you want me to (a) update with current data, (b) compare to the previous audit, or (c) rebuild?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/analytics/*.md` -- prior audits and reports
-2. `docs/analytics/dashboard-spec.md` -- reporting standards
+1. **Analytics** documents -- prior audits and reports
+2. **Dashboard Spec** documents -- reporting standards
 3. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Analyze Stage Distribution
@@ -133,7 +137,7 @@ Categorize recommendations by urgency:
 
 ## Output Format
 
-Save to `docs/analytics/pipeline-audit.md`:
+Save the output to your project. Suggested filename: `pipeline-audit.md`
 
 ```markdown
 # Pipeline Health Check

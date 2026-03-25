@@ -1,6 +1,10 @@
 ---
+name: dinner-event-planner
 description: Plan an executive dinner event with guest selection, invitation sequence, and follow-up. Use when someone says "executive dinner", "dinner event", "VIP dinner", "prospect dinner", "account dinner", "intimate event", or "roundtable dinner"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Dinner Event Planner
@@ -24,16 +28,16 @@ If guest profile is missing, ask: "Who should be at this dinner? I need the targ
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/sales/dinner-event-{name-slug}.md` if it exists. If found, present a summary and ask: "A dinner event plan already exists for {name}. Do you want me to (a) update the guest list, (b) redesign the agenda, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A dinner event plan already exists for {name}. Do you want me to (a) update the guest list, (b) redesign the agenda, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/account-tiering-model.md` -- identify Tier 1 accounts
-2. `docs/sales/account-plays/*.md` -- relationship context per account
-3. `docs/personas/*.md` -- understand the guest persona
-4. `docs/sales/abm-campaign-*.md` -- active campaigns this supports
+1. **Account tiering model** -- identify Tier 1 accounts
+2. **Account Plays** documents -- relationship context per account
+3. **Persona profiles** -- understand the guest persona
+4. **Abm Campaign** documents -- active campaigns this supports
 5. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Define Guest Criteria
@@ -131,7 +135,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/sales/dinner-event-{name-slug}.md`:
+Save the output to your project. Suggested filename: `dinner-event-{name-slug}.md`
 
 ```markdown
 # Executive Dinner: {Event Name}

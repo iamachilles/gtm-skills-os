@@ -1,6 +1,10 @@
 ---
+name: inbound-follow-up-sequence
 description: Write follow-up sequences for inbound leads by source type. Use when someone says "inbound follow-up", "demo request follow-up", "content download follow-up", "webinar follow-up", "lead follow-up", "inbound sequence", or "respond to inbound"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Inbound Follow-Up Sequence
@@ -21,15 +25,15 @@ If lead source is missing, ask: "I need to know the lead source to write the rig
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/sequences/inbound-follow-up-{source-slug}.md` if it exists. If found, present a summary and ask: "An inbound follow-up sequence for this source already exists. Do you want me to (a) update content references, (b) refine copy, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "An inbound follow-up sequence for this source already exists. Do you want me to (a) update content references, (b) refine copy, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/personas/*.md` -- persona profiles for typical inbound leads
-2. `docs/messaging-matrix.md` -- messaging for inbound personas
-3. `docs/sales-narratives.md` -- narrative framing
+1. **Persona profiles** -- persona profiles for typical inbound leads
+2. **Messaging matrix** -- messaging for inbound personas
+3. **Sales narratives** -- narrative framing
 4. `CLAUDE.md` -- project-level instructions
 
 Identify the intent level for this source:
@@ -142,7 +146,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/sequences/inbound-follow-up-{source-slug}.md`:
+Save the output to your project. Suggested filename: `inbound-follow-up-{source-slug}.md`
 
 ```markdown
 # Inbound Follow-Up: {Source Type}

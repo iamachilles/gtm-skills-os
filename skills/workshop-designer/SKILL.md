@@ -1,6 +1,10 @@
 ---
+name: workshop-designer
 description: Design a hands-on workshop with exercises and takeaway materials. Use when someone says "design a workshop", "workshop outline", "hands-on session", "training workshop", "workshop plan", "interactive session", or "workshop agenda"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Workshop Designer
@@ -21,15 +25,15 @@ If topic, audience, or duration is missing, ask: "I need the topic, who the audi
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/content/workshop-{topic-slug}.md` if it exists. If found, present a summary and ask: "A workshop design on this topic already exists. Do you want me to (a) update it, (b) redesign for a different audience, or (c) keep it?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A workshop design on this topic already exists. Do you want me to (a) update it, (b) redesign for a different audience, or (c) keep it?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/gtm-triangle.md` -- positioning (workshop should reinforce your methodology)
-2. `docs/case-studies/*.md` -- examples to reference during instruction
-3. `docs/content/talk-*.md` -- related talks that could inform content
+1. **GTM Triangle** -- positioning (workshop should reinforce your methodology)
+2. **Case studies** -- examples to reference during instruction
+3. **Talk** documents -- related talks that could inform content
 4. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Define Learning Objectives
@@ -115,7 +119,7 @@ The conversion path should feel like continued support, not a sales sequence.
 
 ## Output Format
 
-Save to `docs/content/workshop-{topic-slug}.md`:
+Save the output to your project. Suggested filename: `workshop-{topic-slug}.md`
 
 ```markdown
 # Workshop: {Title}

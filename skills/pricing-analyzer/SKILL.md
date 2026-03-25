@@ -1,6 +1,10 @@
 ---
+name: pricing-analyzer
 description: Analyze competitor pricing models and produce a positioning-ready landscape. Trigger phrases — "pricing analysis", "competitor pricing", "how much do competitors charge", "pricing landscape", "pricing comparison"
-tools: Read, Write, WebFetch, WebSearch
+allowed-tools: Read, Write, WebFetch, WebSearch
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Pricing Analyzer
@@ -11,7 +15,7 @@ Pricing analysis is not just about the numbers. It's about understanding the und
 
 ## Inputs
 
-- **Competitor list** (required) — 3-7 competitors to analyze. If `docs/competitors/competitive-analysis.md` exists, load the competitor list from there.
+- **Competitor list** (required) — 3-7 competitors to analyze. If competitive analysis exists, load the competitor list from there.
 - **Your product/pricing** (optional) — current pricing model for comparison. Check `CLAUDE.md` for context.
 - **Industry/category** (optional) — helps with broader market pricing research
 - **Specific questions** (optional) — anything to investigate ("Is usage-based pricing viable here?", "What do customers complain about with Competitor X's pricing?")
@@ -23,8 +27,8 @@ If no competitor list is provided and no competitive analysis exists, ask the us
 ### Step 1 — Load Context
 
 Read existing project documents:
-- Check for `docs/competitors/competitive-analysis.md` — load competitor list and positioning
-- Check for `docs/icp.md` — load buyer context (who pays, what they value, budget range)
+- Check for competitive analysis — load competitor list and positioning
+- Check for ICP document — load buyer context (who pays, what they value, budget range)
 - Check for `CLAUDE.md` — load company context and current pricing
 
 From the context, identify:
@@ -133,7 +137,7 @@ Before saving, verify:
 
 ## Output Format
 
-Save to `docs/competitors/pricing-landscape.md`:
+Save the output to your project. Suggested filename: `pricing-landscape.md`
 
 ```markdown
 # Pricing Landscape Analysis: [Category/Market]

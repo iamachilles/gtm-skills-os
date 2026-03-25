@@ -1,6 +1,10 @@
 ---
+name: client-report-writer
 description: Write a client progress report with results and next steps. Use when someone says "client report", "progress report", "client update", "engagement report", "status report for client", "client deliverable report", or "monthly client report"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Client Report Writer
@@ -23,15 +27,15 @@ If engagement data or results are missing, ask: "I need the activities and resul
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/sales/client-report-{client-slug}-{date}.md` if it exists. If found, present a summary and ask: "A report for this period already exists. Do you want me to (a) update it, (b) keep it, or (c) rebuild?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A report for this period already exists. Do you want me to (a) update it, (b) keep it, or (c) rebuild?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/sales/sow-{client-slug}.md` -- engagement scope and objectives
-2. `docs/sales/client-report-{client-slug}-*.md` -- prior reports for continuity
-3. `docs/case-studies/{client-slug}.md` -- if engagement is documented
+1. **Sow Client** documents -- engagement scope and objectives
+2. **Client Report Client** documents -- prior reports for continuity
+3. **Case studies** -- if engagement is documented
 4. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Section 1: Summary
@@ -116,7 +120,7 @@ Don't hard-sell. Present the facts and the recommendation. If the results speak 
 
 ## Output Format
 
-Save to `docs/sales/client-report-{client-slug}-{date}.md`:
+Save the output to your project. Suggested filename: `client-report-{client-slug}-{date}.md`
 
 ```markdown
 # Client Report: {Client Name}

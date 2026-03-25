@@ -1,6 +1,10 @@
 ---
+name: pricing-strategy
 description: Design pricing and packaging strategy with model selection, tier structure, and competitive anchoring. Use when someone says "pricing strategy", "pricing model", "how to price", "packaging and pricing", "tier pricing", or "price our product"
-tools: Read, Write, WebSearch
+allowed-tools: Read, Write, WebSearch
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Pricing Strategy
@@ -24,16 +28,16 @@ If product description or ICP is missing, ask: "I need to understand what you se
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/pricing-strategy.md` if it exists. If found, present a summary and ask: "A pricing strategy already exists with [current model/tiers]. Do you want me to (a) optimize the current structure, (b) evaluate a different pricing model, or (c) redesign from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A pricing strategy already exists with [current model/tiers]. Do you want me to (a) optimize the current structure, (b) evaluate a different pricing model, or (c) redesign from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/pricing-analysis.md` -- competitive pricing landscape if available
-2. `docs/value-prop-matrix.md` -- value delivered per feature per persona
-3. `docs/gtm-triangle.md` or `docs/icp.md` -- customer segments and their characteristics
-4. `docs/personas/*.md` -- who makes the buying decision and what they value
+1. **Pricing analysis** -- competitive pricing landscape if available
+2. **Value proposition mapping** -- value delivered per feature per persona
+3. gtm triangle.md documents or ICP document -- customer segments and their characteristics
+4. **Persona profiles** -- who makes the buying decision and what they value
 5. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Research Pricing Landscape
@@ -177,7 +181,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/pricing-strategy.md`:
+Save the output to your project. Suggested filename: `pricing-strategy.md`
 
 ```markdown
 # Pricing Strategy: [Company/Product Name]

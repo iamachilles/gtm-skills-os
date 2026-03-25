@@ -1,6 +1,10 @@
 ---
+name: webinar-planner
 description: Plan a webinar end-to-end with agenda, promotion plan, follow-up sequence, and repurposing strategy. Use when someone says "plan a webinar", "webinar outline", "webinar agenda", "online event", "live session plan", or "virtual workshop"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Webinar Planner
@@ -21,16 +25,16 @@ If topic, speakers, or audience are missing, ask: "I need the webinar topic, who
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/content/webinar-{topic-slug}.md`. If found, ask: "A webinar plan for [topic] already exists. Do you want me to (a) update the agenda, (b) revise the promotion plan, or (c) rebuild?"
+Read content documents. If found, ask: "A webinar plan for [topic] already exists. Do you want me to (a) update the agenda, (b) revise the promotion plan, or (c) rebuild?"
 
 ### Step 1 -- Load Context
 
 Read available context:
 
-1. `docs/personas/*.md` -- target audience profiles
-2. `docs/content-strategy.md` -- content positioning
-3. `docs/gtm-triangle.md` -- market positioning
-4. `docs/value-prop-matrix.md` -- value props
+1. **Persona profiles** -- target audience profiles
+2. **Content strategy** -- content positioning
+3. **GTM Triangle** -- market positioning
+4. **Value proposition mapping** -- value props
 5. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Define Format
@@ -136,7 +140,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/content/webinar-{topic-slug}.md`:
+Save the output to your project. Suggested filename: `webinar-{topic-slug}.md`
 
 ```markdown
 # Webinar Plan: [Title]

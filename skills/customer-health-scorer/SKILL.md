@@ -1,6 +1,10 @@
 ---
+name: customer-health-scorer
 description: Design a customer health scoring model with weighted dimensions and alert thresholds. Use when someone says "health score", "customer health", "health scoring", "account health", "customer risk", "health model", or "customer scoring"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Customer Health Scorer
@@ -23,16 +27,16 @@ If product type is missing, ask: "What type of product/service are we scoring he
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/ops/customer-health-model.md` if it exists. If found, present a summary and ask: "A health scoring model already exists. Do you want me to (a) recalibrate weights, (b) add dimensions, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A health scoring model already exists. Do you want me to (a) recalibrate weights, (b) add dimensions, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/ops/churn-prevention.md` -- churn signals if documented
-2. `docs/ops/upsell-triggers.md` -- expansion signals
-3. `docs/ops/customer-onboarding.md` -- onboarding milestones
-4. `docs/ops/success-plan-template.md` -- success plan structure
+1. **Churn Prevention** documents -- churn signals if documented
+2. **Upsell Triggers** documents -- expansion signals
+3. **Customer Onboarding** documents -- onboarding milestones
+4. **Success Plan Template** documents -- success plan structure
 5. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Select Health Dimensions
@@ -125,7 +129,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/ops/customer-health-model.md`:
+Save the output to your project. Suggested filename: `customer-health-model.md`
 
 ```markdown
 # Customer Health Scoring Model

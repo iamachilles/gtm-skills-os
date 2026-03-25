@@ -1,6 +1,10 @@
 ---
+name: handoff-designer
 description: Design the marketing-to-sales handoff with MQL criteria, SLA, and routing rules. Use when someone says "lead handoff", "MQL handoff", "marketing to sales", "lead routing", "handoff process", "lead SLA", or "lead qualification handoff"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Handoff Designer
@@ -23,16 +27,16 @@ If lead scoring is missing, ask: "I need your lead scoring criteria or MQL defin
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/ops/handoff-process.md` if it exists. If found, present a summary and ask: "A handoff process already exists. Do you want me to (a) tighten MQL criteria, (b) update routing rules, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A handoff process already exists. Do you want me to (a) tighten MQL criteria, (b) update routing rules, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/icp.md` or `docs/gtm-triangle.md` -- ICP criteria
-2. `docs/ops/sales-process.md` -- what happens after handoff
-3. `docs/personas/*.md` -- who becomes an MQL
-4. `docs/ops/territory-plan.md` -- territory routing context
+1. ICP document or gtm triangle.md documents -- ICP criteria
+2. **Sales Process** documents -- what happens after handoff
+3. **Persona profiles** -- who becomes an MQL
+4. **Territory Plan** documents -- territory routing context
 5. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Define MQL Criteria
@@ -118,7 +122,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/ops/handoff-process.md`:
+Save the output to your project. Suggested filename: `handoff-process.md`
 
 ```markdown
 # Marketing-to-Sales Handoff

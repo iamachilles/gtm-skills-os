@@ -1,6 +1,10 @@
 ---
+name: write-outbound-sequence
 description: Create a multichannel outbound sequence with 8-12 touchpoints across email, LinkedIn, and phone
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Write Outbound Sequence

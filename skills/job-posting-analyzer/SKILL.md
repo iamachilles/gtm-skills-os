@@ -1,6 +1,10 @@
 ---
+name: job-posting-analyzer
 description: Analyze job postings to infer company priorities and generate outreach angles. Use when someone asks "analyze their hiring", "what are they hiring for", "job posting signals", "infer company priorities from jobs", or "hiring intent analysis"
-tools: Read, Write, WebFetch, WebSearch
+allowed-tools: Read, Write, WebFetch, WebSearch
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Job Posting Analyzer
@@ -21,8 +25,8 @@ If company name is missing, ask before proceeding.
 ### Step 1 — Load Context
 
 Check for and read these files if they exist:
-- `docs/prospects/{company-slug}*.md` — existing prospect research
-- `docs/icp.md` — ICP criteria to assess fit
+- prospect documents — existing prospect research
+- ICP document — ICP criteria to assess fit
 - `CLAUDE.md` — project context
 
 ### Step 2 — Search for Active Job Postings
@@ -124,7 +128,7 @@ Before saving, verify:
 
 ## Output Format
 
-Save to `docs/prospects/{company-slug}-job-analysis.md`:
+Save the output to your project. Suggested filename: `{company-slug}-job-analysis.md`
 
 ```
 # Job Posting Analysis: [Company Name]

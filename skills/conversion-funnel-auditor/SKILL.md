@@ -1,6 +1,10 @@
 ---
+name: conversion-funnel-auditor
 description: Audit a conversion funnel to find and fix drop-off points. Use when someone says "funnel audit", "conversion funnel", "funnel analysis", "drop-off analysis", "conversion rate", "funnel optimization", or "where are we losing people"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Conversion Funnel Auditor
@@ -20,14 +24,14 @@ If funnel data is missing, ask: "I need the conversion numbers at each stage of 
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/analytics/funnel-audit.md` if it exists. If found, present a summary and ask: "A funnel audit already exists. Do you want me to (a) update with new data, (b) audit a different funnel, or (c) keep it?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A funnel audit already exists. Do you want me to (a) update with new data, (b) audit a different funnel, or (c) keep it?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/analytics/*.md` -- prior audits and reports
-2. `docs/analytics/dashboard-spec.md` -- current metrics
+1. **Analytics** documents -- prior audits and reports
+2. **Dashboard Spec** documents -- current metrics
 3. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Map Funnel Stages
@@ -107,7 +111,7 @@ Rules:
 
 ## Output Format
 
-Save to `docs/analytics/funnel-audit.md`:
+Save the output to your project. Suggested filename: `funnel-audit.md`
 
 ```markdown
 # Conversion Funnel Audit

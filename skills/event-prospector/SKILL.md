@@ -1,6 +1,10 @@
 ---
+name: event-prospector
 description: "Build a prospect list from event attendees, speakers, and sponsors. Trigger: 'prospect from event', 'find leads from conference', 'event attendees list', 'who is speaking at', 'conference prospects'"
-tools: Read, Write, WebFetch, WebSearch
+allowed-tools: Read, Write, WebFetch, WebSearch
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Event Prospector
@@ -22,13 +26,13 @@ If the event name is missing, ask: "Which event should I prospect from? Provide 
 
 ### Step 0 — Idempotency Check
 
-Check if `docs/prospects/event-{event-slug}.md` already exists. If it does, ask: "An event prospect list for this event already exists. Should I overwrite or update it?"
+Check if prospect documents already exists. If it does, ask: "An event prospect list for this event already exists. Should I overwrite or update it?"
 
 ### Step 1 — Load Context
 
 Read available context:
-- `docs/icp.md` — ICP criteria for scoring
-- `docs/gtm-triangle.md` — value proposition for outreach angles
+- ICP document — ICP criteria for scoring
+- gtm triangle.md documents — value proposition for outreach angles
 - `CLAUDE.md` — project instructions
 
 ### Step 2 — Research the Event
@@ -122,7 +126,7 @@ If any check fails, fix before proceeding.
 
 ## Output Format
 
-Save to `docs/prospects/event-{event-slug}.md`:
+Save the output to your project. Suggested filename: `event-{event-slug}.md`
 
 ```
 # Event Prospects: {Event Name}

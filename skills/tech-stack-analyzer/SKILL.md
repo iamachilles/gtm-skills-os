@@ -1,6 +1,10 @@
 ---
+name: tech-stack-analyzer
 description: Research a prospect's tech stack for sales intelligence and outreach personalization. Trigger phrases — "tech stack analysis", "what tools do they use", "technology stack", "prospect tech stack", "tech research"
-tools: Read, Write, WebFetch, WebSearch
+allowed-tools: Read, Write, WebFetch, WebSearch
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Tech Stack Analyzer
@@ -14,7 +18,7 @@ Good tech stack research goes beyond listing tools. It identifies what the stack
 - **Company name** (required) — the company to research
 - **Company domain** (required) — website URL for scraping and research
 - **Product/service context** (optional) — what you're selling, so displacement angles are relevant. Check `CLAUDE.md` for this.
-- **ICP document** (optional) — if `docs/icp.md` exists, load it to assess tech fit signals
+- **ICP document** (optional) — if ICP document exists, load it to assess tech fit signals
 - **Specific tools to check for** (optional) — particular technologies to look for (e.g., "Are they using Salesforce or HubSpot?")
 
 If company name and domain are both missing, ask before proceeding. You need at least one to start research.
@@ -25,8 +29,8 @@ If company name and domain are both missing, ask before proceeding. You need at 
 
 Read existing project documents:
 - Check for `CLAUDE.md` — load product context and positioning
-- Check for `docs/icp.md` — load tech-related ICP signals (technology stack criteria, integration requirements)
-- Check for `docs/competitors/competitive-analysis.md` — load competitor tools for displacement identification
+- Check for ICP document — load tech-related ICP signals (technology stack criteria, integration requirements)
+- Check for competitive analysis — load competitor tools for displacement identification
 
 Identify which technology categories matter most for this product/prospect combination.
 
@@ -149,7 +153,7 @@ Before saving, verify:
 
 ## Output Format
 
-Save to `docs/prospects/{company-slug}-tech-stack.md`:
+Save the output to your project. Suggested filename: `{company-slug}-tech-stack.md`
 
 ```markdown
 # Tech Stack Analysis: [Company Name]

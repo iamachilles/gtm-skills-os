@@ -1,0 +1,13 @@
+# Sales Enablement Pack (10 skills)
+# For: Sales teams, sales managers
+# Covers: Battlecards, proposals, discovery, deal coaching, objections
+battlecard-generator
+proposal-writer
+discovery-question-set
+deal-strategy-advisor
+pre-call-brief
+objection-library
+roi-calculator
+champion-enablement-kit
+meeting-recap-writer
+sales-playbook-writer

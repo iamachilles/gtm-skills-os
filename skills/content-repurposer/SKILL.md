@@ -1,6 +1,10 @@
 ---
+name: content-repurposer
 description: Turn one piece of content into 5+ derivatives across channels. Use when someone says "repurpose content", "turn this into posts", "content derivatives", "repurpose blog", "repurpose podcast", or "multi-channel content"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Content Repurposer
@@ -21,15 +25,15 @@ If source content is missing, ask: "I need the source content to repurpose. Can 
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/content/repurposed-{source-slug}.md`. If found, ask: "Repurposed content from [source] already exists. Do you want me to (a) add new derivatives, (b) update existing ones, or (c) rebuild?"
+Read content documents. If found, ask: "Repurposed content from [source] already exists. Do you want me to (a) add new derivatives, (b) update existing ones, or (c) rebuild?"
 
 ### Step 1 -- Load Context
 
 Read available context:
 
 1. Source content (provided)
-2. `docs/content-strategy.md` -- channel strategy
-3. `docs/personas/*.md` -- audience per channel
+2. **Content strategy** -- channel strategy
+3. **Persona profiles** -- audience per channel
 4. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Extract Key Insights
@@ -94,7 +98,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/content/repurposed-{source-slug}.md`:
+Save the output to your project. Suggested filename: `repurposed-{source-slug}.md`
 
 ```markdown
 # Repurposed Content: [Source Title]

@@ -1,6 +1,10 @@
 ---
+name: launch-strategy
 description: Plan a product or feature launch with tiered strategy and channel activation timeline. Use when someone says "launch plan", "launch strategy", "product launch", "feature launch", "go-to-market launch", "plan a release", or "launch checklist"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Launch Strategy
@@ -24,16 +28,16 @@ If "what's launching" or target segments are missing, ask: "I need to know what 
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/launches/{launch-slug}.md` where `{launch-slug}` is the launch name slugified. If found, present a summary and ask: "A launch plan already exists for '[launch name]'. Do you want me to (a) update the timeline, (b) add channels or content, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A launch plan already exists for '[launch name]'. Do you want me to (a) update the timeline, (b) add channels or content, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/messaging-matrix.md` -- messaging per persona per value pillar
-2. `docs/personas/*.md` -- persona profiles for targeting
-3. `docs/gtm-triangle.md` -- positioning and channel strategy
-4. `docs/value-prop-matrix.md` -- value props for launch messaging
+1. **Messaging matrix** -- messaging per persona per value pillar
+2. **Persona profiles** -- persona profiles for targeting
+3. **GTM Triangle** -- positioning and channel strategy
+4. **Value proposition mapping** -- value props for launch messaging
 5. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Define Launch Tier
@@ -208,7 +212,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/launches/{launch-slug}.md`:
+Save the output to your project. Suggested filename: `{launch-slug}.md`
 
 ```markdown
 # Launch Plan: [Launch Name]

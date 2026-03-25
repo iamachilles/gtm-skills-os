@@ -1,6 +1,10 @@
 ---
+name: compensation-modeler
 description: Design a sales compensation plan with base/variable split, accelerators, and payout modeling. Use when someone says "comp plan", "compensation model", "sales comp", "commission structure", "incentive plan", "quota and comp", "OTE", or "sales incentives"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Compensation Modeler
@@ -24,15 +28,15 @@ If role or OTE is missing, ask: "Which role are we designing comp for, and what'
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/ops/compensation-model.md` if it exists. If found, present a summary and ask: "A compensation model already exists for {role}. Do you want me to (a) adjust accelerators, (b) add a new role, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A compensation model already exists for {role}. Do you want me to (a) adjust accelerators, (b) add a new role, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/ops/sales-process.md` -- what the team is executing
-2. `docs/ops/territory-plan.md` -- quota context and territory balance
-3. `docs/ops/capacity-plan.md` -- headcount and productivity assumptions
+1. **Sales Process** documents -- what the team is executing
+2. **Territory Plan** documents -- quota context and territory balance
+3. **Capacity Plan** documents -- headcount and productivity assumptions
 4. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Define Base/Variable Split
@@ -113,7 +117,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/ops/compensation-model.md`:
+Save the output to your project. Suggested filename: `compensation-model.md`
 
 ```markdown
 # Compensation Model: {Role}

@@ -1,6 +1,10 @@
 ---
+name: linkedin-message-writer
 description: Write LinkedIn connection requests and follow-up message sequences. Use when someone says "linkedin message", "connection request", "linkedin outreach", "linkedin DM", "linkedin follow-up", or "linkedin sequence"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # LinkedIn Message Writer
@@ -20,15 +24,15 @@ If persona or reason is missing, ask: "I need the target persona and a specific 
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/sequences/linkedin-{persona-slug}.md` if it exists. If found, present a summary and ask: "A LinkedIn sequence for this persona already exists. Do you want me to (a) add new variants, (b) refine existing copy, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A LinkedIn sequence for this persona already exists. Do you want me to (a) add new variants, (b) refine existing copy, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/personas/{persona-slug}.md` -- persona language and interests
-2. `docs/messaging-matrix.md` -- relevant messaging for this persona
-3. `docs/sales-narratives.md` -- narrative framing if available
+1. **Persona profiles** -- persona language and interests
+2. **Messaging matrix** -- relevant messaging for this persona
+3. **Sales narratives** -- narrative framing if available
 4. `CLAUDE.md` -- project-level instructions
 
 Note the persona's likely LinkedIn behavior: do they post content? Share articles? Comment on industry topics? This shapes personalization.
@@ -84,7 +88,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/sequences/linkedin-{persona-slug}.md`:
+Save the output to your project. Suggested filename: `linkedin-{persona-slug}.md`
 
 ```markdown
 # LinkedIn Sequence: {Persona Title}

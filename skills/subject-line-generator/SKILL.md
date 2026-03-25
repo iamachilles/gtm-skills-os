@@ -1,6 +1,10 @@
 ---
+name: subject-line-generator
 description: Generate 10 subject line variants across 5 categories with A/B test pairings. Use when someone says "subject lines", "email subject", "subject line ideas", "subject line test", "A/B test subjects", or "improve open rates"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Subject Line Generator
@@ -20,15 +24,15 @@ If email topic or persona is missing, ask: "I need the email topic and target pe
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/sequences/subject-lines-{topic-slug}.md` if it exists. If found, present a summary and ask: "Subject lines for this topic already exist. Do you want me to (a) generate fresh variants, (b) refine existing ones, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "Subject lines for this topic already exist. Do you want me to (a) generate fresh variants, (b) refine existing ones, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/personas/{persona-slug}.md` -- persona language and priorities
-2. `docs/messaging-matrix.md` -- messaging angles for this persona
-3. `docs/sequences/cold-email-{persona-slug}.md` -- existing emails for alignment
+1. **Persona profiles** -- persona language and priorities
+2. **Messaging matrix** -- messaging angles for this persona
+3. **Persona profiles** -- existing emails for alignment
 4. `CLAUDE.md` -- project-level instructions
 
 Identify the persona's language patterns. Subject lines that use the reader's words get opened.
@@ -112,7 +116,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/sequences/subject-lines-{topic-slug}.md`:
+Save the output to your project. Suggested filename: `subject-lines-{topic-slug}.md`
 
 ```markdown
 # Subject Lines: {Topic}

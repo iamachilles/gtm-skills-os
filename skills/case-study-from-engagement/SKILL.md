@@ -1,6 +1,10 @@
 ---
+name: case-study-from-engagement
 description: Extract a publishable case study from a client engagement. Use when someone says "case study from engagement", "write up this client", "document engagement results", "engagement case study", "publish client results", or "client success case study"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Case Study from Engagement
@@ -21,16 +25,16 @@ If engagement results are missing, ask: "I need the quantified results from this
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/case-studies/{client-slug}.md` if it exists. If found, present a summary and ask: "A case study for this client already exists. Do you want me to (a) update with new results, (b) rewrite with a different angle, or (c) keep it?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A case study for this client already exists. Do you want me to (a) update with new results, (b) rewrite with a different angle, or (c) keep it?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/sales/client-report-{client-slug}-*.md` -- engagement reports with metrics
-2. `docs/sales/sow-{client-slug}.md` -- original engagement scope
-3. `docs/case-studies/*.md` -- existing case studies for format consistency
-4. `docs/gtm-triangle.md` -- positioning (case study should reinforce your narrative)
+1. **Client Report Client** documents -- engagement reports with metrics
+2. **Sow Client** documents -- original engagement scope
+3. **Case studies** -- existing case studies for format consistency
+4. **GTM Triangle** -- positioning (case study should reinforce your narrative)
 5. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Extract Story Arc
@@ -101,7 +105,7 @@ Each derivative should be able to stand alone without reading the full case stud
 
 ## Output Format
 
-Save to `docs/case-studies/{client-slug}.md`:
+Save the output to your project. Suggested filename: `{client-slug}.md`
 
 ```markdown
 # Case Study: {Client Name}

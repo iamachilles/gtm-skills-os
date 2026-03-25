@@ -1,6 +1,10 @@
 ---
+name: cohort-analyzer
 description: Analyze customer cohorts for retention, LTV, and patterns. Use when someone says "cohort analysis", "customer cohorts", "retention analysis", "LTV analysis", "cohort retention", "customer segments", or "acquisition cohorts"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Cohort Analyzer
@@ -20,14 +24,14 @@ If customer data or cohort definition is missing, ask: "I need customer data wit
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/analytics/cohort-analysis.md` if it exists. If found, present a summary and ask: "A cohort analysis already exists. Do you want me to (a) update with new data, (b) analyze different cohorts, or (c) keep it?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A cohort analysis already exists. Do you want me to (a) update with new data, (b) analyze different cohorts, or (c) keep it?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/analytics/*.md` -- existing analytics
-2. `docs/gtm-triangle.md` -- ICP and segment context
+1. **Analytics** documents -- existing analytics
+2. **GTM Triangle** -- ICP and segment context
 3. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Segment by Acquisition Cohort
@@ -108,7 +112,7 @@ Answer these questions:
 
 ## Output Format
 
-Save to `docs/analytics/cohort-analysis.md`:
+Save the output to your project. Suggested filename: `cohort-analysis.md`
 
 ```markdown
 # Cohort Analysis

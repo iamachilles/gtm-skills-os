@@ -1,6 +1,10 @@
 ---
+name: deal-desk-playbook
 description: Design deal desk processes with discount authority, approval workflows, and pricing exceptions. Use when someone says "deal desk", "pricing approval", "discount matrix", "deal approval", "pricing exceptions", "non-standard deal", or "enterprise pricing"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Deal Desk Playbook
@@ -24,15 +28,15 @@ If pricing model is missing, ask: "I need your pricing model and list prices to 
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/ops/deal-desk-playbook.md` if it exists. If found, present a summary and ask: "A deal desk playbook already exists. Do you want me to (a) update discount thresholds, (b) add deal types, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A deal desk playbook already exists. Do you want me to (a) update discount thresholds, (b) add deal types, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/ops/sales-process.md` -- when in the process deals need desk support
-2. `docs/ops/compensation-model.md` -- how discounts affect commission
-3. `docs/icp.md` -- customer segments that affect pricing
+1. **Sales Process** documents -- when in the process deals need desk support
+2. **Compensation Model** documents -- how discounts affect commission
+3. **ICP definition** -- customer segments that affect pricing
 4. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Define Standard Deal Templates
@@ -117,7 +121,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/ops/deal-desk-playbook.md`:
+Save the output to your project. Suggested filename: `deal-desk-playbook.md`
 
 ```markdown
 # Deal Desk Playbook

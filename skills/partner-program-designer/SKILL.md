@@ -1,6 +1,10 @@
 ---
+name: partner-program-designer
 description: Design a partner program with tiers, benefits, and requirements. Use when someone says "partner program", "design partner tiers", "referral program", "reseller program", "channel partner program", "partnership structure", or "partner strategy"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Partner Program Designer
@@ -20,15 +24,15 @@ If company context or partner goals are missing, ask: "I need to understand what
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/ops/partner-program.md` if it exists. If found, present a summary and ask: "A partner program already exists. Do you want me to (a) update it, (b) add a new partner type, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A partner program already exists. Do you want me to (a) update it, (b) add a new partner type, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/gtm-triangle.md` -- positioning and ICP context
-2. `docs/value-prop-matrix.md` -- value pillars partners can leverage
-3. `docs/sales/*.md` -- existing sales materials partners will need
+1. **GTM Triangle** -- positioning and ICP context
+2. **Value proposition mapping** -- value pillars partners can leverage
+3. **Sales** documents -- existing sales materials partners will need
 4. `CLAUDE.md` -- project-level instructions
 
 ### Step 2 -- Define Program Goals
@@ -107,7 +111,7 @@ Outline key terms (not legal language):
 
 ## Output Format
 
-Save to `docs/ops/partner-program.md`:
+Save the output to your project. Suggested filename: `partner-program.md`
 
 ```markdown
 # Partner Program

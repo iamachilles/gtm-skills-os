@@ -1,6 +1,10 @@
 ---
+name: persona-deep-dive
 description: Create a rich, research-backed buyer persona profile. Use when someone says "persona deep dive", "build a persona", "who is our buyer", "understand the buyer", "persona research", or "buyer profile"
-tools: Read, Write, WebSearch
+allowed-tools: Read, Write, WebSearch
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Persona Deep Dive
@@ -23,14 +27,14 @@ If role title or industry is missing, ask: "I need at least a role title and ind
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/personas/{persona-slug}.md` where `{persona-slug}` is the role title slugified (e.g., "vp-revenue-operations"). If found, present a summary and ask: "A persona profile for [role] already exists. Do you want me to (a) enrich it with new research, (b) overwrite it, or (c) keep it and build a different persona?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "A persona profile for [role] already exists. Do you want me to (a) enrich it with new research, (b) overwrite it, or (c) keep it and build a different persona?" 
 
 ### Step 1 -- Load Context
 
 Read available context:
 
-1. `docs/gtm-triangle.md` -- ICP and positioning context
-2. `docs/personas/*.md` -- existing personas for consistency
+1. **GTM Triangle** -- ICP and positioning context
+2. **Persona profiles** -- existing personas for consistency
 3. `CLAUDE.md` -- project-level instructions
 4. Any user-provided notes about this role
 
@@ -105,7 +109,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/personas/{persona-slug}.md`:
+Save the output to your project. Suggested filename: `{persona-slug}.md`
 
 ```markdown
 # Persona: [Role Title]

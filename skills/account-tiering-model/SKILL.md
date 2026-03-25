@@ -1,6 +1,10 @@
 ---
+name: account-tiering-model
 description: Design a Tier 1/2/3 account prioritization model with scoring rubrics and resource allocation. Use when someone says "account tiering", "tier accounts", "prioritize accounts", "account scoring", "which accounts to focus on", or "ABM tiers"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Account Tiering Model
@@ -23,15 +27,15 @@ If ICP definition is missing, ask: "I need your ICP criteria to build the tierin
 
 ### Step 0 -- Check for Existing Output
 
-Read `docs/account-tiering-model.md` if it exists. If found, present a summary and ask: "An account tiering model already exists with [current tier thresholds]. Do you want me to (a) recalibrate the scoring, (b) update resource allocation, or (c) rebuild from scratch?"
+Search the project for any existing output from a previous run of this skill (check common locations like `docs/`, the project root, or any organized output directory). If a previous version is found, present a summary and ask: "An account tiering model already exists with [current tier thresholds]. Do you want me to (a) recalibrate the scoring, (b) update resource allocation, or (c) rebuild from scratch?" 
 
 ### Step 1 -- Load Context
 
-Read all available context:
+Search the project for any available context. Look in the project root, `docs/`, or any organized directory. Read what you find:
 
-1. `docs/gtm-triangle.md` or `docs/icp.md` -- ICP criteria and tier definitions
-2. `docs/intent-signals.md` or signal framework -- what signals matter
-3. `docs/personas/*.md` -- who you're selling to (affects deal potential estimates)
+1. gtm triangle.md documents or ICP document -- ICP criteria and tier definitions
+2. intent signals.md documents or signal framework -- what signals matter
+3. **Persona profiles** -- who you're selling to (affects deal potential estimates)
 4. `CLAUDE.md` -- project-level instructions
 5. Any historical data on win rates, deal sizes, or sales cycles
 
@@ -167,7 +171,7 @@ If any check fails, fix it before proceeding.
 
 ## Output Format
 
-Save to `docs/account-tiering-model.md`:
+Save the output to your project. Suggested filename: `account-tiering-model.md`
 
 ```markdown
 # Account Tiering Model

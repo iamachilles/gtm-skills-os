@@ -1,6 +1,10 @@
 ---
+name: market-sizing
 description: Estimate TAM/SAM/SOM from ICP criteria. Trigger phrases — "size the market", "how big is the market", "TAM SAM SOM", "market sizing", "total addressable market"
-tools: Read, Write, WebSearch
+allowed-tools: Read, Write, WebSearch
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Market Sizing
@@ -11,7 +15,7 @@ Good market sizing is honest about what it doesn't know. Every number should tra
 
 ## Inputs
 
-- **ICP document or criteria** (required) — firmographics, industry, geography, company size, buyer personas. If `docs/icp.md` exists, load it automatically.
+- **ICP document or criteria** (required) — firmographics, industry, geography, company size, buyer personas. If ICP document exists, load it automatically.
 - **Product/service description** (required) — what is being sold and at what price point
 - **Geography** (optional, default: global) — market scope to size
 - **Time horizon** (optional, default: current year) — base year for estimates
@@ -24,8 +28,8 @@ If the ICP document or product description is missing, ask for them before proce
 ### Step 1 — Load Context
 
 Read existing project documents to ground the analysis:
-- Check for `docs/icp.md` — load firmographics, industry, company size criteria
-- Check for `docs/competitors/competitive-analysis.md` — extract market landscape context
+- Check for ICP document — load firmographics, industry, company size criteria
+- Check for competitive analysis — extract market landscape context
 - Check for `CLAUDE.md` — load company context and positioning
 - Note the average deal size or pricing from the product description
 
@@ -134,7 +138,7 @@ Before saving, verify:
 
 ## Output Format
 
-Save to `docs/market-sizing.md`:
+Save the output to your project. Suggested filename: `market-sizing.md`
 
 ```markdown
 # Market Sizing: [Product/Company Name]

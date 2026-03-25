@@ -1,0 +1,11 @@
+# Freelancer & Agency Pack (8 skills)
+# For: Freelancers, consultants, agencies
+# Covers: Scoping, onboarding, reporting, case studies, positioning
+client-engagement-scoper
+onboard-client
+gtm-diagnostic
+client-report-writer
+case-study-from-engagement
+sow-generator
+freelancer-positioning
+service-productizer

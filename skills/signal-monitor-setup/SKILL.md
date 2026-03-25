@@ -1,6 +1,10 @@
 ---
+name: signal-monitor-setup
 description: Generate Clay/n8n/Zapier configurations for monitoring buying signals. Use when someone asks "set up signal monitoring", "automate intent signals", "build signal workflows", "configure buying signal alerts", or "operationalize signals"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Signal Monitor Setup
@@ -24,8 +28,8 @@ If signal map is missing, tell the user to run **intent-signals** first. If pref
 ### Step 1 — Load Signal Map and Context
 
 Read these files if they exist:
-- `docs/intent-signals.md` — the signal map with priorities and capture methods
-- `docs/icp.md` — ICP context for filtering logic
+- intent signals.md documents — the signal map with priorities and capture methods
+- ICP document — ICP context for filtering logic
 - `CLAUDE.md` — project context
 
 From the signal map, extract:
@@ -109,7 +113,7 @@ Before saving, verify:
 
 ## Output Format
 
-Save to `docs/ops/signal-monitoring-setup.md`:
+Save the output to your project. Suggested filename: `signal-monitoring-setup.md`
 
 ```
 # Signal Monitoring Setup: [Company/Product Name]

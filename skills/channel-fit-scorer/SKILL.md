@@ -1,6 +1,10 @@
 ---
+name: channel-fit-scorer
 description: Evaluate which GTM channels fit your ICP, ACV, and sales cycle. Use when someone asks "which channels should we use", "channel strategy", "where should we focus outreach", "channel prioritization", or "GTM channel mix"
-tools: Read, Write
+allowed-tools: Read, Write
+metadata:
+  author: Achille Morin-Lemoine
+  version: "1.0.0"
 ---
 
 # Channel Fit Scorer
@@ -24,9 +28,9 @@ If ICP description or ACV or sales cycle length are missing, ask for them before
 ### Step 1 — Load Context
 
 Check for and read these files if they exist:
-- `docs/icp.md` — ICP details, buyer personas, firmographics
-- `docs/gtm-triangle.md` — positioning, messaging, channel assumptions
-- `docs/gtm-diagnostic.md` — current GTM assessment and gaps
+- ICP document — ICP details, buyer personas, firmographics
+- gtm triangle.md documents — positioning, messaging, channel assumptions
+- gtm diagnostic.md documents — current GTM assessment and gaps
 - `CLAUDE.md` — project context
 
 Extract: ICP firmographics, buyer personas, ACV, sales cycle, current team composition, and any channel performance data already captured.
@@ -118,7 +122,7 @@ Before saving, verify:
 
 ## Output Format
 
-Save to `docs/channel-strategy.md`:
+Save the output to your project. Suggested filename: `channel-strategy.md`
 
 ```
 # Channel Strategy: [Company/Product Name]
