@@ -1,0 +1,15 @@
+# Signal Campaigns Pack (12 skills)
+# For: Growth teams running signal-based outbound
+# Covers: Intent signals, trigger campaigns, list generation, prospecting tools
+signal-list-generator
+signal-monitor-setup
+trigger-campaign-designer
+warm-lead-reactivator
+lookalike-finder
+linkedin-search-builder
+event-prospector
+email-validator
+tam-builder
+job-posting-analyzer
+tech-stack-analyzer
+inbound-qualifier

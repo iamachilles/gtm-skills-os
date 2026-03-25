@@ -1,0 +1,17 @@
+# Customer Growth Pack (14 skills)
+# For: Customer success, account management, partnerships
+# Covers: Health scoring, churn, upsell, advocacy, partner programs, referrals, enablement
+customer-health-scorer
+churn-prevention-playbook
+upsell-trigger-mapper
+customer-onboarding-planner
+success-plan-template
+nps-survey-designer
+advocacy-program
+referral-program-designer
+partner-program-designer
+partner-pitch-builder
+co-marketing-planner
+integration-partner-brief
+channel-enablement-kit
+marketplace-listing-writer

@@ -1,6 +1,6 @@
-# Freelancer & Agency Pack (8 skills)
+# Freelancer & Agency Pack (10 skills)
 # For: Freelancers, consultants, agencies
-# Covers: Scoping, onboarding, reporting, case studies, positioning
+# Covers: Scoping, onboarding, reporting, case studies, positioning, launch
 client-engagement-scoper
 onboard-client
 gtm-diagnostic
@@ -9,3 +9,5 @@ case-study-from-engagement
 sow-generator
 freelancer-positioning
 service-productizer
+inbound-qualifier
+launch-strategy

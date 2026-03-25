@@ -1,0 +1,14 @@
+# Events & Field Pack (11 skills)
+# For: Event marketers, field marketing teams
+# Covers: Event strategy, conference talks, booth planning, ROI tracking, follow-up
+event-gtm-playbook
+conference-talk-outliner
+booth-strategy
+workshop-designer
+field-event-roi-tracker
+event-invitation-writer
+event-follow-up
+dinner-event-planner
+webinar-planner
+podcast-guest-pitch
+deal-desk-playbook

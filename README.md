@@ -55,13 +55,17 @@ cd gtm-skills-os
 
 | Pack | Skills | Best for |
 |------|--------|----------|
-| `gtm-foundations` | 12 | Anyone starting GTM from scratch. ICP, positioning, personas, competitive intel. |
-| `outbound-engine` | 12 | SDRs, AEs, outbound teams. Cold email, LinkedIn, calls, sequences, list building. |
-| `content-machine` | 10 | Content marketers, founders. LinkedIn posts, blogs, newsletters, repurposing. |
-| `abm-playbook` | 10 | ABM teams, enterprise sellers. Account mapping, executive outreach, multi-threading. |
-| `sales-enablement` | 10 | Sales teams, managers. Battlecards, proposals, discovery, deal coaching. |
-| `revops-infra` | 12 | RevOps, ops teams. Email infra, CRM, enrichment, scoring, forecasting. |
-| `freelancer-agency` | 8 | Freelancers, consultants. Scoping, onboarding, reporting, positioning. |
+| `gtm-foundations` | 16 | Anyone starting GTM from scratch. ICP, positioning, personas, messaging, pricing. |
+| `outbound-engine` | 15 | SDRs, AEs, outbound teams. Cold email, LinkedIn, calls, sequences, nurture. |
+| `content-machine` | 15 | Content marketers, founders. LinkedIn, blogs, SEO, ads, video, lead magnets. |
+| `signal-campaigns` | 12 | Growth teams. Signal-based lists, trigger campaigns, prospecting tools. |
+| `abm-playbook` | 12 | ABM teams, enterprise sellers. Account mapping, executive outreach, LinkedIn ads. |
+| `sales-enablement` | 16 | Sales teams, managers. Battlecards, proposals, discovery, QBRs, coaching. |
+| `revops-infra` | 16 | RevOps, ops teams. Email infra, CRM, enrichment, comp, capacity, automation. |
+| `customer-growth` | 14 | CS teams, partnerships. Health scoring, churn, upsell, partner programs. |
+| `events-field` | 11 | Event marketers. Event strategy, conference talks, booth, webinars, ROI. |
+| `analytics-ops` | 17 | Marketing ops, analysts. Campaign analysis, attribution, dashboards, experiments. |
+| `freelancer-agency` | 10 | Freelancers, consultants. Scoping, onboarding, reporting, positioning. |
 
 Install multiple packs at once:
 

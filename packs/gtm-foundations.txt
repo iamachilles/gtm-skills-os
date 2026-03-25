@@ -1,6 +1,6 @@
-# GTM Foundations Pack (12 skills)
+# GTM Foundations Pack (16 skills)
 # For: Anyone starting GTM from scratch
-# Covers: Market research, ICP, positioning, personas, competitive intel
+# Covers: Market research, ICP, positioning, personas, competitive intel, messaging, pricing
 gtm-diagnostic
 icp-model-creator
 gtm-triangle-builder
@@ -13,3 +13,7 @@ intent-signals
 market-sizing
 industry-briefing
 channel-fit-scorer
+icp-challenger
+messaging-matrix
+pricing-strategy
+category-designer

@@ -1,0 +1,20 @@
+# Analytics & Ops Pack (17 skills)
+# For: Marketing ops, revenue analysts, GTM leaders
+# Covers: Campaign analysis, pipeline audits, attribution, forecasting, dashboards, rituals
+campaign-analyzer
+pipeline-health-check
+ab-test-analyzer
+attribution-modeler
+conversion-funnel-auditor
+cohort-analyzer
+experiment-designer
+weekly-gtm-report
+outbound-dashboard-spec
+content-performance-analyzer
+win-loss-analyzer
+g2-review-miner
+voice-of-customer-extractor
+pricing-analyzer
+weekly-ritual-designer
+onboarding-ramp-plan
+tech-stack-auditor
